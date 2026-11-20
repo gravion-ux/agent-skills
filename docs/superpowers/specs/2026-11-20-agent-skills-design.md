@@ -63,7 +63,8 @@ agent-skills/
 │   ├── ROUTING.md
 │   └── CONTRIBUTING_SKILLS.md
 ├── skills/
-│   ├── master/SKILL.md             # the master routing skill
+│   ├── master/SKILL.md             # the master routing skill (hand-written)
+│   ├── master/APPENDIX.md          # GENERATED — domain map and scoring reference
 │   └── <domain>/<skill-name>/SKILL.md
 ├── routers/
 │   └── <domain>/SKILL.md           # ~35 domain router skills
@@ -73,16 +74,18 @@ agent-skills/
 │   │   ├── _types.py
 │   │   ├── _domains.py
 │   │   └── <domain>.py
-│   ├── index.json                  # GENERATED — machine-readable manifest
 │   └── CATALOG.md                  # GENERATED — human-readable index
 ├── src/agentskills/
 │   ├── __init__.py
+│   ├── spec.py                     # canonical SkillSpec / DomainProfile / spec()
 │   ├── catalog.py                  # load + model the catalogue
+│   ├── frontmatter.py              # minimal YAML-subset frontmatter parser
 │   ├── router.py                   # BM25 scorer
 │   ├── generation.py               # catalogue -> skill files / index / routers
 │   ├── validation.py               # skill validator (single implementation)
 │   ├── exporters.py                # export / pack
-│   └── cli.py                      # agentskills list|show|route|validate|export|pack
+│   ├── cli.py                      # agentskills list|show|route|validate|export|pack
+│   └── data/catalog.json           # GENERATED — packaged machine-readable index
 ├── scripts/
 │   ├── generate_skills.py          # thin wrapper over agentskills.generation
 │   ├── build_index.py              # thin wrapper over agentskills.generation
@@ -189,11 +192,13 @@ The user chose to combine all three mechanisms. They are complementary, not comp
 
 ### Layer 1 — deterministic scorer
 
-`agentskills route "<task>" --top K` runs a BM25-style ranking over `catalog/index.json`.
-The indexed fields are `name`, `description`, `tags`, `triggers` and `domain`, with
-field-specific weights. Tokenisation lowercases, splits on non-alphanumerics and keeps
-hyphenated compounds as both a compound token and its parts. The scorer is pure
-Python standard library, fully deterministic and unit-tested.
+`agentskills route "<task>" --top K` runs a BM25-style ranking over the packaged
+catalogue index (`agentskills/data/catalog.json`, overridable with the
+`AGENTSKILLS_CATALOG` environment variable during development). The indexed fields are
+`name`, `description`, `tags`, `triggers` and `domain`, with field-specific weights.
+Tokenisation lowercases, splits on non-alphanumerics and keeps hyphenated compounds as
+both a compound token and its parts. The scorer is pure Python standard library, fully
+deterministic and unit-tested.
 
 Output: ranked candidates with score, matched terms and the field each term matched.
 
@@ -221,9 +226,9 @@ give the master a fast structural map and give humans a browsable entry point.
 
 ### Shared source of truth
 
-All three layers read `catalog/index.json`, which is generated from `catalog/source/`.
-The validator fails CI if the index and the files on disk disagree, so routing can never
-silently drift from the catalogue.
+All three layers read the packaged index at `src/agentskills/data/catalog.json`, which is
+generated from `catalog/source/`. The validator fails CI if the index and the files on
+disk disagree, so routing can never silently drift from the catalogue.
 
 ## 7. Package and CLI
 
@@ -244,10 +249,16 @@ silently drift from the catalogue.
 ### Generation
 
 `scripts/generate_skills.py` reads `catalog/source/` and writes every leaf `SKILL.md` plus
-every domain router. `scripts/build_index.py` writes `catalog/index.json` and
-`catalog/CATALOG.md`. The master skill at `skills/master/SKILL.md` is **hand-written** —
-it encodes routing policy, not catalogue data — and its per-domain appendix is generated
-from the same source.
+every domain router. `scripts/build_index.py` writes the packaged index at
+`src/agentskills/data/catalog.json` and the human mirror at `catalog/CATALOG.md`. The
+master skill at `skills/master/SKILL.md` is **hand-written** — it encodes routing policy,
+not catalogue data — and its per-domain appendix is generated from the same source into
+`skills/master/APPENDIX.md`.
+
+The canonical `SkillSpec` and `DomainProfile` types live in the installed package at
+`src/agentskills/spec.py`; `catalog/source/_types.py` re-exports them so authoring modules
+keep a single import path. The installed distribution never imports from `catalog/`, so
+`pip install agentskills` yields a package that routes, validates and exports on its own.
 
 Both generators are idempotent: running them twice produces no diff. The generated files
 are committed, so consumers can clone and use the catalogue without running Python.
@@ -263,7 +274,8 @@ are committed, so consumers can clone and use the catalogue without running Pyth
 - All nine body sections are present, in order, and non-empty.
 - No placeholder markers (`TBD`, `TODO`, `FIXME`, `XXX`, `lorem`).
 - Every name in `related` resolves to an existing skill.
-- `catalog/index.json` matches the catalogue on disk exactly.
+- The packaged index at `src/agentskills/data/catalog.json` matches the catalogue source
+  exactly, and `catalog/CATALOG.md` lists exactly the same skill set.
 
 Repository-wide checks: router skills are unique and cover every domain; the master skill
 exists and references the router map.
