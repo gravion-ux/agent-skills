@@ -103,7 +103,7 @@ def test_version_is_semver() -> None:
 
 def test_package_exports_version() -> None:
     assert agentskills.__version__
-    assert "agentskills" in agentskills.__all__
+    assert "__version__" in agentskills.__all__
 ```
 
 - [ ] **Step 2: Run the test to verify it fails**

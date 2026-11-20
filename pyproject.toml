@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentskills"
+dynamic = ["version"]
+description = "A 1200-skill agent skill library with a deterministic master router that selects the right skill for any task."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "gravion-ux" }]
+keywords = ["agent-skills", "skills", "orchestration", "routing", "bm25", "prompting"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "build==1.2.2.post1",
+    "mypy==1.18.2",
+    "pytest==9.2.0",
+    "pytest-cov==7.0.0",
+    "ruff==0.17.4",
+]
+
+[project.scripts]
+agentskills = "agentskills.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gravion-ux/agent-skills"
+Repository = "https://github.com/gravion-ux/agent-skills"
+Issues = "https://github.com/gravion-ux/agent-skills/issues"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.dynamic]
+version = { file = ["VERSION"] }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+agentskills = ["data/*.json"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["catalog/source"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S", "PL", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "PLR2004"]
+"scripts/*" = ["E402"]
+"src/agentskills/spec.py" = ["PLR0913"]
+"src/agentskills/generation.py" = ["PLR0912", "PLR0915"]
+"src/agentskills/validation.py" = ["PLR0912", "PLR0915"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+mypy_path = "src"
+packages = ["agentskills"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-ra --strict-markers --strict-config"
+
+[tool.coverage.run]
+branch = true
+source = ["agentskills"]
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
