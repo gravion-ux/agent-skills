@@ -61,7 +61,7 @@ select = ["E", "F", "I", "UP", "B", "S", "PL", "RUF"]
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "PLR2004"]
 "scripts/*" = ["E402"]
-"src/agentskills/spec.py" = ["PLR0913"]
+"src/agentskills/spec.py" = ["PLR0913", "PLR0917"]
 "src/agentskills/generation.py" = ["PLR0912", "PLR0915"]
 "src/agentskills/validation.py" = ["PLR0912", "PLR0915"]
 
