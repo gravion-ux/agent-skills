@@ -179,7 +179,7 @@ select = ["E", "F", "I", "UP", "B", "S", "PL", "RUF"]
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "PLR2004"]
 "scripts/*" = ["E402"]
-"src/agentskills/spec.py" = ["PLR0913"]
+"src/agentskills/spec.py" = ["PLR0913", "PLR0917"]
 "src/agentskills/generation.py" = ["PLR0912", "PLR0915"]
 "src/agentskills/validation.py" = ["PLR0912", "PLR0915"]
 
@@ -1518,8 +1518,9 @@ def domain_of() -> tuple[tuple[SkillSpec, str], ...]:
     pairs: list[tuple[SkillSpec, str]] = []
     for module_name in _DOMAIN_MODULES:
         module = _load_module(module_name)
+        domain = str(getattr(module, "DOMAIN", module_name.replace("_", "-")))
         for entry in getattr(module, "SKILLS"):
-            pairs.append((entry, module_name.replace("_", "-")))
+            pairs.append((entry, domain))
     return tuple(pairs)
 
 
@@ -1528,6 +1529,12 @@ __all__ = ["DomainProfile", "SkillSpec", "all_specs", "domain_of", "spec"]
 
 `_DOMAIN_MODULES` starts empty. Tasks 7–10 append their module names; each module name
 maps to a domain key by replacing underscores with hyphens.
+
+**Reconciled with the implementation.** Every module now declares an explicit
+`DOMAIN = "<hyphenated-domain>"` constant, and `domain_of()` reads that attribute
+first, falling back to the filename convention. This is what lets one domain span
+several module files — `devops_cloud.py` and `devops_cloud_2.py` both declare
+`DOMAIN = "devops-cloud"` — without the filename heuristic splitting them apart.
 
 - [ ] **Step 7: Run the test to verify it passes**
 
@@ -2174,6 +2181,7 @@ SECTION_ORDER: tuple[str, ...] = (
 )
 
 _MAX_RELATED = 5
+_MAX_SIBLINGS = 3
 _NAME_TOKEN_RE = re.compile(r"[a-z0-9]+")
 
 
@@ -2190,12 +2198,12 @@ def _sibling_names(entry: SkillSpec, entries: Sequence[SkillSpec]) -> tuple[str,
         return len(mine & _name_tokens(other.name))
 
     candidates.sort(key=lambda other: (-shared(other), other.name))
-    picked = [other.name for other in candidates if shared(other) > 0][:3]
-    if len(picked) < 3:
+    picked = [other.name for other in candidates if shared(other) > 0][:_MAX_SIBLINGS]
+    if len(picked) < _MAX_SIBLINGS:
         for other in candidates:
             if other.name not in picked:
                 picked.append(other.name)
-            if len(picked) == 3:
+            if len(picked) == _MAX_SIBLINGS:
                 break
     return tuple(picked)
 
@@ -2277,7 +2285,7 @@ def render_router_markdown(domain: str, skills: Sequence[Skill], profile: Domain
     lines.append(f"domain: {domain}")
     lines.append(f"tags: [router, routing, {domain}]")
     lines.append(
-        f'trigiggers: ["route a {domain} task", "which {domain} skill should I use"]'
+        f'triggers: ["route a {domain} task", "which {domain} skill should I use"]'
     )
     lines.append("---")
     lines.append("")
@@ -2512,10 +2520,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from agentskills import __version__  # noqa: E402
-from agentskills.generation import generate  # noqa: E402
-from catalog.source import domain_of  # noqa: E402
-from catalog.source._domains import DOMAIN_PROFILES  # noqa: E402
+from agentskills import __version__
+from agentskills.generation import generate
+from catalog.source import domain_of
+from catalog.source._domains import DOMAIN_PROFILES
 
 
 def main() -> int:
@@ -2542,10 +2550,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from agentskills import __version__  # noqa: E402
-from agentskills.generation import generate  # noqa: E402
-from catalog.source import domain_of  # noqa: E402
-from catalog.source._domains import DOMAIN_PROFILES  # noqa: E402
+from agentskills import __version__
+from agentskills.generation import generate
+from catalog.source import domain_of
+from catalog.source._domains import DOMAIN_PROFILES
 
 
 def main() -> int:
@@ -2797,8 +2805,14 @@ def validate_skill_file(path: Path, expected_name: str) -> list[Finding]:
     sections = _sections(body)
     headings = [heading for heading, _ in sections]
     if headings[: len(SECTION_ORDER)] != list(SECTION_ORDER):
+        missing = [heading for heading in SECTION_ORDER if heading not in headings]
+        detail = f" (missing: {', '.join(missing)})" if missing else ""
         findings.append(
-            Finding("error", str(path), "the nine sections are missing or out of order")
+            Finding(
+                "error",
+                str(path),
+                f"the nine sections are missing or out of order{detail}",
+            )
         )
     for heading, content in sections:
         if heading in SECTION_ORDER and not content:
@@ -2931,7 +2945,7 @@ def validate_repository(root: Path) -> list[Finding]:
     if not catalog.exists():
         findings.append(Finding("error", str(catalog), "catalogue mirror is missing"))
     else:
-        listed = set(_CATOG_ENTRY_RE.findall(catalog.read_text(encoding="utf-8")))
+        listed = set(_CATALOG_ENTRY_RE.findall(catalog.read_text(encoding="utf-8")))
         if listed != on_disk:
             missing = sorted(on_disk - listed)
             extra = sorted(listed - on_disk)
@@ -2972,7 +2986,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from agentskills.validation import format_findings, validate_repository  # noqa: E402
+from agentskills.validation import format_findings, validate_repository
 
 
 def main() -> int:
@@ -3114,7 +3128,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from collections.abc import Sequence
+from collections.abc import Callable, Sequence
 from pathlib import Path
 
 from agentskills.catalog import load_catalogue
@@ -3171,93 +3185,25 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = _build_parser()
     args = parser.parse_args(argv)
     root = Path(args.root)
-    catalogue = load_catalogue()
 
-    if args.command == "list":
-        skills = catalogue.by_domain(args.domain) if args.domain else catalogue.skills
-        if args.json:
-            print(json.dumps([skill.name for skill in skills], indent=2))
-        else:
-            for skill in skills:
-                print(f"{skill.domain:<24} {skill.name}")
-        return 0
+    if args.command in {"list", "show", "route"}:
+        catalogue = load_catalogue()
+        handlers: dict[str, Callable[[], int]] = {
+            "list": lambda: _run_list(catalogue, args),
+            "show": lambda: _run_show(catalogue, args),
+            "route": lambda: _run_route(catalogue, args),
+        }
+    else:
+        handlers = {
+            "validate": lambda: _run_validate(root, args),
+            "export": lambda: _run_export(root, args),
+            "pack": lambda: _run_pack(root, args),
+        }
 
-    if args.command == "show":
-        skill = catalogue.get(args.name)
-        if skill is None:
-            print(f"unknown skill: {args.name}", file=sys.stderr)
-            return 1
-        print(
-            json.dumps(
-                {
-                    "name": skill.name,
-                    "domain": skill.domain,
-                    "description": skill.description,
-                    "tags": list(skill.tags),
-                    "triggers": list(skill.triggers),
-                    "steps": list(skill.steps),
-                    "related": list(skill.related),
-                },
-                indent=2,
-            )
-        )
-        return 0
-
-    if args.command == "route":
-        results = route(catalogue, args.task, top=args.top)
-        if args.json:
-            print(
-                json.dumps(
-                    {
-                        "query": args.task,
-                        "results": [
-                            {
-                                "name": item.skill.name,
-                                "domain": item.skill.domain,
-                                "score": item.score,
-                                "matched": list(item.matched),
-                                "fields": list(item.fields),
-                            }
-                            for item in results
-                        ],
-                    },
-                    indent=2,
-                )
-            )
-        else:
-            for index, item in enumerate(results, start=1):
-                print(f"{index}. {item.skill.name}  [{item.skill.domain}]  score={item.score}")
-                print(f"   matched: {', '.join(item.matched)}")
-        return 0
-
-    if args.command == "validate":
-        findings = validate_repository(root)
-        if args.json:
-            print(
-                json.dumps(
-                    [
-                        {"severity": f.severity, "path": f.path, "message": f.message}
-                        for f in findings
-                    ],
-                    indent=2,
-                )
-            )
-        else:
-            print(format_findings(findings))
-        return 1 if any(f.severity == "error" for f in findings) else 0
-
-    if args.command == "export":
-        count = export_skills(root, Path(args.out), domain=args.domain)
-        print(f"exported {count} skill(s) to {args.out}")
-        return 0
-
-    if args.command == "pack":
-        path = pack_catalogue(root, Path(args.out))
-        print(f"wrote {path}")
-        return 0
-
-    parser.error(f"unknown command: {args.command}")
-    return 2
+    handler = handlers.get(args.command)
+    if handler is None:
+        parser.error(f"unknown command: {args.command}")
+    return handler()
 
 
 __all__ = ["main"]
@@ -3266,6 +3212,18 @@ __all__ = ["main"]
 if __name__ == "__main__":
     sys.exit(main())
 ```
+
+**Reconciled with the implementation.** Each command body was extracted into its own
+`_run_list`, `_run_show`, `_run_route`, `_run_validate`, `_run_export` and
+`_run_pack` helper, and `main()` now dispatches through a handler dictionary. Two
+problems with the original single-function shape are fixed by this:
+
+- `mypy --strict` rejected the shared `catalogue` variable being reassigned to
+  `None` across branches, and flagged the two `parser.error(...)` statements after
+  an `if`/`return` chain as unreachable.
+- `load_catalogue()` was called for every command, so `validate`, `export` and
+  `pack` failed when the packaged index had not been built yet. The catalogue is
+  now loaded only for the three commands that actually read it.
 
 - [ ] **Step 5: Run the test to verify it passes**
 

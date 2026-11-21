@@ -1,6 +1,7 @@
 # tests/test_generation.py
 import json
 
+from agentskills.frontmatter import parse_frontmatter
 from agentskills.generation import (
     SECTION_ORDER,
     build_skill,
@@ -88,6 +89,12 @@ def test_rendered_router_lists_every_leaf_skill() -> None:
     assert "name: router-data-engineering" in text
     for heading in SECTION_ORDER:
         assert f"## {heading}" in text
+
+
+def test_rendered_router_frontmatter_declares_triggers() -> None:
+    fields, _ = parse_frontmatter(render_router_markdown("data-engineering", (SKILL,), PROFILE))
+    assert "triggers" in fields
+    assert "trigiggers" not in fields
 
 
 def test_rendered_index_is_valid_json_with_the_skill() -> None:

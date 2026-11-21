@@ -127,7 +127,7 @@ def render_router_markdown(domain: str, skills: Sequence[Skill], profile: Domain
     lines.append(f"domain: {domain}")
     lines.append(f"tags: [router, routing, {domain}]")
     lines.append(
-        f'trigiggers: ["route a {domain} task", "which {domain} skill should I use"]'
+        f'triggers: ["route a {domain} task", "which {domain} skill should I use"]'
     )
     lines.append("---")
     lines.append("")
