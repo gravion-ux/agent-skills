@@ -2,4 +2,2632 @@
 
 Generated from `catalog/source` at version 0.1.0.
 
-Total skills: 0 across 0 domains.
+Total skills: 1209 across 42 domains.
+
+## agent-tooling-meta
+
+Router: `routers/agent-tooling-meta/SKILL.md` — 26 skills.
+
+- `add-a-citation-to-a-skill` — Add a citation to a skill so the claims in it can be traced back to their source.
+  - Triggers: add a citation to a skill, record where my skill guidance came from, reference sources inside a skill
+- `audit-a-catalogue-for-gaps` — Audit a catalogue for gaps by comparing the domains of real work against the skills available.
+  - Triggers: audit a catalogue for gaps, what skills are we missing, check our skill coverage against real work
+- `build-a-skill-evaluation-harness` — Build an evaluation harness that runs a catalogue against labelled tasks and scores the result.
+  - Triggers: build a skill evaluation harness, automatically score my skill catalogue, regression harness for skill routing
+- `compose-two-skills-into-a-chain` — Compose two skills into a chain where the first produces what the second consumes.
+  - Triggers: compose two skills into a chain, run skill a then skill b, chain skills with a clean hand-off
+- `create-a-skill-template` — Create a skill template that produces a correctly structured skill every time.
+  - Triggers: create a skill template, standardise the way skills are written, template for new skill files
+- `design-a-router-for-a-skill-catalogue` — Design a router that narrows a large catalogue to a small candidate set without hiding options.
+  - Triggers: design a router for a skill catalogue, build the selection layer over many skills, how to group skills for selection
+- `design-a-skill-for-a-multi-domain-task` — Design a skill for a task that spans domains by splitting it at the hand-off between them.
+  - Triggers: design a skill for a multi domain task, one task needing several kinds of skill, split a cross domain task into a chain
+- `design-a-skill-for-a-repeated-task` — Design a skill for a repeated task only after confirming the repetition is real.
+  - Triggers: design a skill for a repeated task, is this task worth a skill, is this repetitive enough to automate
+- `document-a-skill-for-another-agent` — Document a skill for another agent so it can be loaded and applied without asking a question.
+  - Triggers: document a skill for another agent, write a skill spec an agent can follow, handoff instructions for a skill
+- `keep-skill-outputs-consistent` — Keep skill outputs consistent by defining one shape that every skill in a group returns.
+  - Triggers: keep skill outputs consistent, same output format from every skill, standardise the shape of skill results
+- `manage-skill-dependencies-between-domains` — Manage cross-domain skill dependencies so a change in one domain cannot break another.
+  - Triggers: manage skill dependencies between domains, one domain change breaks another, reduce coupling between skill sets
+- `measure-skill-routing-accuracy` — Measure routing accuracy by checking the selected skill against the labelled correct answer.
+  - Triggers: measure skill routing accuracy, how often does the router pick correctly, routing precision and recall check
+- `migrate-a-skill-to-a-new-format` — Migrate skills to a new format by transforming the source and regenerating the output.
+  - Triggers: migrate a skill to a new format, convert the catalogue to the new structure, move skills to a new schema
+- `name-and-version-a-skill` — Name and version a skill so its identity stays stable as its behaviour changes.
+  - Triggers: name and version a skill, skill naming convention and semver, how should I version this skill
+- `plan-a-skill-catalogue-growth` — Plan catalogue growth by finding the repeated tasks that are missing a skill.
+  - Triggers: plan skill catalogue growth, which skills should we write next, expand our skill library deliberately
+- `retire-a-skill-nobody-uses` — Retire an unused skill without breaking the skills that point at it.
+  - Triggers: retire a skill nobody uses, remove an unused skill safely, deprecate a skill in my catalogue
+- `review-a-skill-for-quality` — Review a skill for quality by checking whether its steps actually decide anything.
+  - Triggers: review a skill for quality, critique this skill before publishing, what is weak about this skill
+- `structure-a-skill-file` — Structure a skill file so its sections appear in the fixed order the repository expects.
+  - Triggers: structure a skill file, correct section order for a skill, skill file layout and headings
+- `test-a-skill-against-real-requests` — Test a skill against the real requests it was written to handle.
+  - Triggers: test a skill against real requests, check my skill on actual examples, skill behaves right on real tasks
+- `tune-a-routing-keyword-list` — Tune a routing keyword list by testing each term against the requests it should catch.
+  - Triggers: tune a routing keyword list, improve the terms my router matches on, keywords for skill selection
+- `write-a-migration-note-for-a-skill-change` — Write a migration note that tells the people using a skill exactly what changed for them.
+  - Triggers: write a migration note for a skill change, tell users what changed in my skill, breaking change note for a skill
+- `write-a-reusable-skill` — Write a reusable skill that captures one repeated task with clear inputs and outputs.
+  - Triggers: write a reusable skill, turn this repeated task into a skill, capture this workflow as a skill
+- `write-a-skill-regression-suite` — Write a regression suite that locks in the behaviour a catalogue must not lose.
+  - Triggers: write a skill regression suite, tests that protect my catalogue routing, lock in current skill behaviour
+- `write-a-skill-safety-checklist` — Write a safety checklist for a skill that names the actions that need a confirmation.
+  - Triggers: write a skill safety checklist, which actions need confirmation in my skill, guardrails for an agent skill
+- `write-a-skill-trigger-phrase` — Write trigger phrases that match how people actually ask for the task.
+  - Triggers: write skill trigger phrases, phrase that would make my skill match, improve the triggers on a skill
+- `write-a-skill-usage-guide` — Write a usage guide that shows a user how to get the right result from a skill.
+  - Triggers: write a skill usage guide, explain to users how to use my skill, guide for calling a skill
+
+## ai-agents
+
+Router: `routers/ai-agents/SKILL.md` — 52 skills.
+
+- `add-human-approval-to-an-agent-step` — Add a human approval gate before an agent step that changes external state, with a recorded decision.
+  - Triggers: human approval for an agent step, pause an agent for confirmation, add a confirm-before-run gate
+- `add-memory-to-an-agent` — Add an agent memory layer that stores useful facts, recalls them at the right time and forgets stale entries.
+  - Triggers: agent memory, make an AI agent remember things, add persistence to an agent
+- `block-harmful-agent-actions` — Block harmful agent actions through scoped policies, confirmation gates, and auditable denials.
+  - Triggers: block harmful agent actions, deny unsafe agent tool calls, gate dangerous agent operations
+- `build-a-long-term-memory-store` — Build a long-term memory store with explicit schemas, retrievable records and a maintenance path for old entries.
+  - Triggers: long-term memory store, persist agent knowledge across sessions, build an agent knowledge base
+- `build-a-swarm-of-specialist-agents` — Design a swarm that routes each subtask to the specialist agent best equipped to complete it.
+  - Triggers: swarm of specialist agents, build a specialist agent swarm, route subtasks across agents
+- `build-an-agent-queue-and-worker` — Build a queue and worker system that processes agent jobs reliably without duplicate execution.
+  - Triggers: agent queue and worker, queue agent jobs for background processing, build a worker queue for agents
+- `cache-agent-results-for-reuse` — Cache agent results under versioned keys so equivalent requests can reuse prior verified outputs.
+  - Triggers: cache agent results, reuse previous agent outputs, add result caching to an agent
+- `cancel-a-running-agent` — Cancel a running agent while stopping new actions and preserving evidence of its final state.
+  - Triggers: cancel a running agent, stop an active agent task, terminate an agent execution
+- `cap-an-agents-iteration-count` — Cap an agent's iterations at a fixed maximum and stop for a named reason before the loop is exhausted.
+  - Triggers: cap agent iterations, stop an AI agent loop, limit agent loop cycles
+- `choose-a-model-per-agent-step` — Choose a model for each agent step from measured task difficulty, budget, and fallback criteria.
+  - Triggers: choose a model per agent step, route agent steps to models, select models dynamically for agents
+- `choose-when-to-split-work-across-agents` — Decide whether a task should run in one agent or split by comparing context needs, tool access and verification cost.
+  - Triggers: split work across agents, should I use multiple agents, decide on agent parallelism
+- `coordinate-parallel-agent-tasks` — Coordinate parallel agent tasks by dispatching independent work, merging outputs and resolving conflicting results.
+  - Triggers: coordinate parallel agent tasks, run agent subtasks concurrently, merge parallel agent results
+- `debug-a-looping-agent` — Debug a looping agent by finding the repeated state, the unmet exit condition and the smallest corrective change.
+  - Triggers: debug a looping agent, an AI agent keeps repeating itself, find why an agent won't stop
+- `design-a-durable-agent-workflow` — Design an agent workflow whose durable steps can be retried, resumed, and audited safely.
+  - Triggers: durable agent workflow, build a retry-safe agent workflow, persist agent workflow steps
+- `design-a-multi-agent-workflow` — Design a multi-agent workflow with clear roles, explicit handoffs and one owner for the final outcome.
+  - Triggers: multi-agent workflow, split work across several AI agents, orchestrate a team of agents
+- `design-a-persistent-agent-session` — Design a persistent session that preserves agent state while enforcing expiry and access controls.
+  - Triggers: persistent agent session, preserve agent state across restarts, design a resumable agent session
+- `design-a-short-term-memory-buffer` — Design a bounded short-term buffer that keeps recent turns without letting stale context crowd out the task.
+  - Triggers: short-term memory buffer, limit an agent's context window, trim recent agent messages
+- `design-a-status-report-for-an-agent` — Design a status report that summarizes an agent's objective, state, actions, blockers, and next step.
+  - Triggers: agent status report, summarize an agent run status, report agent progress and blockers
+- `design-a-supervisor-agent` — Design a supervisor that decomposes work, delegates it, and verifies each returned result.
+  - Triggers: supervisor agent design, supervise worker agents, coordinate agents with a supervisor
+- `design-a-tool-schema-for-an-agent` — Design a tool schema an agent can call correctly using clear names, typed fields and constrained outputs.
+  - Triggers: agent tool schema, design a tool definition for an LLM, write tool parameters for an agent
+- `design-an-agent-evaluation-set` — Design an agent evaluation set of representative tasks with fixed inputs, expected outcomes and pass criteria.
+  - Triggers: agent evaluation set, build a test suite for an AI agent, agent regression cases
+- `design-an-agent-router` — Design an agent router that classifies a request, selects one qualified handler and records the routing decision.
+  - Triggers: agent router, route requests to the right agent, build a request triage agent
+- `design-an-agent-sandbox` — Design an agent sandbox that isolates tool execution, limits credentials and blocks writes outside approved paths.
+  - Triggers: agent sandbox, isolate an AI agent's execution, design a sandbox for agent tools
+- `design-an-agent-trigger-from-a-webhook` — Design a webhook trigger that authenticates, deduplicates, and safely routes events into agent work.
+  - Triggers: agent webhook trigger, start an agent from a webhook, route webhook events to agents
+- `design-an-agent-with-a-single-purpose` — Design an agent with one measurable purpose, a bounded toolset and an explicit stop condition.
+  - Triggers: single-purpose agent, design an agent for one job, scope an autonomous agent
+- `detect-agent-drift-in-production` — Detect production agent drift by comparing live traces, outcomes, and costs against a trusted baseline.
+  - Triggers: detect agent drift in production, monitor an agent for behavior drift, compare live agent traces to baseline
+- `give-an-agent-a-budget-of-tokens` — Give an agent a token budget split across steps so it finishes within a declared spend limit.
+  - Triggers: agent token budget, limit tokens for an AI agent, cap the spend of an agent run
+- `give-an-agent-a-tool-contract` — Define a tool contract covering inputs, outputs, authorisation and failure semantics for each agent tool.
+  - Triggers: agent tool contract, document an agent's tools, define allowed agent tools
+- `hand-off-work-between-agents` — Hand off work between agents with a structured payload that carries context, status and the acceptance bar.
+  - Triggers: hand off work between agents, pass context from one agent to another, agent handoff payload
+- `handle-a-tool-failure-in-an-agent` — Handle an agent tool failure by classifying the error, retrying only safe causes and preserving the trace.
+  - Triggers: handle a tool failure in an agent, recover from a failed agent tool, agent tool error handling
+- `implement-a-blackboard-pattern-for-agents` — Implement a shared blackboard that lets agents coordinate through observable work items.
+  - Triggers: agent blackboard pattern, coordinate agents with a blackboard, shared blackboard for agents
+- `implement-agent-reflection` — Implement a reflection step where an agent critiques its own output and revises it against explicit criteria.
+  - Triggers: agent reflection, make an agent critique its own output, add a self-review step to an agent
+- `implement-self-critique-and-retry` — Implement a self-critique and retry loop that reruns failed agent work only when the failure is judged fixable.
+  - Triggers: self-critique and retry, retry a failed agent run, recover from a bad agent result
+- `let-an-agent-act-on-a-scheduled-check` — Let an agent act on a scheduled check only when a defined condition and authorization both hold.
+  - Triggers: scheduled agent check, let an agent act on a condition, automate a periodic agent check
+- `let-an-agent-call-other-agents-as-tools` — Expose specialist agents as typed tools that another agent can invoke under controlled permissions.
+  - Triggers: call other agents as tools, invoke subagents from an agent, expose agents as callable tools
+- `make-an-agent-action-idempotent` — Make an agent action idempotent with a stable key so retries cannot duplicate external effects.
+  - Triggers: idempotent agent action, stop duplicate agent writes, make agent tool calls safe to retry
+- `plan-an-agent-task-decomposition` — Split an agent objective into ordered subtasks with dependencies, budgets and a verifiable final output.
+  - Triggers: agent task decomposition, break an agent objective into steps, plan subtasks for an autonomous agent
+- `price-an-agent-run` — Price an agent run by itemizing model tokens, tool calls, storage, and retry overhead.
+  - Triggers: price an agent run, calculate the cost of agent execution, itemize agent tool and token costs
+- `rate-limit-an-agent-endpoint` — Rate-limit an agent endpoint by identity while returning clear retry guidance and usable metrics.
+  - Triggers: rate limit an agent endpoint, throttle requests to an agent service, enforce agent API quotas
+- `red-team-an-agent` — Red-team an agent with authorized adversarial cases that expose unsafe tool use and instruction failures.
+  - Triggers: red team an agent, run adversarial tests against an agent, test an agent for prompt injection
+- `resume-an-interrupted-agent-task` — Resume an interrupted agent task from its last valid checkpoint without duplicating external actions.
+  - Triggers: resume an interrupted agent task, continue an agent run after failure, recover a stopped agent task
+- `roll-back-an-agent-prompt-change` — Roll back an agent prompt to a prior verified release with a controlled diff and validation.
+  - Triggers: roll back an agent prompt, revert a regressing prompt release, restore a previous agent prompt
+- `route-a-task-to-a-smaller-model` — Route an agent task to a smaller model when defined checks show it can meet the required quality.
+  - Triggers: route a task to a smaller model, use a cheaper model for agent tasks, downshift eligible agent work
+- `run-an-agent-in-a-docker-sandbox` — Run an agent inside a Docker sandbox with pinned image, restricted mounts and a hard time limit.
+  - Triggers: docker sandbox for an agent, run an agent in a container, containerised agent execution
+- `schedule-a-recurring-agent-task` — Schedule a recurring agent task with isolated runs, bounded catch-up, and auditable outcomes.
+  - Triggers: schedule a recurring agent task, run an agent on a schedule, repeat an automated agent job
+- `score-an-agent-run` — Score an agent run against the evaluation set and separate hard failures from partial outcomes.
+  - Triggers: score an agent run, rate an AI agent's test results, judge agent output quality
+- `stream-agent-progress-to-a-user` — Stream concise agent progress events that show actions, outcomes, and blockers as they occur.
+  - Triggers: stream agent progress, show live agent status updates, tail an agent run
+- `trace-an-agent-execution` — Trace an agent execution with the prompts, tool calls, state changes and timing needed to reproduce it.
+  - Triggers: trace an agent execution, log what an AI agent did, agent run audit trail
+- `use-a-checkpoint-in-a-long-agent-run` — Use a checkpoint to bound recovery work during a long-running agent execution.
+  - Triggers: checkpoint a long agent run, add checkpoints to an agent execution, snapshot a running agent task
+- `version-an-agent-prompt` — Version an agent prompt with immutable releases, evaluation evidence, and a controlled active pointer.
+  - Triggers: version an agent prompt, track prompt releases for agents, promote a versioned agent prompt
+- `write-an-agent-runbook` — Write an agent runbook with actionable diagnosis, containment, rollback, and escalation steps.
+  - Triggers: write an agent runbook, create an operational guide for an agent, document agent incident procedures
+- `write-an-agent-system-prompt` — Write a system prompt that fixes the agent's role, boundaries, output format and refusal rules.
+  - Triggers: agent system prompt, write instructions for an AI agent, fix a broken agent prompt
+
+## api-design
+
+Router: `routers/api-design/SKILL.md` — 22 skills.
+
+- `choose-pagination-for-a-collection` — Chooses cursor or offset pagination and defines its collection contract.
+  - Triggers: api collection pagination, choose cursor pagination, paginate a rest collection
+- `design-a-bulk-endpoint` — Designs a bulk API operation with item limits, partial results, and safe retries.
+  - Triggers: bulk api endpoint, design a batch api operation, accept many api items
+- `design-a-graphql-schema` — Designs a GraphQL type system with queries, mutations, connections, and safe errors.
+  - Triggers: graphql schema design, design graphql connections, model graphql mutations
+- `design-a-rest-resource-model` — Models API resources as URLs, methods, and relationships.
+  - Triggers: rest resource model, model rest resources, design rest endpoints
+- `design-a-search-endpoint` — Defines a searchable collection with query filters, ordering, and bounded results.
+  - Triggers: api search endpoint, design a filtered search api, specify api search pagination
+- `design-a-webhook-delivery-contract` — Defines webhook events, signed deliveries, retries, ordering, and consumer handling.
+  - Triggers: webhook delivery contract, design signed webhooks, define webhook retry behavior
+- `design-an-authentication-flow` — Designs token authentication with issuance, renewal, revocation, and failure behavior.
+  - Triggers: api authentication flow, design token authentication, specify an oauth login flow
+- `design-an-authorization-model` — Maps roles and resource permissions to enforceable API authorization decisions.
+  - Triggers: api authorization model, design endpoint permissions, map roles to api actions
+- `design-an-error-response-format` — Defines a consistent machine-readable error envelope for API failures.
+  - Triggers: api error response format, standardize api errors, design a stable error envelope
+- `design-an-event-streaming-api` — Defines an event stream contract with schemas, delivery semantics, replay, and backpressure.
+  - Triggers: event streaming api, design a streaming event contract, specify event topic retention
+- `design-api-key-scopes` — Defines scoped API keys with least-privilege permissions and safe lifecycle controls.
+  - Triggers: api key scopes, define api key permissions, scope an api access key
+- `design-api-observability-headers` — Defines request, rate-limit, and diagnostic headers for traceable API calls.
+  - Triggers: api observability headers, propagate a request id header, design tracing response headers
+- `design-api-versioning-strategy` — Selects an API versioning scheme with explicit compatibility and migration rules.
+  - Triggers: api versioning strategy, choose api versioning, version an api contract
+- `design-idempotency-keys` — Defines idempotency keys so retried mutation requests return one safe outcome.
+  - Triggers: idempotency key design, support safe api retries, define idempotent api mutations
+- `design-long-running-operations` — Designs an asynchronous operation resource with status, polling, and completion rules.
+  - Triggers: long running api operation, design an async job endpoint, specify api operation polling
+- `plan-an-api-deprecation` — Plans an API deprecation timeline, migration path, and safe endpoint sunset.
+  - Triggers: api deprecation plan, sunset an api version, schedule an endpoint migration
+- `plan-an-api-gateway-policy` — Plans gateway routing, authentication, quotas, and resilience policies for API routes.
+  - Triggers: api gateway policy, plan gateway routing rules, define api traffic policy
+- `rate-limit-an-api-endpoint` — Sets endpoint quotas, client identification, and retry behavior for API traffic.
+  - Triggers: rate limit an api endpoint, set api request quotas, design endpoint throttling
+- `review-an-api-change-for-clients` — Reviews an API change for client breakage, compatibility, and migration impact.
+  - Triggers: review an api change for clients, assess client breaking changes, check api migration impact
+- `review-an-api-for-consistency` — Reviews an API contract for inconsistent naming, payloads, and response behavior.
+  - Triggers: review api consistency, check api contract conventions, audit api endpoint consistency
+- `write-an-openapi-specification` — Writes an OpenAPI contract that captures schemas, operations, and error responses.
+  - Triggers: openapi specification, write an openapi spec, document an http api in openapi
+- `write-api-documentation-examples` — Writes copyable API examples that cover normal flows and important failures.
+  - Triggers: api documentation examples, write copyable api examples, document api errors and pagination
+
+## architecture-design
+
+Router: `routers/architecture-design/SKILL.md` — 26 skills.
+
+- `assess-a-technical-proposal` — Assess a technical proposal for feasibility, risk, operability, and alignment with constraints.
+  - Triggers: assess a technical proposal, review an architecture proposal, evaluate a system design proposal
+- `choose-a-message-queue` — Choose a message queue using delivery, ordering, latency, throughput, and operating constraints.
+  - Triggers: message queue selection, choose a message broker, compare queue technologies
+- `choose-between-a-modular-monolith-and-microservices` — Compare a modular monolith with microservices against team topology, scaling, and operating cost.
+  - Triggers: modular monolith or microservices, choose monolith versus microservices, service architecture comparison
+- `define-service-boundaries` — Define service boundaries around business capabilities, data ownership, and change cadence.
+  - Triggers: define service boundaries, split a system into services, bounded context service design
+- `design-a-batch-processing-pipeline` — Design a batch pipeline with checkpoints, retries, idempotency, and observable completion.
+  - Triggers: batch processing pipeline, design a resilient data job, checkpointed batch architecture
+- `design-a-caching-layer` — Design a cache that reduces load while preserving correctness and predictable invalidation.
+  - Triggers: cache layer design, add a caching layer, cache invalidation architecture
+- `design-a-data-model-for-a-feature` — Model a feature's entities, relationships, invariants, indexes, and lifecycle states.
+  - Triggers: feature data model, design a database model, entity relationship design for a feature
+- `design-a-failover-strategy` — Design a failover strategy with detection, promotion, recovery, and ownership boundaries.
+  - Triggers: failover strategy design, plan automatic failover, service recovery architecture
+- `design-a-file-upload-and-processing-flow` — Design a secure file upload and processing flow with bounded storage and observable outcomes.
+  - Triggers: file upload architecture, design upload processing flow, secure file ingestion design
+- `design-a-multi-tenant-data-model` — Design a multi-tenant data model that isolates access while supporting tenant-specific needs.
+  - Triggers: multi tenant data model, design tenant isolation, tenant aware database schema
+- `design-a-permission-model` — Design a permission model with roles, resource scopes, deny rules, and auditable checks.
+  - Triggers: permission model design, role based access architecture, resource authorization policy
+- `design-a-public-api-contract` — Specify a versioned public API with resources, errors, compatibility, and usage policies.
+  - Triggers: public api contract, design a versioned api, api compatibility specification
+- `design-a-rate-limit-and-quota-policy` — Design a rate-limit and quota policy that protects capacity while serving fair demand.
+  - Triggers: api rate limit policy, design request quotas, rate limiting architecture
+- `design-an-event-driven-workflow` — Design an event-driven workflow with event contracts, delivery semantics, and recovery paths.
+  - Triggers: event driven workflow, design an event workflow, asynchronous event architecture
+- `design-an-idempotent-api` — Design an idempotent API that safely tolerates retries, duplicates, and partial failures.
+  - Triggers: idempotent api design, make an api retry safe, idempotency key contract
+- `design-for-observability` — Define observability signals, service objectives, dashboards, and actionable alerts for a system.
+  - Triggers: system observability design, add service monitoring, architecture alerting plan
+- `evaluate-a-third-party-service` — Evaluate a third-party service against reliability, security, cost, and exit constraints.
+  - Triggers: evaluate a third party service, assess an api vendor, third party dependency review
+- `plan-a-decomposition-of-a-god-service` — Plan a decomposition of a god service into owned capabilities with incremental extraction.
+  - Triggers: god service decomposition, split a monolith by domain, extract a capability from a large service
+- `plan-a-read-write-split` — Plan a read-write split with replica selection, consistency rules, and failover behavior.
+  - Triggers: read write split, route reads to replicas, plan database read scaling
+- `plan-a-schema-evolution-strategy` — Plan a schema evolution strategy that supports compatible reads, writes, and deployments.
+  - Triggers: schema evolution strategy, change a shared database schema, expand migrate contract plan
+- `plan-a-strangler-fig-migration` — Plan a strangler-fig migration that routes traffic incrementally and preserves a tested rollback path.
+  - Triggers: strangler fig migration, plan an incremental migration, route traffic from a legacy system
+- `plan-a-zero-downtime-schema-change` — Plan a zero-downtime schema change using expand, migrate, and contract phases.
+  - Triggers: zero downtime schema change, live database migration plan, expand and contract schema rollout
+- `review-an-architecture-diagram` — Review an architecture diagram for missing components, unclear flows, and unverifiable guarantees.
+  - Triggers: architecture diagram review, check a system diagram, validate an architecture drawing
+- `write-a-migration-rollback-plan` — Write a migration rollback plan with triggers, checkpoints, data handling, and decision ownership.
+  - Triggers: migration rollback plan, write a rollback procedure, production migration retreat plan
+- `write-a-system-design-document` — Produce a system design that maps requirements to components, interfaces, data flows, and failure handling.
+  - Triggers: system design document, write a system design document, architecture design proposal
+- `write-an-architecture-decision-record` — Record an architecture decision with context, options, consequences, and explicit assumptions.
+  - Triggers: architecture decision record, write an adr, record a technical decision
+
+## business-ops
+
+Router: `routers/business-ops/SKILL.md` — 30 skills.
+
+- `check-compliance-with-a-process` — Check a process execution against required controls and document exceptions with owners.
+  - Triggers: check process compliance, audit process execution, review business process controls
+- `collect-and-organise-business-feedback` — Collect and organize business feedback into themes, evidence, owners, and response decisions.
+  - Triggers: collect business feedback, organize stakeholder feedback, turn feedback into business themes
+- `delegate-a-task-with-a-clear-outcome` — Delegate a task with an explicit outcome, owner, guardrails, and acceptance check.
+  - Triggers: delegate task with clear outcome, write task delegation brief, delegate work with acceptance criteria
+- `document-a-business-process` — Document a business process with owners, inputs, steps, exceptions, and success measures.
+  - Triggers: document business process, write business process procedure, business process owners and steps
+- `find-the-bottleneck-in-a-process` — Find the process bottleneck by comparing queue time, capacity, and downstream impact.
+  - Triggers: find process bottleneck, locate the process constraint, reduce process queue time
+- `follow-up-on-a-meeting-commitment` — Close a meeting commitment by confirming the owner, deliverable, and evidence of completion.
+  - Triggers: follow up on meeting commitment, close a meeting commitment, meeting commitment follow-up
+- `forecast-next-quarter-operating-costs` — Forecast next-quarter operating costs with drivers, scenarios, and a variance-based update path.
+  - Triggers: forecast next quarter operating costs, quarterly operating cost forecast, model quarterly cost drivers
+- `give-status-on-a-blocked-task` — Report a blocked task with impact, attempted remedies, owner, and a dated recovery path.
+  - Triggers: status on blocked task, report blocked work status, unblock task with recovery path
+- `make-a-decision-with-limited-information` — Make a reversible decision under incomplete information by testing assumptions and defining a checkpoint.
+  - Triggers: decision with limited information, business decision under uncertainty, reversible decision checkpoint
+- `manage-a-vendor-renewal` — Manage a vendor renewal with performance review, open issues, negotiation, and approval.
+  - Triggers: manage vendor renewal, prepare vendor renewal, review vendor before renewal
+- `map-a-process-from-start-to-finish` — Map a process from trigger to completion with handoffs, decisions, and time costs.
+  - Triggers: map process start to finish, create end-to-end process map, process handoff map
+- `offboard-a-team-member-smoothly` — Coordinate a team member's offboarding with controlled access, handover, and closeout.
+  - Triggers: offboard team member smoothly, coordinate team member offboarding, departing employee handover
+- `onboard-a-new-hire-to-the-business` — Onboard a new hire with role context, access, stakeholders, and first measurable work.
+  - Triggers: onboard new hire to business, new hire operations onboarding, 30-day new hire plan
+- `plan-a-week-of-focused-work` — Build a focused weekly plan with capacity limits, priority work, and protected time.
+  - Triggers: plan a focused work week, schedule focused work week, balance weekly priorities and capacity
+- `prepare-a-budget-proposal` — Prepare a budget proposal with assumptions, costs, options, controls, and approval needs.
+  - Triggers: prepare budget proposal, request operating budget, present business funding request
+- `prepare-a-decision-brief` — Prepare a decision brief with options, evidence, trade-offs, risks, and a clear recommendation.
+  - Triggers: business decision brief, prepare a business decision brief, options and recommendation brief
+- `prepare-a-team-meeting-agenda` — Prepare a focused team meeting agenda with objectives, owners, and timed discussion items.
+  - Triggers: team meeting agenda, prepare a team meeting agenda, focused team meeting agenda
+- `prioritise-a-backlog-of-tasks` — Prioritize a task backlog using urgency, impact, dependencies, and available capacity.
+  - Triggers: prioritise task backlog, order task backlog by impact, rebalance task backlog
+- `reconcile-a-monthly-expense-report` — Reconcile a monthly expense report by matching transactions, categories, approvals, and totals.
+  - Triggers: reconcile monthly expense report, match monthly expenses to receipts, monthly expense reconciliation
+- `run-a-daily-standup` — Run a daily standup with consistent updates, blockers, and assigned follow-ups.
+  - Triggers: daily standup, run a daily standup, daily team standup
+- `run-a-retrospective-on-a-workstream` — Run a workstream retrospective to identify causes, corrective actions, and measurable follow-through.
+  - Triggers: workstream retrospective, run a workstream retrospective, improve a workstream process
+- `run-a-small-process-improvement` — Run a small process improvement by baselining a metric, testing a change, and checking results.
+  - Triggers: run small process improvement, run a process improvement pilot, improve one business process
+- `run-a-vendor-selection-check` — Run a vendor selection check against requirements, risk, cost, and contract conditions.
+  - Triggers: vendor selection check, evaluate vendor against requirements, vendor scoring and risk check
+- `summarise-a-meeting-for-a-stakeholder` — Summarize a meeting for a stakeholder with decisions, impact, actions, and open risks.
+  - Triggers: stakeholder meeting summary, summarize meeting for stakeholder, stakeholder decision digest
+- `track-a-budget-in-a-spreadsheet` — Track a budget in a spreadsheet with clear categories, owners, variances, and thresholds.
+  - Triggers: track budget in spreadsheet, monitor budget variance, update budget tracker spreadsheet
+- `triage-an-inbox-to-action-items` — Triage an inbox into owned, prioritized actions without losing the source context.
+  - Triggers: triage inbox action items, turn inbox into action items, route urgent inbox requests
+- `write-a-business-case-for-a-project` — Build a business case for a project with value, costs, risks, and approval criteria.
+  - Triggers: business case for project, justify project investment, project benefits and costs
+- `write-a-standard-operating-procedure` — Write a standard operating procedure with repeatable steps, controls, and escalation rules.
+  - Triggers: write standard operating procedure, write business SOP, procedure steps and escalation
+- `write-a-weekly-business-update` — Compile a weekly business update with progress, risks, decisions, and next priorities.
+  - Triggers: weekly business update, write a weekly business update, business update for stakeholders
+- `write-meeting-minutes-with-action-items` — Write meeting minutes that capture decisions, owners, deadlines, and open questions.
+  - Triggers: meeting minutes with action items, write meeting minutes with actions, meeting decision minutes
+
+## code-quality
+
+Router: `routers/code-quality/SKILL.md` — 30 skills.
+
+- `add-typing-to-an-untyped-function` — Add precise type annotations to an untyped function without altering its runtime behavior.
+  - Triggers: add types to function, annotate untyped function, function typing pass
+- `apply-a-formatter-consistently` — Apply the repository formatter consistently and keep the resulting diff behavior-neutral.
+  - Triggers: apply code formatter, format files consistently, repository formatting pass
+- `audit-a-file-for-hidden-side-effects` — Audit a file for hidden side effects by tracing I/O globals state and network calls.
+  - Triggers: hidden side effects, audit file side effects, find implicit io effects
+- `detect-and-remove-duplicate-utility-functions` — Detect duplicate utility functions and consolidate them into one tested shared helper.
+  - Triggers: duplicate utility functions, merge overlapping helpers, find redundant helpers
+- `enable-strict-mode-on-a-module` — Enable strict type checking for one module and resolve its errors in focused changes.
+  - Triggers: enable strict type checking, strict mode for module, module type check hardening
+- `enforce-coding-standards-with-tooling` — Enforce coding standards automatically with configured linters formatters and focused CI checks.
+  - Triggers: enforce code standards, automated lint checks, coding standard enforcement
+- `improve-a-codebase-readme` — Improve a codebase README with verified setup usage architecture and maintenance guidance.
+  - Triggers: improve codebase readme, fix repository readme, contributor readme review
+- `keep-configuration-in-one-place` — Consolidate scattered configuration into one typed source with documented defaults.
+  - Triggers: centralize configuration, one configuration source, collect scattered config
+- `keep-functions-short-and-focused` — Split a long function into focused units while preserving its public behavior and callers.
+  - Triggers: split a long function, short focused functions, function length refactor
+- `make-error-messages-actionable` — Rewrite error messages to state the failed operation, relevant context, and next action.
+  - Triggers: actionable error messages, improve exception message, clearer validation errors
+- `name-things-well` — Rename misleading identifiers so their names state purpose, scope, and ownership clearly.
+  - Triggers: better code names, rename unclear identifiers, identifier naming review
+- `reduce-a-modules-cyclomatic-complexity` — Reduce module complexity by extracting cohesive decisions and preserving every existing branch.
+  - Triggers: reduce cyclomatic complexity, lower module complexity, complexity metric refactor
+- `refactor-for-testability` — Refactor code for testability by injecting dependencies without changing observable behavior.
+  - Triggers: refactor for testability, make code easier to test, inject dependencies for tests
+- `remove-a-feature-flag-left-behind` — Remove a retired feature flag after confirming every branch and configuration key is dead.
+  - Triggers: remove retired feature flag, delete stale flag branch, feature flag cleanup
+- `remove-a-temporary-workaround` — Remove a temporary workaround after proving the underlying cause is fixed and covered.
+  - Triggers: remove temporary workaround, delete stale workaround, workaround cleanup review
+- `remove-an-unsafe-cast` — Remove an unsafe cast by validating the value or replacing it with a sound type.
+  - Triggers: remove unsafe cast, replace unsafe type cast, cast safety cleanup
+- `remove-dead-dependencies-and-code` — Remove unreachable modules unused imports and dead branches after proving they are unreferenced.
+  - Triggers: remove dead code, delete unused imports, strip dead branches
+- `remove-duplicated-code` — Remove duplicated code by extracting one focused implementation and preserving every caller contract.
+  - Triggers: duplicate code removal, extract duplicated code, consolidate repeated code
+- `replace-a-flag-argument-with-two-functions` — Replace a boolean flag with two named functions so each call path states its intent.
+  - Triggers: remove boolean flag argument, split flag argument functions, boolean parameter refactor
+- `replace-magic-numbers-with-named-constants` — Replace unexplained numeric literals with named constants that reveal their domain meaning.
+  - Triggers: replace magic numbers, named numeric constants, extract numeric literals
+- `review-a-diff-for-correctness` — Review a code diff for correctness while keeping behavior unchanged and tests passing.
+  - Triggers: diff correctness review, review code diff for correctness, correctness review of a diff
+- `review-a-pr-for-scope-discipline` — Review a pull request for scope discipline by separating behavior fixes from unrelated changes.
+  - Triggers: pull request scope review, review pr for scope, scope discipline check
+- `review-dependency-hygiene` — Review dependencies for unused packages duplicates vulnerabilities and unnecessary runtime weight.
+  - Triggers: dependency hygiene review, audit project dependencies, unused package cleanup
+- `run-a-weekly-quality-improvement-pass` — Run a weekly quality pass that selects one small debt item verifies it and records the result.
+  - Triggers: weekly quality improvement, automated weekly code cleanup, recurring quality pass
+- `simplify-a-complex-condition` — Simplify a complex condition with equivalent logic, named predicates, and unchanged branch behavior.
+  - Triggers: complex condition simplification, simplify nested condition, condition readability refactor
+- `spot-a-nullable-bug-by-reading-types` — Locate a nullable dereference bug by following declared types and ownership boundaries.
+  - Triggers: nullable type bug, read types to spot null bug, nullable dereference review
+- `stop-catching-and-ignoring-errors` — Stop swallowing errors by handling, propagating, or reporting them with explicit intent.
+  - Triggers: stop ignoring errors, remove empty exception catch, ignored exception cleanup
+- `tighten-a-loose-type-annotation` — Tighten a loose annotation to reflect proven constraints without narrowing valid inputs.
+  - Triggers: tighten loose type, precise type annotation, broad any type cleanup
+- `write-a-code-smell-triage-list` — Create a code smell triage list that ranks evidence impact effort and safe first fixes.
+  - Triggers: code smell triage, prioritize code smells, technical debt smell list
+- `write-self-documenting-code` — Make code self-documenting by replacing misleading comments with intent-revealing structure.
+  - Triggers: self documenting code, replace stale code comments, code clarity without comments
+
+## communication
+
+Router: `routers/communication/SKILL.md` — 26 skills.
+
+- `answer-a-question-you-do-not-know` — Answer a question you do not know by saying so clearly and offering a route to the answer.
+  - Triggers: answer a question you do not know, what to say when I do not have the answer, reply honestly when you are unsure
+- `ask-a-colleague-a-specific-question` — Ask a colleague a question that can be answered directly instead of prompting a negotiation.
+  - Triggers: ask a colleague a specific question, how do I ask for information without being vague, write a question to a teammate
+- `ask-for-feedback-on-your-work` — Ask for feedback on your own work by naming what you want judged and when you need it.
+  - Triggers: ask for feedback on my work, how do I request a code review with focus, request specific feedback from a reviewer
+- `communicate-a-delay-to-a-stakeholder` — Communicate a delay with the new date, the reason and what is being done about it.
+  - Triggers: communicate a delay to a stakeholder, tell a client we will be late, announce a slipped deadline
+- `communicate-in-a-crisis-hour` — Communicate in a crisis hour by stating the facts, the impact and the next update time.
+  - Triggers: communicate in a crisis hour, status update during an outage, tell customers about an incident
+- `decline-a-meeting-invite` — Decline a meeting invite with a clear no and a reason the organiser can act on.
+  - Triggers: decline a meeting invite, politely refuse a meeting invitation, say no to a calendar invite
+- `deliver-bad-news-with-a-plan` — Deliver bad news by stating it clearly and attaching the plan that goes with it.
+  - Triggers: deliver bad news with a plan, announce that we missed a deadline, tell the team a project slipped
+- `give-a-toast-at-a-team-event` — Give a toast at a team event that names the people and the moments that mattered.
+  - Triggers: give a toast at a team event, speech for a team celebration, say a few words at a work party
+- `give-feedback-to-a-peer` — Give a peer feedback that is specific, kind and about the work rather than the person.
+  - Triggers: give feedback to a peer, how do I tell a colleague what I think, honest feedback for a teammate
+- `present-a-result-to-an-executive` — Present a result to an executive by leading with the decision and the number behind it.
+  - Triggers: present a result to an executive, brief leadership on an outcome, summarise results for the board
+- `reschedule-a-meeting-without-apology` — Reschedule a meeting by offering two concrete times and keeping the reason to one line.
+  - Triggers: reschedule a meeting without apologising, move a meeting to a different time, propose new times for our call
+- `run-a-difficult-conversation` — Run a difficult conversation by preparing the facts, the outcome and the room.
+  - Triggers: run a difficult conversation, prepare for a hard talk at work, conversation with an unhappy colleague
+- `speak-in-a-meeting-with-confidence` — Speak in a meeting by preparing the point, the evidence and the ask before it starts.
+  - Triggers: speak in a meeting with confidence, how to present to my team, prepare what to say in a meeting
+- `summarise-a-long-thread` — Summarise a long email thread into the decisions, the open questions and the next actions.
+  - Triggers: summarise a long email thread, catch me up on this conversation, what was decided in this thread
+- `write-a-clear-email` — Write an email whose ask, context and next step are clear in the first three lines.
+  - Triggers: write a clear email, email that explains what I need, draft a professional email
+- `write-a-hand-over-message` — Write a hand-over message that lets the next person continue the work without asking anything.
+  - Triggers: write a hand over message, hand this work over to someone else, handover note for a project
+- `write-a-kind-rejection-to-a-candidate` — Reject a candidate kindly with a clear decision, respect and something concrete to take away.
+  - Triggers: write a kind rejection to a candidate, email a job applicant who was not selected, respond to an unsuccessful interview candidate
+- `write-a-meeting-invite-with-an-agenda` — Write a meeting invite whose agenda says what will be decided and who prepares what.
+  - Triggers: write a meeting invite with an agenda, agenda for a working meeting, invite people to a meeting with prep
+- `write-a-message-for-a-time-zone-gap` — Write a message that works for a recipient in a different time zone without being vague.
+  - Triggers: write a message for a time zone gap, email a colleague in another timezone, async update for someone asleep
+- `write-a-professional-follow-up` — Write a follow-up that recaps the decisions and lists the actions with their owners.
+  - Triggers: write a professional follow up, email recap after our meeting, confirm the actions we agreed
+- `write-a-recommendation-for-a-colleague` — Write a recommendation that makes the colleague's case with evidence rather than adjectives.
+  - Triggers: write a recommendation for a colleague, reference letter for a job application, support a colleague for a role
+- `write-a-reply-to-a-customer-complaint` — Reply to a customer complaint by acknowledging it, explaining it and committing to a next step.
+  - Triggers: reply to a customer complaint, answer an angry customer email, respond to a customer escalation
+- `write-a-reply-to-a-hard-email` — Reply to a difficult email by staying factual, addressing every point and not escalating.
+  - Triggers: reply to a hard email, respond to a blunt or critical message, answer an aggressive email calmly
+- `write-a-short-status-update` — Write a status update that reports progress, blockers and the next step without padding.
+  - Triggers: short status update, where are we on this work, weekly progress note for my team
+- `write-a-thank-you-note-that-matters` — Write a thank-you that names the specific contribution rather than the good intention.
+  - Triggers: write a thank you note that matters, thank a colleague properly at work, appreciation message for a colleague
+- `write-an-update-for-a-non-technical-audience` — Explain a technical update to a non-technical audience in terms of what it means for them.
+  - Triggers: write an update for a non technical audience, explain this to the client in plain words, translate technical work for leadership
+
+## content-creation
+
+Router: `routers/content-creation/SKILL.md` — 30 skills.
+
+- `build-a-content-brief-for-a-writer` — Write a one-page brief that gives a writer the angle, sources and constraints.
+  - Triggers: build a content brief for a writer, writing brief for my freelancer, editorial brief document
+- `build-a-prompt-library-for-content` — Assemble reusable content prompts with slots for audience, format and source material.
+  - Triggers: build a prompt library for content, reusable prompts for writing, content prompt templates
+- `build-an-editorial-calendar` — Map planned posts onto a dated editorial calendar with owners and channels.
+  - Triggers: build an editorial calendar, content calendar for my blog, plan my publishing schedule
+- `check-a-draft-for-plagiarism-risk` — Scan a draft for passages that overlap too closely with published sources.
+  - Triggers: check a draft for plagiarism risk, is this draft plagiarised, similarity check on my draft
+- `create-a-content-series` — Plan a content series with a shared theme, episode order and release rhythm.
+  - Triggers: create a content series, plan a multi-part content series, series of posts
+- `edit-a-draft-for-clarity` — Edit a draft so each sentence states one idea in plain, concrete language.
+  - Triggers: edit a draft for clarity, tighten my article draft, copyedit my article
+- `fact-check-a-draft` — Check every claim in a draft against a source and flag the ones that fail.
+  - Triggers: fact-check a draft, verify the facts in my article, check my draft's claims
+- `handle-a-content-pushback-comment` — Reply to a critical comment accurately, calmly and with a clear resolution.
+  - Triggers: handle a content pushback comment, reply to a critical comment, answer a negative comment on my post
+- `manage-a-content-backlog` — Triage a content backlog into priorities with owners and next actions.
+  - Triggers: manage a content backlog, triage my content ideas, prioritise my blog backlog
+- `measure-content-roi` — Measure content return by tying production cost to traffic, leads and revenue.
+  - Triggers: measure content roi, content return on investment, is our content profitable
+- `optimise-a-post-for-search-engines` — Adjust a published post for search intent, structure and technical basics.
+  - Triggers: optimise a post for search engines, improve my article's SEO, seo audit of a blog post
+- `outline-a-long-form-article` — Build a section-by-section outline for a long-form article with a clear through-line.
+  - Triggers: outline a long-form article, structure my article, article outline
+- `pick-a-content-topic-that-fits-the-audience` — Choose one content topic that matches the audience's interests, gaps and level of expertise.
+  - Triggers: content topic for my audience, choose a topic to write about, pick a content topic
+- `repurpose-one-idea-into-five-formats` — Turn one source piece into five platform-specific drafts without duplicating wording.
+  - Triggers: repurpose one idea into five formats, turn this post into five formats, repurpose content across channels
+- `research-a-content-idea` — Gather sourced evidence for a content idea and turn it into an annotated research brief.
+  - Triggers: research a content idea, find sources for my article, research before writing
+- `review-content-performance` — Review published content against traffic, engagement and conversion goals.
+  - Triggers: review content performance, how did my blog posts perform, content performance report
+- `update-an-outdated-article` — Refresh an older article so its facts, examples and links are current.
+  - Triggers: update an outdated article, refresh this old blog post, bring an article up to date
+- `write-a-case-study-for-a-blog` — Write a case study that shows the problem, the chosen approach and the measured result.
+  - Triggers: write a case study for a blog, customer case study blog post, blog case study
+- `write-a-community-post` — Write a community post that answers a question and invites specific replies.
+  - Triggers: write a community post, forum reply for my question, post in our community
+- `write-a-how-to-guide-for-a-blog` — Write a blog how-to that walks the reader from setup to a finished result.
+  - Triggers: write a how-to guide for a blog, blog tutorial draft, step by step blog guide
+- `write-a-listicle-that-earns-its-links` — Write a list post whose entries are specific enough to be worth linking to.
+  - Triggers: write a listicle that earns its links, best of list article, list post for backlinks
+- `write-a-long-form-article` — Draft a complete long-form article with a title, hook, body and close.
+  - Triggers: write a long-form article, draft my blog article, write the article draft
+- `write-a-newsletter-issue` — Write a newsletter issue with a subject line, sections and a single primary action.
+  - Triggers: write a newsletter issue, draft an email newsletter, newsletter for subscribers
+- `write-a-product-update-post` — Turn release notes into a product update post that states what changed and why.
+  - Triggers: write a product update post, announce our product update, product release announcement
+- `write-a-short-form-post` — Write a short social post that opens with a hook and ends with one clear call to action.
+  - Triggers: write a short-form post, draft a social post, short post for social media
+- `write-a-thread-that-holds-attention` — Sequence a social thread so each post pulls the reader into the next one.
+  - Triggers: write a thread that holds attention, social media thread, write a post thread
+- `write-a-video-script-for-a-short` — Write a short-video script with a visual cue and spoken line for every beat.
+  - Triggers: video script for a short, write a short video script, tiktok script draft
+- `write-headlines-and-subheadings` — Generate headline options and subheadings that fit the platform and the reader's benefit.
+  - Triggers: write headlines and subheadings, headline options for my post, title and subheading draft
+- `write-meta-descriptions-and-social-copy` — Write meta descriptions and social copy that match the page's hook and audience.
+  - Triggers: write meta descriptions and social copy, meta description for my page, social caption for a blog post
+- `write-podcast-show-notes` — Write show notes with a summary, timestamps, links and episode credits.
+  - Triggers: write podcast show notes, episode notes for my podcast, podcast timestamps and links
+
+## cooking-food
+
+Router: `routers/cooking-food/SKILL.md` — 14 skills.
+
+- `batch-cook-for-the-week` — Batch-cook a week of meals that reheat well and still taste worth eating.
+  - Triggers: batch cook for the week, cook several meals on Sunday, meal prep containers for the week
+- `braise-a-meat` — Braise meat slowly in liquid until it is tender, with a clear browning and temperature plan.
+  - Triggers: braise a piece of meat, slow cook a tough cut until tender, braising liquid and timing for meat
+- `build-a-shopping-list-from-a-menu` — Build a shopping list from a chosen menu so ingredients are bought once and nothing is missed.
+  - Triggers: shopping list from a menu, buy everything for these meals in one trip, consolidated grocery list for several recipes
+- `cook-a-sourdough-loaf` — Bake a sourdough loaf with a fermentation that is judged by the dough rather than the clock.
+  - Triggers: bake a sourdough loaf, sourdough bread step by step, make an open crumb sourdough at home
+- `cook-rice-perfectly` — Cook rice evenly with the right water ratio, a covered pot and a resting period.
+  - Triggers: cook rice perfectly, why is my rice mushy, fluffy rice water ratio and method
+- `fix-a-sauce-that-broke` — Repair a broken sauce by finding whether the fat or the liquid separated and bringing it back.
+  - Triggers: fix a sauce that broke, my sauce split and turned oily, rescue a curdled emulsion
+- `make-a-pizza-dough` — Make pizza dough that is mixed, rested and shaped so it stretches without tearing.
+  - Triggers: make pizza dough from scratch, homemade pizza dough recipe, pizza dough that stretches properly
+- `plan-a-dinner-party-menu` — Plan a dinner party menu that flows from starter to dessert and fits the kitchen's capacity.
+  - Triggers: plan a dinner party menu, menu for hosting friends at home, dinner party menu that I can make ahead
+- `plan-a-weeknight-meal` — Plan a weeknight meal that fits the time, the equipment and what is already in the kitchen.
+  - Triggers: plan a weeknight meal, what should I cook tonight on a time limit, quick dinner idea for tonight
+- `prep-vegetables-efficiently` — Prep vegetables in one organised session with a clear order and minimal washing.
+  - Triggers: prep vegetables efficiently, batch prep vegetables quickly, organised vegetable chopping session
+- `reduce-food-waste-in-a-kitchen` — Reduce food waste in a kitchen by planning purchases around what is already there.
+  - Triggers: reduce food waste in my kitchen, use up what I already have before shopping, stop throwing food away
+- `scale-a-recipe-for-more-people` — Scale a recipe up or down for a different number of people without breaking the ratios.
+  - Triggers: scale a recipe for more people, double this recipe quantities, make this recipe for a different number of servings
+- `sharpen-a-knife` — Sharpen a kitchen knife on a whetstone and keep it cutting cleanly afterwards.
+  - Triggers: sharpen a kitchen knife, how to use a whetstone, restore the edge on my chef knife
+- `substitute-an-ingredient-in-a-recipe` — Substitute an ingredient in a recipe by matching its function rather than its name.
+  - Triggers: substitute an ingredient in a recipe, what can I use instead of this missing ingredient, swap an ingredient without ruining the dish
+
+## data-analysis
+
+Router: `routers/data-analysis/SKILL.md` — 30 skills.
+
+- `analyse-a-survey-result` — Analyze survey results with sampling caveats, subgroup checks, and question-level clarity.
+  - Triggers: survey result analysis, analyse survey responses, summarize survey findings
+- `analyse-a-text-corpus` — Analyze a text corpus with transparent preprocessing, topic evidence, and document-level traceability.
+  - Triggers: text corpus analysis, analyze text collection, find topics in documents
+- `analyse-a-time-series` — Analyze a time series with trend, seasonality, structural breaks, and data-quality checks.
+  - Triggers: time series analysis, analyze trends over time, detect seasonality in time data
+- `ask-a-clear-analytical-question` — Frame a decision-focused analytical question with scope, metric, and decision owner.
+  - Triggers: analytical question, frame an analysis question, define what the data should answer
+- `automate-a-recurring-analysis-report` — Automate a recurring analysis report with validated inputs, scheduled execution, and failure alerts.
+  - Triggers: recurring analysis report, automate weekly analysis report, schedule analysis with alerts
+- `build-a-funnel-analysis` — Build a funnel that measures stage-to-stage conversion, drop-off, and time to progress.
+  - Triggers: funnel analysis, build conversion funnel, measure stage drop off
+- `build-a-pivot-table-for-a-question` — Build a pivot table that answers a specific question with clear rows, measures, and filters.
+  - Triggers: pivot table for a question, build pivot table, summarize data in pivot rows
+- `build-an-interactive-analysis-dashboard` — Build an interactive analysis dashboard with scoped metrics, controls, and performance checks.
+  - Triggers: interactive analysis dashboard, build analysis dashboard, add dashboard filters and drill down
+- `calculate-a-cohort-retention-rate` — Calculate cohort retention with explicit dates, denominators, and consistent return windows.
+  - Triggers: cohort retention rate, calculate cohort retention, measure return by signup cohort
+- `choose-the-right-chart-for-a-question` — Choose a chart form that matches the question, comparison, and expected audience.
+  - Triggers: right chart for a question, choose chart type, select visualization for analysis
+- `compare-two-groups-statistically` — Compare two populations with an effect size, uncertainty interval, and stated assumptions.
+  - Triggers: compare two groups, test difference between groups, group comparison with effect size
+- `design-an-experiment-with-a-control-group` — Design a controlled experiment with explicit hypotheses, assignment, metrics, and stopping rules.
+  - Triggers: experiment with control group, design a controlled experiment, plan treatment and control
+- `detect-outliers-in-a-numeric-column` — Flag unusual numeric values with domain thresholds and assess whether they distort conclusions.
+  - Triggers: numeric outliers, detect outliers in a column, review unusual values
+- `explore-a-distribution` — Describe a numeric or categorical distribution and identify shapes, gaps, and rare groups.
+  - Triggers: distribution analysis, explore a variable distribution, summarize value distribution
+- `find-and-remove-duplicate-rows` — Identify duplicate records with stable keys, compare their content, and remove confirmed copies.
+  - Triggers: duplicate rows, find duplicate records, deduplicate a dataset
+- `forecast-a-time-series-baseline` — Forecast a time series with a reproducible baseline and honest backtest error.
+  - Triggers: baseline time series forecast, forecast time series baseline, backtest a simple forecast
+- `handle-missing-values-in-an-analysis` — Choose and justify missing-value treatment while preserving the analysis population.
+  - Triggers: missing values, treat missing data in analysis, impute missing fields
+- `measure-a-feature-launch-impact` — Measure a feature launch impact with a defensible baseline, comparison, and rollout timeline.
+  - Triggers: feature launch impact, measure feature rollout effect, evaluate launch performance
+- `prepare-data-for-a-stakeholder-review` — Prepare a stakeholder-ready data brief with decision context, evidence, and explicit caveats.
+  - Triggers: data for stakeholder review, prepare stakeholder data brief, make analysis decision ready
+- `profile-a-dataset-before-analysing` — Profile rows, columns, types, ranges, and missingness before choosing an analysis method.
+  - Triggers: dataset profile, profile data before analysis, inspect dataset quality
+- `quantify-uncertainty-in-an-estimate` — Quantify uncertainty around an estimate with intervals, assumptions, and sensitivity checks.
+  - Triggers: uncertainty in estimate, quantify estimate uncertainty, add confidence interval to estimate
+- `reconcile-two-different-data-sources` — Reconcile two data sources by aligning definitions, keys, periods, and unexplained differences.
+  - Triggers: reconcile two data sources, compare mismatched data sources, align totals across systems
+- `run-a-correlation-analysis` — Measure pairwise associations with correlation, uncertainty, and confounding cautions.
+  - Triggers: correlation analysis, measure association between variables, check correlated columns
+- `sanity-check-an-aggregate-number` — Sanity-check an aggregate against components, bounds, and independent reasonableness tests.
+  - Triggers: sanity check aggregate number, validate a total, reasonableness check metric
+- `segment-a-population-by-behaviour` — Create behaviour-based segments with interpretable rules, sizes, and validation checks.
+  - Triggers: behavioural segments, segment population by behaviour, create customer behaviour groups
+- `spot-a-misleading-chart` — Identify chart choices that distort comparisons and suggest a more honest representation.
+  - Triggers: misleading chart, check chart for distortion, review misleading visualization
+- `tell-a-data-story-in-a-narrative` — Tell a data-driven story with a defensible claim, evidence sequence, and clear ending.
+  - Triggers: data story narrative, tell a story with data, write analysis narrative
+- `test-a-hypothesis-with-a-significance-test` — Test a prespecified statistical hypothesis and report the result without overstating evidence.
+  - Triggers: significance test, test a statistical hypothesis, calculate p value and effect
+- `validate-an-analysis-result` — Validate an analytical result against source data, logic, and plausible boundaries.
+  - Triggers: validate analysis result, check analytical output, verify analysis numbers
+- `write-a-clean-analysis-query` — Write a reproducible SQL query that returns the exact measure needed for the decision.
+  - Triggers: clean analysis query, write SQL for analysis, build aggregation query
+
+## data-engineering
+
+Router: `routers/data-engineering/SKILL.md` — 40 skills.
+
+- `automate-data-quality-checks` — Automate data quality checks so every load is tested against agreed expectations.
+  - Triggers: automate data quality checks, run quality tests on every load, add data quality assertions to a pipeline
+- `backfill-a-historical-period` — Backfill a historical period safely by isolating the run and proving the result.
+  - Triggers: backfill a historical period, reload historic warehouse data, rewrite old table partitions
+- `build-a-batch-ingestion-job` — Build a scheduled batch job that loads a source table into a warehouse target.
+  - Triggers: batch ingestion job, build a scheduled batch load, nightly warehouse load job
+- `build-a-metric-definition` — Write a metric definition that fixes the numerator, denominator, grain and owner for one business number.
+  - Triggers: metric definition, define a business metric, write a metric spec
+- `build-a-raw-to-curated-data-layer` — Build a curated layer that turns raw ingested files into typed, deduplicated tables.
+  - Triggers: raw to curated data layer, build a curated data layer, shape raw files into curated tables
+- `build-a-streaming-ingestion-consumer` — Build a streaming consumer that writes incoming events to storage as they arrive.
+  - Triggers: streaming ingestion consumer, consume an event stream into storage, build a live event consumer
+- `build-an-offline-feature-pipeline` — Build an offline feature pipeline that reconstructs point-in-time training rows from stored events.
+  - Triggers: offline feature pipeline, build point-in-time training data, backfill historical features
+- `cost-optimise-a-data-pipeline` — Reduce the cost of a data pipeline by finding the stages that consume the most resources.
+  - Triggers: cost optimise a data pipeline, reduce the cost of an etl job, cut warehouse spend on a pipeline
+- `deduplicate-records-in-a-warehouse` — Remove duplicate records from a warehouse table while keeping the correct survivor.
+  - Triggers: deduplicate warehouse records, remove duplicate rows from a table, clean duplicate records in a warehouse
+- `design-a-real-time-aggregation` — Design a real-time aggregation that keeps rolling windows current without overloading the source.
+  - Triggers: real time aggregation, rolling window stream aggregate, live counters from events
+- `design-a-semantic-layer` — Design a semantic layer that exposes approved metrics and dimensions behind one consistent query interface.
+  - Triggers: semantic layer design, build a semantic layer, expose governed metrics api
+- `design-a-slowly-changing-dimension` — Design a slowly changing dimension that keeps history without exploding row counts.
+  - Triggers: design a slowly changing dimension, track dimension attribute history, implement a type two dimension
+- `design-an-enterprise-wide-naming-convention` — Define an enterprise naming convention for layers, tables and columns with enforceable validation.
+  - Triggers: enterprise naming convention, standardize table column names, data naming lint rules
+- `design-an-ingestion-pipeline` — Design an ingestion pipeline from source systems to a warehouse layer with clear contracts.
+  - Triggers: ingestion pipeline design, plan data ingestion into a warehouse, source to warehouse pipeline plan
+- `document-a-data-pipeline` — Document a pipeline so another engineer can run, debug and extend it without help.
+  - Triggers: document a data pipeline, write a pipeline runbook, explain an etl job for other engineers
+- `expose-a-stream-to-warehouse-sync` — Stream source events into a warehouse table with ordering, deduplication and lag monitoring.
+  - Triggers: stream to warehouse sync, land kafka events in warehouse, continuous ingest from source
+- `handle-a-schema-mismatch-between-systems` — Reconcile two incompatible schemas by mapping fields, preserving nulls and quarantining bad rows.
+  - Triggers: schema mismatch between systems, map incompatible source schemas, fix field type mismatch
+- `handle-late-arriving-events` — Handle events that arrive after their window closed by defining a correction policy.
+  - Triggers: handle late arriving events, process events that arrive out of window, apply late data corrections
+- `implement-idempotent-writes-to-a-warehouse` — Make warehouse writes safe to repeat by keying every record and merging on conflict.
+  - Triggers: idempotent warehouse writes, make warehouse loads rerunnable, upsert instead of duplicate inserts
+- `implement-row-level-access-rules` — Apply row-level security so each user sees only the records their role permits in shared tables.
+  - Triggers: row level access rules, restrict rows by role, apply row level security
+- `manage-data-encryption-at-rest` — Protect stored data with managed encryption keys, key rotation and access logging for every dataset.
+  - Triggers: encryption at rest, manage encryption keys for data, encrypt warehouse storage
+- `manage-schema-evolution-in-a-stream` — Evolve a streaming schema safely by versioning it and tolerating older events.
+  - Triggers: manage schema evolution in a stream, version an event schema safely, change a stream schema without breaking consumers
+- `mask-sensitive-data-in-a-warehouse` — Mask sensitive fields in the warehouse so analysts see only the columns their role requires.
+  - Triggers: mask sensitive data in warehouse, redact pii columns, anonymize warehouse tables
+- `migrate-a-pipeline-to-a-new-engine` — Move a pipeline to a new execution engine while keeping output, schedule and failure semantics intact.
+  - Triggers: migrate pipeline to new engine, port batch job to new engine, replace pipeline runtime
+- `migrate-a-warehouse-to-a-new-platform` — Move warehouse workloads to a new platform by mapping schemas, validating output and cutting over safely.
+  - Triggers: migrate warehouse to new platform, move warehouse workloads, warehouse cutover plan
+- `model-an-analytical-star-schema` — Design a star schema that separates facts and dimensions so analysts can query it without joins.
+  - Triggers: analytical star schema, model a star schema warehouse, design facts and dimensions
+- `monitor-pipeline-freshness` — Monitor pipeline freshness so stale output is detected before anyone depends on it.
+  - Triggers: monitor pipeline freshness, detect stale warehouse data, track how old the latest data is
+- `partition-a-dataset-by-date` — Split a dataset into date partitions so reads and maintenance stay bounded.
+  - Triggers: partition a dataset by date, date partition a table, add date partitions for pruning
+- `plan-a-consumption-based-cost-model` — Estimate pipeline and storage cost per consumer using measured queries, scan volume and retention.
+  - Triggers: consumption based cost model, estimate pipeline cloud cost, attribute warehouse spend
+- `publish-a-dataset-to-a-catalog` — Publish a dataset to a catalog with ownership, schema, quality results and usage notes attached.
+  - Triggers: publish dataset to catalog, register dataset metadata, catalog documentation for dataset
+- `retry-a-failed-pipeline-run` — Retry a failed pipeline run from the last good point without reprocessing clean work.
+  - Triggers: retry a failed pipeline run, recover a failed data job, restart a pipeline from the failed stage
+- `run-a-data-governance-review` — Review a dataset's ownership, retention, access and compliance evidence before production sign-off.
+  - Triggers: data governance review, review dataset governance, compliance sign-off for data
+- `run-a-data-quality-report` — Produce a data quality report covering freshness, row counts, schema drift and null rates.
+  - Triggers: data quality report, check pipeline output quality, freshness and row count checks
+- `schedule-a-data-pipeline` — Schedule a pipeline on a schedule that respects its dependencies and its load window.
+  - Triggers: schedule a data pipeline, set a cron schedule for a pipeline, orchestrate pipeline dependencies
+- `serve-a-feature-set-to-a-model` — Serve a versioned feature set to a model with consistent values, latency limits and a null policy.
+  - Triggers: feature set for model, serve features to a model, feature store serving
+- `test-a-pipeline-with-synthetic-events` — Test a pipeline with synthetic events that reproduce the cases real data misses.
+  - Triggers: test a pipeline with synthetic events, generate synthetic test events for a pipeline, use a fixed seed to test a data job
+- `track-data-lineage-across-pipelines` — Track where every column came from across the pipelines that transform it.
+  - Triggers: track data lineage across pipelines, column level data lineage, trace a field back to its source
+- `validate-an-incoming-data-contract` — Validate an incoming dataset against its declared contract before it is loaded.
+  - Triggers: validate an incoming data contract, check incoming data against schema, enforce a data contract on ingest
+- `version-a-dataset` — Version a dataset with immutable snapshots so consumers can pin and reproduce a past result.
+  - Triggers: version a dataset, immutable dataset snapshot, pin dataset release version
+- `write-a-data-access-api` — Write a data access API that serves documented datasets with pagination, authentication and clear errors.
+  - Triggers: data access api, serve warehouse data endpoint, build api for curated data
+
+## databases
+
+Router: `routers/databases/SKILL.md` — 33 skills.
+
+- `analyse-a-slow-dashboard-query` — Analyze a slow dashboard query and improve its measured latency without changing results.
+  - Triggers: analyse a slow dashboard query, slow analytics dashboard sql, speed up dashboard query
+- `archive-cold-data` — Archive cold database rows to lower storage cost while preserving a traceable copy.
+  - Triggers: archive cold database data, move old rows to archive, database data archival plan
+- `audit-a-schema-for-constraints` — Audit a database schema for missing keys, references, checks, and inconsistent defaults.
+  - Triggers: audit schema for constraints, review database constraints, find missing integrity constraints
+- `build-a-search-index-for-entities` — Build a searchable entity index with deliberate tokenization, ranking, and freshness rules.
+  - Triggers: build a search index for entities, index entities for search, create an entity search index
+- `cache-a-database-query-safely` — Cache database query results safely with explicit invalidation and freshness bounds.
+  - Triggers: cache a database query safely, database query caching, invalidate cached query results
+- `choose-a-database-isolation-level` — Choose a database isolation level that balances consistency with concurrent write throughput.
+  - Triggers: choose database isolation level, select sql transaction isolation, balance consistency and concurrency
+- `choose-a-primary-key` — Choose a primary key that stays stable, unique, compact, and practical for joins.
+  - Triggers: choose a primary key, database primary key selection, design a table primary key
+- `denormalise-for-read-performance` — Denormalise selected database fields to remove costly joins on measured read paths.
+  - Triggers: denormalise for read performance, denormalize database tables, reduce joins on reads
+- `design-a-multi-tenant-table` — Design a multi-tenant table that isolates access while preserving useful indexes.
+  - Triggers: design a multi-tenant table, multi tenant database schema, tenant isolation table design
+- `design-a-normalised-schema` — Design a normalised schema that removes duplication while preserving required queries.
+  - Triggers: design a normalised schema, normalize database schema, review table normalization
+- `detect-and-fix-replication-lag` — Diagnose replication lag from workload, network, and replica state before applying a fix.
+  - Triggers: detect replication lag, fix database replica lag, troubleshoot replication delay
+- `full-text-search-in-postgres` — Configure PostgreSQL full-text search with ranked queries and a tuned search vector.
+  - Triggers: full text search in postgres, postgres tsvector search, rank postgres full text results
+- `handle-a-deadlock` — Resolve a database deadlock from evidence, a minimal transaction fix, and a regression test.
+  - Triggers: handle a database deadlock, fix SQL deadlock, diagnose transaction deadlock
+- `index-a-slow-query` — Add a targeted index to a slow database query and prove the latency improvement.
+  - Triggers: index a slow query, database query indexing, speed up a slow SQL query
+- `migrate-a-schema-with-zero-downtime` — Migrate a database schema without downtime using expand, backfill, and contract phases.
+  - Triggers: migrate schema with zero downtime, zero downtime database migration, expand backfill contract migration
+- `migrate-between-two-database-engines` — Migrate data between database engines while preserving semantics and proving equivalence.
+  - Triggers: migrate between database engines, move sql database to another engine, database vendor migration
+- `model-a-many-to-many-relationship` — Model a many-to-many relationship with a well-constrained junction table.
+  - Triggers: model a many-to-many relationship, design many-to-many junction table, database many-to-many mapping
+- `model-a-one-to-many-relationship` — Model a one-to-many relationship with explicit keys, cardinality, and deletion rules.
+  - Triggers: model a one-to-many relationship, design one-to-many tables, parent child database schema
+- `partition-a-large-table` — Partition a large database table to make maintenance and pruning predictable.
+  - Triggers: partition a large table, database table partitioning, split table into partitions
+- `plan-a-sharding-strategy` — Plan database sharding around access patterns, rebalancing, and operational limits.
+  - Triggers: plan a database sharding strategy, design database shards, shard a growing database
+- `prevent-lost-updates` — Prevent lost updates with atomic writes, row versions, or explicit transaction locks.
+  - Triggers: prevent lost updates, database concurrent write conflict, avoid overwrite race condition
+- `read-a-query-execution-plan` — Read a database execution plan and identify the operation that dominates query cost.
+  - Triggers: read a query execution plan, explain database query plan, analyze SQL execution plan
+- `restore-a-database-from-backup` — Restore a database backup into an isolated target and prove it matches the source.
+  - Triggers: restore database from backup, database backup recovery, restore a backup to staging
+- `review-a-schema-change-for-lock-risk` — Review a database schema change for blocking locks, rewrite risk, and safe execution order.
+  - Triggers: review schema change for lock risk, database ddl lock review, assess migration lock risk
+- `seed-a-database-with-test-data` — Seed a test database with valid, deterministic fixtures that cover key constraints.
+  - Triggers: seed database with test data, create deterministic test fixtures, load sample database records
+- `set-up-a-database-in-a-local-environment` — Set up a local database with pinned versions, repeatable initialization, and safe credentials.
+  - Triggers: set up database in local environment, run a local database, create reproducible local db
+- `set-up-replication` — Set up database replication with explicit consistency, lag, and failover expectations.
+  - Triggers: set up database replication, configure postgres replication, create a read replica
+- `tune-a-database-configuration` — Tune a database setting against measured workload evidence and preserve a rollback path.
+  - Triggers: tune database configuration, database setting tuning, adjust database config
+- `use-a-connection-pool-correctly` — Size and operate a database connection pool without exhausting or leaking connections.
+  - Triggers: use a connection pool correctly, tune database connection pool, fix connection pool exhaustion
+- `verify-a-backup-restore-in-a-staging-environment` — Verify a backup restore in staging with timed recovery, integrity checks, and evidence.
+  - Triggers: verify backup restore in staging, test database restore in staging, staging restore drill
+- `write-a-data-retention-policy` — Write a database retention policy with legal, operational, and deletion safeguards.
+  - Triggers: write a data retention policy, database retention schedule, define data deletion policy
+- `write-a-safe-backfill-script` — Write a resumable backfill script with batching, checks, and rollback controls.
+  - Triggers: write a safe backfill script, resumable database backfill, backfill rows in batches
+- `write-a-sql-query-with-a-clear-plan` — Write a SQL query from a clear execution plan, data model, and expected result shape.
+  - Triggers: write a SQL query, SQL query plan, build a database query
+
+## design-ux
+
+Router: `routers/design-ux/SKILL.md` — 34 skills.
+
+- `analyse-usability-test-results` — Analyze usability findings and separate recurring problems from isolated observations.
+  - Triggers: usability test analysis, analyze usability test results, synthesize usability findings
+- `apply-design-tokens-to-a-ui` — Apply existing design tokens to a UI without introducing parallel visual values.
+  - Triggers: design token ui migration, apply design tokens to a ui, migrate a ui to design tokens
+- `build-a-clickable-prototype` — Build a clickable prototype that tests the riskiest interaction assumptions.
+  - Triggers: clickable prototype, build a clickable prototype, clickable prototype for usability testing
+- `choose-a-colour-system-with-contrast` — Choose a colour system with semantic roles and contrast-safe foreground pairs.
+  - Triggers: accessible colour system, choose a colour system with contrast, design an accessible product palette
+- `choose-a-type-scale` — Choose a type scale that supports hierarchy, readable body copy, and dense interfaces.
+  - Triggers: type scale for a ui, choose a type scale, set ui typography sizes
+- `create-a-design-handoff-specification` — Create a design handoff specification with flows, states, tokens, and accessibility notes.
+  - Triggers: design handoff specification, create a design handoff, write a design implementation spec
+- `create-a-visual-hierarchy` — Create a visual hierarchy that makes the primary action and content order unmistakable.
+  - Triggers: visual hierarchy design, create a visual hierarchy, prioritize screen content visually
+- `create-a-wireframe-for-a-screen` — Create a low-fidelity wireframe that fixes hierarchy, content, and interaction structure.
+  - Triggers: screen wireframe, create a screen wireframe, wireframe a ui screen
+- `design-a-card-and-list-pattern` — Design reusable card and list patterns with clear hierarchy, actions, and responsive behavior.
+  - Triggers: card and list pattern, design a card and list pattern, create card and list components
+- `design-a-dark-mode-variant` — Design a dark-mode variant that preserves hierarchy, legibility, and brand intent.
+  - Triggers: dark mode variant, design a dark mode variant, create a dark theme for a ui
+- `design-a-dashboard-layout` — Design a dashboard layout that prioritizes decisions, exceptions, and meaningful drill-downs.
+  - Triggers: dashboard layout, design a dashboard layout, create an analytics dashboard layout
+- `design-a-form-that-converts` — Design a form that reduces friction while capturing only data needed for its purpose.
+  - Triggers: converting form design, design a form that converts, improve a signup form
+- `design-a-mobile-first-layout` — Design a mobile-first layout that prioritizes the primary task across small screens.
+  - Triggers: mobile first layout, design a mobile first layout, create a responsive mobile layout
+- `design-a-navigation-model-for-an-app` — Design an app navigation model that reveals hierarchy without hiding core tasks.
+  - Triggers: app navigation model, design a navigation model for an app, structure application navigation
+- `design-a-notification-pattern` — Design notifications that match urgency, deliver context, and avoid unnecessary interruption.
+  - Triggers: notification pattern, design a notification pattern, create a product notification system
+- `design-a-search-and-filter-interface` — Design search and filters that let users narrow results while preserving a clear way back.
+  - Triggers: search and filter interface, design search and filters, create a faceted filter ui
+- `design-an-error-recovery-flow` — Design an error recovery flow that preserves work and offers a clear next step.
+  - Triggers: error recovery flow, design an error recovery flow, recover a failed user task
+- `design-an-onboarding-flow` — Design an onboarding flow that teaches the core task while minimizing premature requests.
+  - Triggers: onboarding flow, design an onboarding flow, improve first run onboarding
+- `design-an-upgrade-prompt` — Design an upgrade prompt that explains the value, limits, and next action without pressure.
+  - Triggers: upgrade prompt, design an upgrade prompt, create a plan upgrade prompt
+- `design-empty-and-loading-states` — Design empty and loading states that explain what will appear and keep users oriented.
+  - Triggers: empty and loading states, design empty states, design loading states
+- `design-for-keyboard-navigation` — Design a keyboard path with predictable focus order, visible focus, and useful shortcuts.
+  - Triggers: keyboard navigation design, design for keyboard navigation, make a ui keyboard accessible
+- `document-a-design-decision` — Document a design decision with its context, alternatives, trade-offs, and consequences.
+  - Triggers: design decision record, document a design decision, record a ux design rationale
+- `improve-form-accessibility` — Improve a form's accessible labels, validation, focus behavior, and completion support.
+  - Triggers: form accessibility audit, improve form accessibility, make a form screen reader accessible
+- `prioritise-design-feedback-by-impact` — Prioritize design feedback by user impact, evidence strength, reach, and confidence.
+  - Triggers: design feedback prioritization, prioritize design feedback, rank ux feedback by impact
+- `run-a-heuristic-review-of-a-screen` — Run a heuristic screen review and document concrete findings with severity and evidence.
+  - Triggers: heuristic screen review, run a heuristic review, conduct a ux heuristic review
+- `run-a-usability-test-session` — Run a usability test session while keeping the participant in control and observations unbiased.
+  - Triggers: usability test session, run a usability test session, moderate usability testing
+- `run-a-user-interview-for-a-design-question` — Run a focused interview that turns one design question into actionable evidence.
+  - Triggers: user interview for a design question, run a user interview, interview users about a design question
+- `set-up-a-design-system-token-set` — Set up a design token set that names reusable visual and spacing decisions.
+  - Triggers: design system token set, set up design tokens, create a design token set
+- `validate-a-design-with-a-technical-spike` — Validate a design with a focused technical spike that tests its riskiest assumption.
+  - Triggers: design technical spike, validate a design with a technical spike, run a design feasibility spike
+- `write-a-usability-test-script` — Write a usability test script with neutral tasks, probes, and success criteria.
+  - Triggers: usability test script, write a usability test script, design usability testing tasks
+- `write-a-user-flow-for-a-feature` — Specify a feature flow with entry points, decisions, states, and recovery paths.
+  - Triggers: feature user flow, write a feature user flow, map a feature flow
+- `write-error-states-for-every-input` — Define precise error states for every input, including how each failure resolves.
+  - Triggers: input error states, write error states for every input, define form validation errors
+- `write-microcopy-for-a-button` — Write button microcopy that names the action and sets a truthful expectation.
+  - Triggers: button microcopy, write microcopy for a button, label a ui button action
+- `write-microcopy-for-an-error` — Write error microcopy that states what failed, why, and how to recover.
+  - Triggers: error microcopy, write microcopy for an error, message a failed ui action
+
+## dev-experience
+
+Router: `routers/dev-experience/SKILL.md` — 30 skills.
+
+- `add-a-health-check-endpoint` — Add a health-check endpoint that reports service readiness without exposing sensitive internals.
+  - Triggers: add a health check endpoint, create a service readiness probe, implement liveness and readiness endpoints
+- `add-editor-support-files-to-a-repo` — Add editor support files that enforce shared formatting, navigation, and generation settings.
+  - Triggers: add editor support files, configure VS Code for the repo, share editor settings across developers
+- `adopt-a-new-linter-rule-safely` — Adopt a new linter rule through scoped detection, baseline comparison, and staged enforcement.
+  - Triggers: adopt a new linter rule safely, enable a lint rule gradually, introduce a new lint check
+- `cache-dependencies-in-ci` — Cache CI dependencies with keyed, verified cache entries that speed up builds safely.
+  - Triggers: cache dependencies in CI, speed up CI with dependency caching, add a safe CI cache key
+- `clean-up-stale-preview-environments` — Identify and remove stale preview environments by age, ownership, and last activity thresholds.
+  - Triggers: clean up stale preview environments, delete abandoned branch previews, prune old preview deployments
+- `configure-a-repository-template` — Configure a repository template that standardizes structure, automation, and documentation for new projects.
+  - Triggers: configure a repository template, create a standard repo template, standardize new repository layout
+- `create-a-code-snippet-library` — Curate a searchable code snippet library with tested examples, ownership, and usage context.
+  - Triggers: create a code snippet library, publish reusable code examples, build an internal snippet catalog
+- `document-a-local-setup-step` — Document one local setup step with prerequisites, commands, expected output, and recovery guidance.
+  - Triggers: document a local setup step, write setup instructions for developers, add a verified local setup guide step
+- `manage-multiple-package-versions` — Manage multiple package versions with explicit constraints, compatibility notes, and safe upgrade paths.
+  - Triggers: manage multiple package versions, support several dependency versions, build a package compatibility matrix
+- `measure-developer-productivity-signals` — Measure developer productivity signals without turning individual metrics into performance targets.
+  - Triggers: measure developer productivity signals, track dev team productivity metrics, measure developer workflow efficiency
+- `onboard-a-new-developer-in-a-week` — Plan a one-week developer onboarding path that reaches a verified contribution without hidden setup steps.
+  - Triggers: onboard a new developer in a week, plan a first-week developer onboarding, get a new engineer productive in seven days
+- `parallelise-a-slow-test-suite` — Parallelise a slow test suite by isolating suites, balancing workers, and preserving deterministic failures.
+  - Triggers: parallelise a slow test suite, run test suites in parallel, speed up the serial test suite
+- `provide-a-debug-configuration` — Create a shared debug configuration that launches the service with breakpoints, ports, and environment values.
+  - Triggers: provide a debug configuration, set up debugger launch config, add shared VS Code debug config
+- `provide-a-one-command-start-script` — Provide one command that starts every required local service and confirms the stack is ready.
+  - Triggers: one command local startup, create a one-command start script, start the local stack in one command
+- `provision-preview-environments-per-branch` — Provision an isolated preview environment for each pull-request branch with a documented lifecycle.
+  - Triggers: provision preview environments per branch, create a pull request preview environment, spin up a branch preview deployment
+- `publish-an-internal-developer-package` — Publish an internal package with discoverable metadata, versioning, and a reliable developer install path.
+  - Triggers: publish an internal developer package, distribute a package to internal devs, release a private team package
+- `reduce-ci-time-for-pull-requests` — Reduce pull-request CI time by profiling slow jobs and removing unnecessary work.
+  - Triggers: reduce CI time for pull requests, speed up pull request checks, make PR CI finish faster
+- `reset-a-broken-local-environment` — Diagnose and reset a broken local environment while preserving source changes and recoverable state.
+  - Triggers: reset a broken local environment, repair my local dev setup, recover a broken local toolchain
+- `review-a-tooling-upgrade-proposal` — Review a tooling upgrade proposal against compatibility, migration effort, and developer impact.
+  - Triggers: review a tooling upgrade proposal, assess a dev tool upgrade, approve or reject a tooling migration
+- `run-a-retrospective-on-tooling-pain` — Run a tooling retrospective that identifies recurring friction, ranks causes, and assigns concrete improvements.
+  - Triggers: run a retrospective on tooling pain, review developer tool friction, improve recurring dev tooling problems
+- `scaffold-a-new-service-repository` — Scaffold a service repository with deployable code, tests, local configuration, and CI wiring.
+  - Triggers: scaffold a new service repository, generate a service repo template, bootstrap a new backend service repo
+- `seed-a-database-with-realistic-test-data` — Seed a disposable database with realistic, deterministic fixtures that exercise common application paths.
+  - Triggers: seed database with realistic test data, create deterministic database fixtures, load realistic local test data
+- `set-up-a-local-development-environment` — Create a reproducible local setup that installs prerequisites and verifies the developer toolchain.
+  - Triggers: set up local development environment, configure a reproducible dev environment, prepare my local developer setup
+- `speed-up-the-inner-development-loop` — Shorten the edit-to-feedback cycle by profiling and removing delays from the local build path.
+  - Triggers: speed up the inner development loop, make local feedback faster, reduce edit to feedback time
+- `version-and-publish-a-shared-library` — Version and release a shared library through reproducible builds, compatibility checks, and clear upgrade notes.
+  - Triggers: version and publish a shared library, release a shared code package, cut a versioned library release
+- `write-a-developer-cli-wrapper` — Wrap a developer CLI with safe defaults, readable output, and commands that match the repository workflow.
+  - Triggers: write a developer CLI wrapper, build a repo-specific command wrapper, add safe CLI subcommands
+- `write-a-developer-onboarding-checklist` — Assemble a day-one developer checklist with every prerequisite, verification, and first-change milestone.
+  - Triggers: developer onboarding checklist, new developer day-one checklist, onboard an engineer checklist
+- `write-a-good-commit-message` — Write a commit message that explains the change's purpose, impact, and verification.
+  - Triggers: write a good commit message, create a commit message for this change, format a conventional commit message
+- `write-a-task-runner-for-a-repo` — Create a repository task runner that exposes common checks through consistent commands.
+  - Triggers: write a repository task runner, add a make task runner, standardize repo commands
+- `write-an-internal-tooling-adoption-plan` — Plan internal tooling adoption with target users, migration steps, enablement, and measurable outcomes.
+  - Triggers: write an internal tooling adoption plan, roll out a new dev tool, plan developer tooling adoption
+
+## devops-cloud
+
+Router: `routers/devops-cloud/SKILL.md` — 48 skills.
+
+- `apply-a-cost-budget-to-cloud-resources` — Set budgets, quotas and alerts so cloud spend stays inside an agreed ceiling.
+  - Triggers: apply a cloud cost budget, control cloud spending, set a cloud budget alert
+- `audit-cloud-permissions` — Audit cloud iam grants for excessive roles, unused credentials, and public exposure across accounts.
+  - Triggers: audit cloud permissions, iam grant review for cloud accounts, unused cloud role assignments
+- `automate-a-release-with-a-pull-request` — Open a release pull request that generates changelog entries, artifacts, and promotion checks.
+  - Triggers: automate a release with a pull request, release pull request workflow, generate a changelog release pr
+- `autoscale-a-kubernetes-workload` — Set horizontal and vertical autoscaling so a workload follows real demand.
+  - Triggers: autoscale a kubernetes workload, scale a deployment automatically, kubernetes autoscaling setup
+- `back-up-and-restore-a-cloud-data-store` — Back up a managed cloud data store and restore it into an isolated instance with verified data.
+  - Triggers: cloud datastore backup and restore, restore a managed database snapshot, validate a database backup
+- `build-a-container-image` — Build a reproducible container image that runs the same in every environment.
+  - Triggers: build a container image, package the service as a container, container image build
+- `configure-a-load-balancer` — Configure a load balancer with health checks, sensible timeouts and a known drain procedure.
+  - Triggers: configure a load balancer, set up a load balancer for a service, load balancer health check
+- `configure-a-load-test-environment` — Stand up an isolated environment that can absorb production-scale load safely.
+  - Triggers: configure a load test environment, set up load testing infrastructure, isolated load test setup
+- `design-a-blue-green-deployment` — Plan a blue-green release that keeps a known-good environment running until cutover.
+  - Triggers: design a blue green deployment, blue green release plan, plan a blue green cutover
+- `drift-detect-infrastructure-changes` — Detect unmanaged changes between declared infrastructure code and the live cloud state.
+  - Triggers: detect infrastructure drift, compare cloud state to terraform code, infrastructure drift report
+- `gate-a-deployment-on-quality-checks` — Block a deployment until automated tests, scans, and policy checks pass on the release artifact.
+  - Triggers: deployment quality gate, gate a deploy on checks, ci quality gate for release
+- `harden-a-server-baseline` — Apply a reviewed server baseline that closes common exposures and verifies each hardening control.
+  - Triggers: harden a server baseline, apply host hardening baseline, server security baseline check
+- `implement-blue-green-traffic-shifting` — Shift production traffic between blue and green stacks with weighted routing and a tested rollback.
+  - Triggers: blue green traffic shifting, shift traffic to the green stack, blue-green deployment routing
+- `manage-a-service-on-a-managed-cloud-platform` — Operate a service on a managed platform using its supported configuration surface.
+  - Triggers: manage a service on a managed platform, run a service on a cloud app platform, paas deployment
+- `manage-configuration-across-environments` — Promote environment configuration through typed values, change review, and encrypted secret storage.
+  - Triggers: manage configuration across environments, promote environment configuration, validated config overlay
+- `manage-cost-with-a-scheduled-scale-down` — Schedule off-hours scaling down and restore capacity at opening time with explicit cost limits.
+  - Triggers: schedule a cloud scale down, off hours capacity cost saving, automated scale up schedule
+- `manage-environments-with-infrastructure-pipelines` — Promote infrastructure changes across environments through one reviewed pipeline.
+  - Triggers: manage environments with pipelines, promote infrastructure across environments, environment pipeline
+- `manage-feature-flags-across-environments` — Control feature flag targeting per environment and audit every exposure change before rollout.
+  - Triggers: feature flag environment targeting, manage feature flags across environments, toggle flags per environment
+- `manage-secrets-in-a-cloud-account` — Store, rotate and scope cloud secrets so no long-lived credential sits in code.
+  - Triggers: manage cloud secrets, rotate a cloud credential, store secrets in the cloud
+- `migrate-a-workload-to-a-managed-service` — Move a self-managed workload onto a managed service with a tested rollback.
+  - Triggers: migrate a workload to a managed service, replace self hosted with managed, managed service migration
+- `patch-a-host-without-downtime` — Patch a running cloud host by draining its traffic, installing updates, and returning it to service.
+  - Triggers: patch a host without downtime, drain and patch a live server, zero downtime host update
+- `pin-a-container-base-image` — Pin a container base image to an immutable digest and update it through a controlled rebuild.
+  - Triggers: pin a container base image, replace an image tag with a digest, pin a docker base image digest
+- `plan-a-cloud-migration-wave` — Group workloads into migration waves that each deliver value and carry known risk.
+  - Triggers: plan a cloud migration wave, group workloads into migration waves, cloud migration wave planning
+- `promote-a-build-through-environments` — Advance one immutable build artifact from development to production through approval gates.
+  - Triggers: promote a build through environments, build promotion from staging to production, promote an immutable build
+- `provision-a-cloud-environment` — Provision a new cloud environment with the accounts, networks and guardrails it needs.
+  - Triggers: provision a cloud environment, set up a new cloud account, create a cloud environment
+- `reduce-a-container-image-size` — Shrink a container image without changing how the service behaves.
+  - Triggers: reduce container image size, shrink a docker image, speed up image pulls
+- `respond-to-a-service-outage` — Restore a failed cloud service using the prepared rollback path while keeping an incident timeline.
+  - Triggers: respond to a cloud service outage, service outage recovery runbook, restore a failed service
+- `right-size-cloud-compute-resources` — Resize cloud compute from measured usage so capacity matches real demand.
+  - Triggers: right size cloud compute, resize cloud instances to save cost, cloud instance rightsizing
+- `roll-back-a-bad-deployment` — Restore the last known-good version quickly and prove the service is healthy again.
+  - Triggers: roll back a bad deployment, undo a release that broke production, deployment rollback
+- `rotate-a-service-account-key` — Replace a service account key without interrupting the workloads that use it.
+  - Triggers: rotate a service account key, replace a cloud access key, service account key rotation
+- `run-a-canary-release-with-metrics` — Release a build to a small traffic slice and promote it only when latency and error budgets hold.
+  - Triggers: canary release with metrics, run a metrics gated canary, canary traffic rollout
+- `run-a-disaster-recovery-drill` — Exercise a disaster recovery plan with a timed failover and prove recovery of critical services.
+  - Triggers: disaster recovery drill, regional failover rehearsal, test recovery time objectives
+- `run-a-service-in-kubernetes` — Deploy a service to Kubernetes with the right workload kind, probes and resources.
+  - Triggers: run a service in kubernetes, deploy to a kubernetes cluster, kubernetes workload setup
+- `scale-a-worker-queue` — Scale queue workers against backlog depth and lag while keeping cost within the budget ceiling.
+  - Triggers: scale a worker queue, increase queue worker concurrency, reduce a queue backlog
+- `scan-an-image-for-vulnerabilities` — Scan a container image for known vulnerabilities and produce a severity-ranked remediation list.
+  - Triggers: scan a container image for vulnerabilities, image vulnerability scan report, rank container image findings
+- `set-up-a-canary-environment-for-testing` — Provision an isolated canary environment that mirrors production configuration for pre-release testing.
+  - Triggers: set up a canary environment, create an isolated canary test environment, mirror production config for canary
+- `set-up-a-cd-pipeline-with-safe-rollouts` — Automate promotion from build to production with gates that stop unsafe releases.
+  - Triggers: set up a cd pipeline, continuous delivery with safe rollouts, automated deployment pipeline
+- `set-up-a-ci-pipeline-for-a-service` — Build a CI pipeline that installs, tests and publishes a service on every change.
+  - Triggers: set up a ci pipeline, continuous integration for a service, build a ci workflow
+- `set-up-a-virtual-network-and-subnets` — Build a virtual network with subnets sized for the workloads that will run in them.
+  - Triggers: set up a virtual network, create cloud subnets, design a vpc layout
+- `sign-and-verify-build-artifacts` — Sign a release artifact and verify its signature, provenance, and identity before deployment.
+  - Triggers: sign and verify build artifacts, verify a release artifact signature, artifact provenance check
+- `test-a-backup-restore-safely` — Test a backup restore in an isolated sandbox without touching production data or access.
+  - Triggers: test a backup restore safely, sandbox restore rehearsal, prove backup recoverability
+- `triage-an-alert-fire` — Separate urgent alerts from noise, identify the common trigger, and route each response to an owner.
+  - Triggers: triage an alert fire, group and route monitoring alerts, alert storm triage
+- `verify-a-deployment-after-release` — Confirm a released service is healthy, reachable, and behaving as expected before closing the change.
+  - Triggers: verify a deployment after release, post release deployment verification, confirm deployment health
+- `write-a-dockerfile-for-a-service` — Write a lean Dockerfile with a deterministic build, a small runtime and a clear entrypoint.
+  - Triggers: write a dockerfile, dockerfile for a service, create a container build file
+- `write-a-kubernetes-manifest` — Write a Kubernetes manifest that declares the workload, its service and its configuration.
+  - Triggers: write a kubernetes manifest, create a k8s yaml for a service, kubernetes manifest for a workload
+- `write-a-runbook-for-an-on-call-engineer` — Write a runbook that lets an on-call engineer act without the original author.
+  - Triggers: write an on call runbook, runbook for an on call engineer, operational runbook for a service
+- `write-an-incident-report` — Write a blameless incident report with timeline, contributing factors, and verified corrective actions.
+  - Triggers: write an incident report, blameless postmortem for an outage, incident review document
+- `write-infrastructure-as-code-for-a-service` — Describe a service's infrastructure as reviewable code instead of console clicks.
+  - Triggers: write infrastructure as code, define cloud resources in code, infrastructure code for a service
+
+## documentation
+
+Router: `routers/documentation/SKILL.md` — 30 skills.
+
+- `capture-a-screen-recording-as-documentation` — Turn a product recording into a focused guide with captions, steps, and checkpoints.
+  - Triggers: screen recording guide, capture a screen recording as docs, record a product walkthrough
+- `document-a-configuration-option` — Define one configuration option with its type, default, behavior, and safe examples.
+  - Triggers: configuration option reference, document a configuration option, configuration setting docs
+- `document-a-local-development-setup` — Set up a reproducible local development environment with verified commands and checkpoints.
+  - Triggers: local development setup, document a local dev setup, reproduce the dev environment
+- `document-a-third-party-integration` — Document an integration's setup, data flow, limits, failures, and ownership boundaries.
+  - Triggers: third-party integration guide, document a third-party integration, integration setup and limits
+- `document-an-api-for-consumers` — Define a consumer-facing API contract with authentication, requests, responses, and errors.
+  - Triggers: consumer api documentation, document an api for consumers, api contract for consumers
+- `document-an-error-code-and-its-fix` — Explain one error code with its cause, impact, remedy, and diagnostic evidence.
+  - Triggers: error code documentation, document an error code, error code fix reference
+- `keep-documentation-in-sync-with-code` — Detect and correct documentation drift by comparing code, tests, and published guides.
+  - Triggers: documentation sync check, keep docs in sync with code, scan docs for code drift
+- `maintain-a-documentation-style-guide` — Maintain writing rules and examples that keep documentation consistent across contributors.
+  - Triggers: documentation style guide, maintain documentation style rules, writing rules for docs
+- `plan-a-documentation-architecture` — Plan documentation sites around user tasks, ownership, navigation, and maintenance cycles.
+  - Triggers: documentation architecture plan, plan a documentation architecture, information architecture for docs
+- `review-documentation-for-accuracy` — Audit documentation claims against current source, tests, and observable behavior.
+  - Triggers: documentation accuracy review, review docs for accuracy, audit documentation against code
+- `structure-a-document-for-scanning` — Organize a document so readers can find answers, compare sections, and act quickly.
+  - Triggers: scannable document structure, structure a document for scanning, document outline for fast scanning
+- `write-a-changelog` — Record product changes by version, date, and user impact in a consistent format.
+  - Triggers: software changelog, write a changelog, version changelog entries
+- `write-a-checklist-in-a-runbook` — Turn an operational procedure into an ordered checklist with checks and rollback.
+  - Triggers: runbook checklist, write a runbook checklist, operational checklist with rollback
+- `write-a-comparison-table-of-options` — Compare options in a table using shared criteria, evidence, and explicit trade-offs.
+  - Triggers: product comparison table, compare product options in a table, options comparison matrix
+- `write-a-conceptual-explanation` — Explain the product's core ideas with a concrete model and minimal jargon.
+  - Triggers: conceptual explanation, explain product concepts, concept guide for a platform
+- `write-a-data-dictionary` — Describe each dataset field with meaning, type, constraints, lineage, and sensitivity.
+  - Triggers: data dictionary, write a data dictionary, dataset field definitions
+- `write-a-decision-record-for-a-team` — Capture a team decision, its context, alternatives, consequences, and review date.
+  - Triggers: document an architecture decision, write a decision record, team decision record
+- `write-a-faq` — Answer recurring questions with concise, sourced responses and clear escalation paths.
+  - Triggers: documentation faq, write a product faq, faq for common questions
+- `write-a-glossary` — Define domain terms consistently with usage examples and links to deeper explanations.
+  - Triggers: domain glossary, write a glossary, glossary of product terms
+- `write-a-how-to-article` — Show a reader how to complete one task using the product with verifiable checkpoints.
+  - Triggers: how-to article, write a product how-to, step-by-step product guide
+- `write-a-migration-guide` — Plan a safe upgrade path with prerequisites, staged changes, validation, and rollback.
+  - Triggers: upgrade migration guide, write a migration guide, migration guide for a version upgrade
+- `write-a-quickstart-guide` — Give a new user a verified shortest path from installation to a working example.
+  - Triggers: quickstart guide, write a quickstart guide, quickstart for a tool
+- `write-a-readme-for-a-project` — Explain what a project does, how to install it, and how to verify a successful setup.
+  - Triggers: project readme, write a project readme, readme for a repository
+- `write-a-reference-page` — Document an interface's inputs, outputs, constraints, and behavior without hiding caveats.
+  - Triggers: interface reference page, write an interface reference page, reference page for a command
+- `write-a-release-note-for-users` — Explain a release's user-visible changes, impact, and required action in plain language.
+  - Triggers: user release notes, write user release notes, release note for customers
+- `write-a-troubleshooting-guide` — Diagnose common failures with ordered checks, causes, fixes, and escalation cues.
+  - Triggers: troubleshooting guide, write a troubleshooting guide, fix common product failures
+- `write-a-tutorial-with-verified-steps` — Build a tutorial whose every step has been executed and confirmed in order.
+  - Triggers: verified tutorial, write a verified tutorial, tutorial with tested steps
+- `write-a-use-case-walkthrough` — Trace one complete use case from user goal through system actions to the final outcome.
+  - Triggers: use case walkthrough, write a use case walkthrough, end-to-end product scenario
+- `write-an-announcement-about-a-change` — Announce a change with impact, timing, action required, and a source of truth.
+  - Triggers: product change announcement, write a change announcement, announce a product update
+- `write-an-onboarding-guide-for-users` — Give a new user a day-one path to value with roles, tasks, and support checkpoints.
+  - Triggers: user onboarding guide, write a user onboarding guide, onboarding path for new users
+
+## education
+
+Router: `routers/education/SKILL.md` — 22 skills.
+
+- `adapt-a-lesson-for-remote-learning` — Adapt a lesson for remote delivery by changing the interaction, not just the setting.
+  - Triggers: adapt a lesson for remote learning, teach this plan online instead, convert an in person lesson to remote
+- `assess-whether-a-teaching-method-worked` — Assess a teaching method by comparing what changed in the learners' work, not in the room.
+  - Triggers: assess whether a teaching method worked, did my lesson approach help, review the effectiveness of a teaching strategy
+- `build-a-formative-assessment` — Build a formative assessment that shows what learners can do right now.
+  - Triggers: build a formative assessment, quick check for understanding, exit ticket for my lesson
+- `build-a-knowledge-check-quiz` — Build a knowledge check that tests recall quickly and points to what to review.
+  - Triggers: build a knowledge check quiz, short recall quiz for my class, quick facts test with review steps
+- `create-a-project-based-unit` — Create a project-based unit with a driving question, a deliverable and a clear assessment.
+  - Triggers: create a project based unit, teach this topic through a project, long term project for a class
+- `create-a-visual-explanation` — Create a visual explanation that shows the relationship rather than decorating the text.
+  - Triggers: create a visual explanation, diagram to show this concept, chart that clarifies this process
+- `design-a-practice-exercise` — Design a practice exercise that isolates one skill and gives feedback on it.
+  - Triggers: design a practice exercise, worksheet for practising one skill, drill for a specific learning objective
+- `design-a-progressive-practice-sequence` — Design a practice sequence that moves from supported to independent in small steps.
+  - Triggers: design a progressive practice sequence, build up from easy to independent tasks, scaffolded practice order
+- `differentiate-task-for-mixed-ability` — Differentiate a task for mixed ability by keeping the outcome shared and the support different.
+  - Triggers: differentiate a task for mixed ability, same task for different levels, support and extension for one worksheet
+- `explain-a-concept-at-three-levels` — Explain a concept three times, at a simple level, a working level and a precise level.
+  - Triggers: explain a concept at three levels, same idea in simple and technical terms, three versions of an explanation
+- `give-actionable-feedback-on-writing` — Give writing feedback that names what to change and shows how, rather than only judging it.
+  - Triggers: actionable feedback on writing, mark this essay for my student, feedback on a piece of writing
+- `grade-with-a-rubric` — Grade with a rubric by stating the criteria and the levels before the work is read.
+  - Triggers: grade with a rubric, build a marking criteria sheet, consistent grading criteria for my class
+- `manage-a-classroom-routine` — Manage a classroom routine with a short signal that works the first time it is used.
+  - Triggers: manage a classroom routine, how do I get my class to settle quickly, attention signal for a lesson
+- `plan-a-course-syllabus` — Plan a course syllabus that maps each week to an objective and an assessed outcome.
+  - Triggers: plan a course syllabus, outline for a course I teach, sequence the topics of a class
+- `plan-a-field-trip-or-outdoor-lesson` — Plan an outdoor lesson with the risk assessment, the logistics and a fallback done first.
+  - Triggers: plan a field trip or outdoor lesson, risk assessment for a school trip, take a group outside for a lesson
+- `plan-a-lesson-for-a-substitute-teacher` — Plan a lesson a substitute can teach without knowing the class, with the class in order.
+  - Triggers: plan a lesson for a substitute teacher, cover work for my class, leave a lesson for someone else to teach
+- `review-a-course-with-a-student` — Review a course with a student by asking what worked, what did not and what to change.
+  - Triggers: review a course with a student, get honest feedback from a learner, ask a student what worked in my class
+- `run-a-group-activity` — Run a group activity where every member has a role and the output is collected on time.
+  - Triggers: run a group activity, manage group work in a class, structure a team task with roles
+- `scaffold-a-support-for-a-struggling-learner` — Support a struggling learner by reducing the gap one step at a time instead of taking over.
+  - Triggers: scaffold support for a struggling learner, help a student who cannot get started, support without doing the work for them
+- `teach-a-concept-through-a-worked-example` — Teach a concept with a worked example that shows every step and then asks for a new one.
+  - Triggers: teach through a worked example, show the steps then have them try, worked problem for teaching a process
+- `write-a-lesson-plan` — Write a lesson plan with the objective, the activity timings and the materials listed.
+  - Triggers: write a lesson plan, prepare tomorrow's class session, structure a single teaching session
+- `write-parent-communication-about-progress` — Write a parent message about a learner's progress that is specific, factual and actionable.
+  - Triggers: write parent communication about progress, report to a parent about their child, progress update letter home
+
+## finance-accounting
+
+Router: `routers/finance-accounting/SKILL.md` — 18 skills.
+
+- `audit-spend-for-duplicate-charges` — Audit spend for duplicate charges by grouping similar transactions by amount and date.
+  - Triggers: audit spend for duplicate charges, find duplicate payments in our records, we might be paying twice for the same invoice
+- `build-a-cash-flow-forecast` — Build a cash flow forecast from expected receipts and payments over the coming weeks.
+  - Triggers: build a cash flow forecast, when will my cash run out, thirteen week cash forecast
+- `calculate-a-unit-economics-model` — Calculate a unit economics model that shows the margin on each unit sold.
+  - Triggers: calculate unit economics, margin on a single customer or order, contribution margin and payback model
+- `explain-a-profit-and-loss-statement` — Explain a profit and loss statement by tracing each material movement to its cause.
+  - Triggers: explain a profit and loss statement, what drove this quarter's profit, understand my p and l movement
+- `post-a-monthly-journal-entry` — Post a monthly journal entry with the supporting detail and the approval attached.
+  - Triggers: post a monthly journal entry, month end journal for my accounts, post recurring monthly accrual entry
+- `prepare-a-budget-vs-actual-report` — Prepare a budget versus actual report that highlights the variances worth acting on.
+  - Triggers: budget versus actual report, compare spend to budget with reasons, monthly budget variance analysis
+- `prepare-a-financial-summary-for-a-board` — Prepare a board financial summary that leads with what changed and what needs a decision.
+  - Triggers: financial summary for a board, board pack financial update, leadership finance summary one page
+- `prepare-a-fundraising-data-room` — Prepare a fundraising data room with an index, clean figures and the source records behind them.
+  - Triggers: prepare a fundraising data room, due diligence document index, investor data room setup
+- `prepare-a-monthly-close-checklist` — Prepare a monthly close checklist that lists every step, owner and dependency in order.
+  - Triggers: monthly close checklist, tasks to close the books each month, period end checklist for finance
+- `prepare-a-vat-return` — Prepare a VAT return that ties to the underlying records and flags the doubtful items.
+  - Triggers: prepare a vat return, file my sales tax quarterly return, vat reconciliation before filing
+- `reconcile-a-bank-account` — Reconcile a bank account by matching every statement line to a ledger entry.
+  - Triggers: reconcile a bank account, match my bank statement to the ledger, bank reconciliation differences
+- `resolve-a-payment-dispute` — Resolve a payment dispute by separating the factual disagreement from the commercial decision.
+  - Triggers: resolve a payment dispute, customer disputes an invoice, supplier refuses to pay a bill
+- `review-a-balance-sheet` — Review a balance sheet by testing whether each balance is supported and current.
+  - Triggers: review a balance sheet, check the balance sheet for errors, sanity check my statement of financial position
+- `review-a-supplier-contract-payment-terms` — Review a supplier contract's payment terms for cost, risk and admin burden.
+  - Triggers: review supplier payment terms, check a contract's payment clauses, early settlement discount worth taking
+- `set-up-an-expense-approval-workflow` — Set up an expense approval workflow with clear thresholds, evidence rules and a record.
+  - Triggers: set up an expense approval workflow, expense claim approval rules, who approves expenses and when
+- `set-up-an-invoice-follow-up-routine` — Set up an invoice follow-up routine that chases overdue invoices on a predictable schedule.
+  - Triggers: invoice follow up routine, chase overdue invoices on a schedule, automatic payment reminders for invoices
+- `track-accruals-and-prepayments` — Track accruals and prepayments so each period carries only its own costs and income.
+  - Triggers: track accruals and prepayments, accrue costs into the right period, manage prepayments in the ledger
+- `write-an-accounts-payable-aging-report` — Write an accounts payable aging report that buckets what is owed by how overdue it is.
+  - Triggers: accounts payable aging report, how much do we owe suppliers and for how long, payables by days overdue
+
+## health-wellness
+
+Router: `routers/health-wellness/SKILL.md` — 18 skills.
+
+- `build-a-sleep-routine` — Build a sleep routine anchored on a consistent wake time and a wind-down sequence.
+  - Triggers: build a sleep routine, fix my sleep schedule and wind down, consistent sleep times
+- `build-a-stress-relief-routine` — Build a stress-relief routine with a short daily practice and a heavier-day fallback.
+  - Triggers: build a stress relief routine, daily practice to manage stress, coping routine for stressful weeks
+- `build-a-sustainable-exercise-routine` — Build an exercise routine that fits the user's real week and can be kept going.
+  - Triggers: build a sustainable exercise routine, exercise habit that fits my week, stick to a workout schedule
+- `do-a-safe-indoor-workout-check` — Check an indoor workout space for hazards before exercising in it.
+  - Triggers: safe indoor workout check, is my home gym safe to use, check a room before exercising in it
+- `eat-well-on-a-budget` — Eat well on a tight budget by planning around cheap staples and batch cooking.
+  - Triggers: eat well on a budget, cheap healthy meals for a tight budget, affordable food shopping plan
+- `improve-sleep-hygiene` — Improve sleep hygiene by fixing the specific habits that disrupt sleep.
+  - Triggers: improve my sleep hygiene, what habits are ruining my sleep, sleep environment and habits fixes
+- `plan-a-home-workout` — Plan a home workout around the space, the equipment and the time actually available.
+  - Triggers: plan a home workout, routine I can do in my living room, no gym workout plan at home
+- `plan-a-week-of-meals` — Plan a week of meals that works with the household's time, budget and preferences.
+  - Triggers: plan a week of meals, weekly meal plan for my household, what should we eat this week
+- `prepare-a-healthy-weeknight-dinner` — Prepare a healthy weeknight dinner in the time available without complicated techniques.
+  - Triggers: healthy weeknight dinner, quick healthy dinner after work, simple healthy evening meal
+- `prepare-for-a-doctor-appointment` — Prepare for a medical appointment so the time is used on the questions that matter.
+  - Triggers: prepare for a doctor appointment, questions to ask my clinician, get ready for a medical appointment
+- `reduce-sedentary-time` — Reduce sedentary time by replacing long stretches of sitting with small, frequent movements.
+  - Triggers: reduce my sedentary time, break up long sitting at a desk, move more during the workday
+- `review-a-supplement-or-diet-claim` — Review a supplement or diet claim against its evidence, dose and safety before acting.
+  - Triggers: review a supplement claim, is this diet claim actually true, check the evidence for a health claim
+- `set-a-realistic-fitness-milestone` — Set a fitness milestone that is measurable, gradual and achievable within the stated time.
+  - Triggers: set a realistic fitness milestone, measurable training target for me, fitness goal that is actually achievable
+- `start-a-walking-program` — Start a walking program that builds distance gradually and stays easy to continue.
+  - Triggers: start a walking program, begin a regular walking routine, walking plan to build fitness
+- `take-a-screen-break-that-works` — Take a screen break that actually restores attention rather than scrolling through another feed.
+  - Triggers: take a screen break that works, rest my eyes during computer work, break from the screen without scrolling
+- `track-a-fitness-goal` — Track a fitness goal with one honest measure and a weekly review that changes the plan.
+  - Triggers: track a fitness goal, log progress towards my training target, measure my fitness progress weekly
+- `track-a-symptom-diary` — Track symptoms on a simple diary so patterns become visible before an appointment.
+  - Triggers: track a symptom diary, log my symptoms over time, symptom record for my doctor
+- `warm-up-before-exercise` — Warm up before exercise with movements that prepare the specific activity.
+  - Triggers: warm up before exercise, dynamic warm up for my workout, pre session warm up routine
+
+## home-diy
+
+Router: `routers/home-diy/SKILL.md` — 18 skills.
+
+- `assemble-flat-pack-furniture` — Assemble flat-pack furniture in the right order with the fittings checked before it is built.
+  - Triggers: assemble flat pack furniture, put together an ikea style wardrobe, flat pack assembly order
+- `choose-the-right-tools-for-a-job` — Choose the right tools for a job without buying tools that duplicate what is already owned.
+  - Triggers: choose the right tools for a job, which tools do I need for this project, buy versus rent tools for diy
+- `dispose-of-old-household-items-safely` — Dispose of old household items safely by finding the right route for each material.
+  - Triggers: dispose of old household items safely, how do I get rid of an old appliance, old furniture disposal rules
+- `fix-a-leaking-tap` — Fix a leaking tap by identifying whether the leak is at the handle or the spout.
+  - Triggers: fix a leaking tap, dripping bathroom tap repair, stop a tap leaking at the handle
+- `fix-a-sticking-door` — Fix a sticking door by finding where it binds and correcting that point first.
+  - Triggers: fix a sticking door, door catches on the frame, door rubs and will not close
+- `hang-a-shelf-level` — Hang a shelf level by finding solid fixings and checking the level before drilling.
+  - Triggers: hang a shelf level, fix a shelf to the wall properly, shelf that does not sag
+- `maintain-a-smart-home-device` — Maintain a smart home device by checking its power, connection, firmware and settings.
+  - Triggers: maintain a smart home device, smart device stopped responding, keep smart home gear working
+- `measure-a-room-for-furniture` — Measure a room properly so new furniture fits with clearance to spare.
+  - Triggers: measure a room for furniture, room measurements before buying a sofa, will this furniture fit my room
+- `organise-a-garage` — Organise a garage by sorting what is kept, what goes and where each item lives.
+  - Triggers: organise a garage, declutter and sort my storage space, garage shelving layout ideas
+- `paint-a-room-well` — Paint a room evenly by preparing the surface, cutting in first and keeping the paint wet.
+  - Triggers: paint a room well, painting without roller marks, how to get a clean paint finish
+- `patch-a-drywall-hole` — Patch a hole in drywall so the repair blends into the surrounding wall.
+  - Triggers: patch a drywall hole, fill a hole in the plasterboard wall, fix a dent in the wall
+- `plan-a-decorating-budget` — Plan a decorating budget that covers materials, tools, time and the contingency.
+  - Triggers: plan a decorating budget, how much will redecorating cost me, renovation budget breakdown
+- `plan-a-home-project-scope` — Scope a home project with the tasks, materials, timings and finish defined before starting.
+  - Triggers: plan a home project scope, break my diy job into steps, what does this job involve
+- `replace-a-light-switch` — Replace a light switch by isolating the circuit and matching the existing wiring type.
+  - Triggers: replace a light switch, swap a broken wall switch, new dimmer switch fitting
+- `run-a-safety-check-before-a-project` — Run a safety check before starting a project so the hazards are identified in advance.
+  - Triggers: safety check before a project, check a diy job is safe to start, pre job home safety checklist
+- `seal-a-drafty-window` — Seal a drafty window by closing the gap with the right material for the frame type.
+  - Triggers: seal a drafty window, stop draughts around my windows, window draught excluder guide
+- `set-up-a-workbench` — Set up a workbench that is stable, at the right height and strong enough for the work.
+  - Triggers: set up a workbench, build a diy bench at home, bench height and layout for projects
+- `unblock-a-drain` — Unblock a slow drain by working from the least invasive method upwards.
+  - Triggers: unblock a drain, slow sink drain fix, clear a blocked shower drain
+
+## hr-recruiting
+
+Router: `routers/hr-recruiting/SKILL.md` — 18 skills.
+
+- `build-a-structured-interview-plan` — Build a structured interview plan where each question probes a stated criterion.
+  - Triggers: build a structured interview plan, interview questions for this role, design a consistent hiring interview
+- `design-a-take-home-test` — Design a take-home test that mirrors the real work and fits the candidate's time.
+  - Triggers: design a take home test, practical exercise for candidates, home assignment that reflects the job
+- `make-a-hiring-decision-without-bias` — Make a hiring decision by applying the agreed criteria to the evidence, with no gut override.
+  - Triggers: make a hiring decision without bias, choose between finalists objectively, avoid gut feel in recruiting
+- `measure-recruiting-funnel-health` — Measure recruiting funnel health from stage conversion, time in stage and drop-off reasons.
+  - Triggers: measure recruiting funnel health, where are we losing candidates, hiring pipeline conversion analysis
+- `negotiate-an-offer` — Negotiate an offer by clarifying what the candidate wants and staying inside the approved band.
+  - Triggers: negotiate an offer with a candidate, candidate wants more than the band, counter offer discussion
+- `offboard-an-employee-safely` — Offboard an employee by securing access, recovering property and recording the end cleanly.
+  - Triggers: offboard an employee safely, handle a resignation checklist, revoke access and recover property
+- `onboard-a-new-hire-in-week-one` — Onboard a new hire in week one with access, context and a clear first deliverable.
+  - Triggers: onboard a new hire in week one, prepare for someone's first day at work, new starter first week plan
+- `plan-a-performance-review-cycle` — Plan a performance review cycle with clear expectations, fair inputs and time for feedback.
+  - Triggers: plan a performance review cycle, organise appraisals for my team, set up the review process
+- `plan-a-team-restructure` — Plan a team restructure around the work that must be done and the people affected.
+  - Triggers: plan a team restructure, reorganise my team reporting lines, change the shape of a team safely
+- `run-a-first-round-phone-screen` — Run a first phone screen that confirms the basics and holds the candidate's interest.
+  - Triggers: run a first round phone screen, first call with a job candidate, introductory recruiter phone call
+- `run-a-pip-conversation` — Run a performance improvement conversation with specific expectations, support and a review date.
+  - Triggers: run a pip conversation, performance improvement plan meeting, tell an employee their performance is not good enough
+- `run-an-onsite-interview-loop` — Run an onsite interview loop where each interviewer scores independently before the debrief.
+  - Triggers: run an onsite interview loop, organise a candidate interview day, interviewer debrief without group bias
+- `screen-resumes-against-a-role` — Screen resumes against a role using the same criteria for every candidate.
+  - Triggers: screen resumes against a role, shortlist applicants fairly, reduce applications to a shortlist
+- `set-up-a-probation-review` — Set up a probation review that measures the role against expectations set at the start.
+  - Triggers: set up a probation review, end of probation conversation plan, assess a new hire during probation
+- `write-a-job-description` — Write a job description that states the outcomes, the work and the requirements clearly.
+  - Triggers: write a job description, job posting for a role I am hiring, advert text for an open position
+- `write-an-offer-letter` — Write an offer letter that states the terms plainly and protects both sides.
+  - Triggers: write an offer letter, put the job offer in writing, formal offer document for a new hire
+- `write-candidate-feedback` — Write candidate feedback that is specific, evidence-based and safe to share.
+  - Triggers: write candidate feedback, hiring decision feedback for an applicant, explain a rejection to a candidate
+- `write-performance-feedback` — Write performance feedback that names the behaviour, the impact and the next step.
+  - Triggers: write performance feedback, give written feedback on someone's work, review notes for a team member
+
+## image-visual
+
+Router: `routers/image-visual/SKILL.md` — 22 skills.
+
+- `batch-generate-a-variant-set` — Batch-generate a controlled variant set and log the parameters for every resulting asset.
+  - Triggers: batch generate an image variant set, generate many prompt variants automatically, run a controlled image variation batch
+- `build-a-moodboard` — Build a moodboard that aligns references, palette, typography, and texture to a visual direction.
+  - Triggers: build a visual moodboard, create an image moodboard, compile a visual direction board
+- `build-a-product-photo-set` — Create a coordinated product photo set with consistent framing, lighting, and background treatment.
+  - Triggers: build a product photo set, create coordinated product views, produce a multi-angle product photo set
+- `build-a-style-guide-for-visuals` — Build a visual style guide that turns approved references into repeatable asset rules.
+  - Triggers: build a brand visual style guide, create visual guidelines for brand assets, write a visual style guide
+- `check-an-image-for-brand-and-safety-issues` — Audit an image for brand violations, unlicensed material, unsafe content, and illegible text.
+  - Triggers: check an image for brand and safety issues, audit a still image before publication, review an image for compliance
+- `create-a-flat-illustration` — Create a flat illustration with clear shapes, restrained color, and consistent spacing.
+  - Triggers: create a flat illustration, make a simple vector-style illustration, design flat artwork
+- `create-a-logo-concept` — Develop a logo concept with a clear silhouette and a documented rights check.
+  - Triggers: create a still logo concept, explore image logo directions, develop a still logo mark
+- `create-an-infographic` — Turn structured information into an infographic with a clear reading order and accurate data.
+  - Triggers: create an infographic, turn facts into a static infographic, design an informational image graphic
+- `design-a-poster-for-an-event` — Design an event poster with readable hierarchy, accurate details, and print-ready dimensions.
+  - Triggers: design an event poster, create a print-ready event image, make a poster for an event
+- `design-a-social-media-graphic` — Design a social media graphic with legible hierarchy, platform dimensions, and clear brand styling.
+  - Triggers: design a social media graphic, create a social media still image, make a branded social graphic
+- `edit-an-image-with-a-mask` — Apply a masked edit to a raster image while preserving pixels outside the selected region.
+  - Triggers: edit an image with a mask, masked raster image edit, change one region of an image
+- `generate-a-product-shot` — Create a clean product shot that presents the item accurately at the requested dimensions.
+  - Triggers: generate a product shot, create a clean product photo, catalog product image
+- `generate-a-storyboard-frame` — Generate a storyboard frame that communicates a scene's action, framing, and shot intent.
+  - Triggers: generate a storyboard frame, draw a still storyboard shot, create a shot planning image
+- `iterate-on-an-image-prompt` — Refine an image-generation prompt through controlled revisions while preserving successful details.
+  - Triggers: iterate on an image prompt, revise an image generation prompt, improve a still image prompt
+- `keep-character-consistency-across-images` — Build a reusable character reference set that keeps appearance consistent across still images.
+  - Triggers: keep character consistent across images, character consistency image set, consistent character reference sheet
+- `make-a-diagram-from-a-description` — Convert a written system description into a labelled diagram with unambiguous relationships.
+  - Triggers: make a diagram from a description, turn a system description into a diagram, draw a process diagram from text
+- `prepare-an-image-set-for-a-release` — Prepare and package a release image set with approved variants, metadata, and final checks.
+  - Triggers: prepare an image set for release, package approved release images, assemble a visual asset release bundle
+- `remove-a-background-from-a-photo` — Remove a photo background while preserving subject edges, hair, transparency, and color.
+  - Triggers: remove a photo background, cut a subject out of a photo, isolate a photo subject
+- `upscale-and-clean-up-a-raster-image` — Upscale and clean a raster image while preserving detail and checking for generated artifacts.
+  - Triggers: upscale and clean up an image, restore a low-resolution photo, denoise and enlarge a raster image
+- `write-a-detailed-image-generation-prompt` — Write a detailed image-generation prompt that fixes subject, composition, lighting, and finish.
+  - Triggers: detailed image generation prompt, write an image prompt, prompt for a still image
+- `write-a-visual-brief-for-a-designer` — Write a visual brief that gives a designer a clear deliverable, constraints, and acceptance criteria.
+  - Triggers: write a visual brief for a designer, create a brief for visual design work, hand off a visual project brief
+- `write-an-image-prompt-for-each-brand-asset` — Produce a prompt matrix that adapts one visual brief to every required brand asset.
+  - Triggers: write an image prompt for each brand asset, create a brand asset prompt matrix, prompt every planned brand image
+
+## learning-skills
+
+Router: `routers/learning-skills/SKILL.md` — 14 skills.
+
+- `build-a-two-week-study-plan` — Build a two-week study plan with daily practice and a mid-point checkpoint.
+  - Triggers: build a study plan, plan to learn a topic in two weeks, two-week study plan
+- `build-learning-feedback-loop` — Build a feedback loop that turns practice results into the next study action.
+  - Triggers: learning feedback loop, build a learning feedback loop, set up a learning feedback loop
+- `build-spaced-repetition-deck` — Build a spaced-repetition deck with atomic cards and review intervals.
+  - Triggers: flashcard deck, build a flashcard deck, spaced repetition flashcard deck
+- `create-learning-concept-map` — Create a concept map that shows how a topic's ideas build on each other.
+  - Triggers: learning concept map, create a learning concept map, learning concept map for a topic
+- `design-ten-minute-drill` — Design a ten-minute drill that exercises one learning objective.
+  - Triggers: ten-minute drill, design a ten-minute drill, run a ten-minute drill
+- `generate-practice-quiz` — Generate a practice quiz with graded questions from the learner's notes.
+  - Triggers: practice quiz, generate a practice quiz, quiz from my study notes
+- `grade-practice-answers` — Grade practice answers against clear criteria and identify the next correction.
+  - Triggers: practice answer review, grade with a practice answer review, request a practice answer review
+- `plan-mastery-project` — Plan a mastery project that proves the learner can use a skill independently.
+  - Triggers: mastery project, plan a mastery project, mastery project for a practical skill
+- `run-knowledge-check` — Run a knowledge check that reveals gaps before the next study session.
+  - Triggers: knowledge check, run a knowledge check, knowledge check before revising
+- `run-weekly-learning-review` — Run a weekly learning review that adjusts the next plan from measured progress.
+  - Triggers: weekly learning review, run a weekly learning review, weekly learning review for my goals
+- `schedule-study-reminder` — Schedule study reminders that match the learner's time and review rhythm.
+  - Triggers: study reminder, schedule a study reminder, set a study reminder
+- `set-weekly-learning-goal` — Set a weekly learning goal with a visible outcome and a completion check.
+  - Triggers: weekly learning goal, set a weekly learning goal, learning goal for this week
+- `trace-skill-learning-path` — Trace a skill-learning path that sequences prerequisite practice before independent use.
+  - Triggers: skill learning path, map a skill learning path, skill learning path for independent use
+- `write-revision-notes` — Write revision notes that connect key ideas to questions and practice tasks.
+  - Triggers: revision notes, write revision notes, revision notes for an exam
+
+## legal-compliance
+
+Router: `routers/legal-compliance/SKILL.md` — 18 skills.
+
+- `build-a-compliance-checklist` — Build a compliance checklist with one actionable line per obligation and an owner for each.
+  - Triggers: build a compliance checklist, turn compliance duties into a checklist, ongoing compliance tasks with owners
+- `check-a-licence-compatibility` — Check licence compatibility by tracing what each licence permits and forbids in combination.
+  - Triggers: check licence compatibility, can I combine these two open source licences, licence obligations conflict in my stack
+- `document-a-compliance-evidence-trail` — Document a compliance evidence trail so any control can be proved on demand.
+  - Triggers: document a compliance evidence trail, prove a control is working, where do we keep audit evidence
+- `flag-unusual-terms-in-a-supplier-agreement` — Flag unusual terms in a supplier agreement by comparing them against the standard position.
+  - Triggers: flag unusual terms in a supplier agreement, which supplier contract terms are off standard, spot deviations in a vendor contract
+- `handle-a-subject-access-request` — Handle a subject access request by finding the data, verifying the identity and meeting the deadline.
+  - Triggers: handle a subject access request, respond to a data subject request, someone asked me for all their personal data
+- `keep-a-licence-and-notice-register` — Keep a register of every licence and notice so the obligations can be met when they are due.
+  - Triggers: keep a licence and notice register, track our open source attribution, third party notice inventory
+- `map-privacy-obligations-to-controls` — Map privacy obligations to the specific controls that satisfy them.
+  - Triggers: map privacy obligations to controls, prove we meet a privacy requirement, privacy control evidence mapping
+- `plan-a-record-retention-schedule` — Plan a record retention schedule that states what is kept, for how long and who disposes of it.
+  - Triggers: plan a record retention schedule, how long should we keep these documents, records disposal policy
+- `prepare-a-data-processing-agreement` — Prepare a data processing agreement that covers the processor's duties and the audit rights.
+  - Triggers: prepare a data processing agreement, processor terms for a vendor, dpa clauses for personal data
+- `prepare-a-nda` — Prepare an NDA with the narrowest workable confidentiality terms for the discussion at hand.
+  - Triggers: prepare an nda, draft a non disclosure agreement, confidentiality terms for a first meeting
+- `prepare-a-training-attestation-list` — Prepare a training attestation list that tracks who completed what and who still owes it.
+  - Triggers: prepare a training attestation list, track who completed compliance training, policy acknowledgement records
+- `prepare-for-a-regulatory-inspection` — Prepare for a regulatory inspection by assembling the evidence before the inspector arrives.
+  - Triggers: prepare for a regulatory inspection, get ready for a compliance audit visit, regulator is coming what do I need
+- `research-a-regulation-that-applies` — Research a regulation by working from the official source and recording each obligation.
+  - Triggers: research a regulation that applies, does this law affect our business, find the official text of a compliance rule
+- `review-a-contract-for-key-terms` — Review a contract by extracting the terms that decide who wins when things go wrong.
+  - Triggers: review a contract for key terms, what clauses matter in this agreement, contract summary before signing
+- `review-a-marketing-claim-for-compliance` — Review a marketing claim by testing the evidence behind every factual statement it makes.
+  - Triggers: review a marketing claim for compliance, is this advert claim safe to run, substantiate an advertising claim
+- `run-a-vendor-risk-assessment` — Run a vendor risk assessment that ranks the supplier by what would hurt if it failed.
+  - Triggers: run a vendor risk assessment, assess a new supplier for risk, third party risk review checklist
+- `triage-a-legal-question-without-counsel` — Triage a legal question into what is known, what is urgent and what needs a qualified opinion.
+  - Triggers: triage a legal question without counsel, we have a legal question and no lawyer yet, what should we do while waiting for advice
+- `write-a-policy-and-get-it-approved` — Write a policy that people can follow and route it through the approval it actually needs.
+  - Triggers: write a policy and get it approved, draft an internal policy document, who signs off a new policy
+
+## llm-engineering
+
+Router: `routers/llm-engineering/SKILL.md` — 44 skills.
+
+- `add-typed-function-definitions-for-tools` — Add typed function definitions that expose each tool's purpose, arguments, and result clearly.
+  - Triggers: add typed function definitions, typed tool function schema, define model tool parameters
+- `build-a-batch-inference-pipeline` — Build a batch inference pipeline with bounded concurrency, retries, and per-item result records.
+  - Triggers: batch inference pipeline, run llm requests in batches, process model requests reliably
+- `build-a-model-router-by-task-difficulty` — Route requests to models based on measured task difficulty while controlling quality and cost.
+  - Triggers: route llm by task difficulty, llm model router, choose llm model by difficulty
+- `build-a-retrieval-pipeline-for-a-model` — Build a repeatable pipeline that ingests documents, retrieves evidence, and supplies grounded context.
+  - Triggers: llm retrieval pipeline, build an llm rag pipeline, retrieve context for an llm
+- `build-a-shadow-deployment-for-a-model` — Build a shadow deployment that scores candidate model traffic without affecting live responses.
+  - Triggers: build model shadow deployment, shadow llm traffic, test model without serving it
+- `build-a-system-prompt-with-guardrails` — Build a system prompt with explicit behavior boundaries, escalation rules, and adversarial checks.
+  - Triggers: llm system prompt guardrails, guardrails for an llm system prompt, llm policy system prompt
+- `build-a-tool-calling-loop` — Build a bounded tool-calling loop that executes model-requested tools and returns a final answer.
+  - Triggers: build a tool calling loop, tool calling agent loop, model tool execution loop
+- `build-an-agentic-rag-loop` — Build an agentic retrieval loop that grounds answers in searched evidence and cites each claim.
+  - Triggers: build agentic rag loop, agent retrieval grounded answer, iterative rag with citations
+- `cache-model-responses-by-prompt-hash` — Cache model responses by normalized prompt hash while preserving privacy and invalidation rules.
+  - Triggers: cache responses by prompt hash, prompt hash llm cache, cache repeated model requests
+- `call-a-model-with-streaming-output` — Stream model output over the transport protocol and measure the first-token and total latency.
+  - Triggers: stream llm output, llm streaming api, llm server sent events output
+- `choose-between-a-chain-and-a-router` — Choose a chain or router by comparing task predictability, routing accuracy, and operating cost.
+  - Triggers: chain or router, choose llm routing architecture, compare chain and router
+- `choose-embeddings-for-a-corpus` — Compare embedding models on representative corpus queries before selecting one for retrieval.
+  - Triggers: choose llm embeddings, llm embedding model comparison, embeddings for an llm corpus
+- `chunk-a-long-document-for-a-model` — Split a long document into retrievable chunks that preserve context and fit the context budget.
+  - Triggers: chunk a long document for an llm, llm document chunking, long document context for an llm
+- `compare-two-models-on-your-task` — Compare two models on representative tasks with matched prompts, metrics, cost, and latency.
+  - Triggers: compare two models, llm model bakeoff, benchmark models on my task
+- `constrain-a-model-output-to-json-schema` — Define a JSON schema, enforce it at the model boundary, and reject responses that violate it.
+  - Triggers: llm json schema output, llm structured output schema, validate llm json output
+- `cut-prompt-tokens-without-losing-accuracy` — Reduce prompt tokens with measured edits that preserve accuracy on a fixed evaluation set.
+  - Triggers: cut llm prompt tokens, reduce llm prompt cost, llm prompt compression
+- `design-a-model-in-the-loop-classifier` — Design a model-based classifier with labeled examples, calibrated thresholds, and a safe fallback.
+  - Triggers: model in loop classifier, llm classification prompt, classify records with confidence
+- `design-a-rag-evaluation-set` — Create a labelled evaluation set that tests retrieval and generation against realistic corpus questions.
+  - Triggers: llm rag evaluation set, build rag test set for an llm, llm retrieval test questions
+- `design-a-schema-validated-tool-response` — Design a schema-validated response contract so tool results remain valid across every model turn.
+  - Triggers: design tool response schema, schema validated tool response, validate tool result contract
+- `detect-hallucination-in-a-generated-answer` — Decompose a generated answer into claims and verify each claim against trusted evidence.
+  - Triggers: detect llm hallucination, llm fact check answer, verify claims in an llm answer
+- `fall-back-to-a-second-model-provider` — Route failed requests to a second provider while preserving the output contract and side-effect safety.
+  - Triggers: fallback llm provider, switch llm provider on failure, second llm provider failover
+- `ground-a-response-in-retrieved-citations` — Attach verified citations to each substantive claim and reject unsupported passages.
+  - Triggers: cite llm sources, ground llm answer in citations, add citations to an llm response
+- `handle-a-model-rate-limit` — Absorb provider rate limits with retry timing, request controls, and observable backpressure.
+  - Triggers: handle llm rate limits, llm retry after backoff, llm rate limit resilience
+- `implement-a-multi-turn-tool-conversation` — Implement a multi-turn conversation that carries tool results back into the model context.
+  - Triggers: multi turn tool conversation, continue llm conversation after tool call, carry tool results across turns
+- `log-model-inputs-and-outputs-safely` — Log model inputs and outputs with redaction, sampling, and retention controls for safe diagnosis.
+  - Triggers: log model inputs outputs safely, safe llm logging, privacy aware model logs
+- `measure-retrieval-quality` — Measure whether relevant evidence is found and ranked before judging the generated answer.
+  - Triggers: measure llm retrieval quality, llm retrieval metrics, evaluate retrieved chunks for an llm
+- `measure-token-usage-and-cost` — Attribute model tokens, latency, and monetary cost to requests and features from provider metadata.
+  - Triggers: measure llm token usage, llm cost per request, llm token budget tracking
+- `migrate-between-model-providers` — Migrate an LLM integration between providers while preserving contracts, safety, and evaluation quality.
+  - Triggers: migrate llm providers, switch model provider, move llm integration provider
+- `parse-structured-tool-arguments` — Parse structured tool arguments into validated objects and report malformed calls precisely.
+  - Triggers: parse tool arguments, validate structured tool arguments, handle malformed tool calls
+- `pin-a-model-version-for-reproducibility` — Pin model, prompt, and decoding versions so a production result can be reproduced exactly.
+  - Triggers: pin model version, reproducible llm configuration, freeze model and prompt versions
+- `plan-a-fallback-model-strategy` — Plan a fallback model strategy with health signals, routing rules, budget limits, and recovery tests.
+  - Triggers: fallback model strategy, plan llm failover, route around model failures
+- `plan-a-multi-step-model-workflow` — Plan a multi-step model workflow with explicit inputs, handoffs, and measurable completion checks.
+  - Triggers: plan multi step model workflow, design staged llm workflow, map model and tool handoffs
+- `rank-retrieved-chunks-before-generation` — Rerank retrieved chunks by query relevance before placing them in the model context.
+  - Triggers: rerank llm retrieved chunks, llm retrieval reranking, rank chunks for an llm
+- `redact-personal-data-before-sending-to-a-model` — Redact personal data before model submission while preserving task-relevant signals and audit evidence.
+  - Triggers: redact personal data for llm, remove pii before model call, mask sensitive prompt data
+- `retry-on-a-malformed-model-response` — Detect malformed model responses and recover them with bounded, observable retries.
+  - Triggers: llm malformed response retry, retry invalid llm json, repair malformed model output
+- `run-an-ab-test-between-prompts` — Run a controlled A/B test between prompts with fixed traffic splits and confidence checks.
+  - Triggers: ab test prompts, compare prompt variants, run live prompt experiment
+- `run-an-offline-evaluation-suite` — Run a fixed offline evaluation suite and report quality, latency, cost, and failure changes.
+  - Triggers: run offline evaluation suite, evaluate llm changes offline, llm regression evaluation
+- `score-output-quality-with-rubrics` — Score generated outputs against explicit rubrics that define quality dimensions and pass thresholds.
+  - Triggers: score outputs with rubrics, llm output rubric, grade generated answers
+- `structure-a-prompt-with-context-and-instructions` — Organize a prompt into explicit context, task, instruction, and output sections.
+  - Triggers: structured llm prompt, llm prompt context and instructions, organize an llm prompt
+- `summarise-a-long-conversation-in-context` — Maintain a compact conversation state that preserves decisions, facts, and unresolved requests.
+  - Triggers: summarise llm conversation context, llm conversation summary, compress llm chat history
+- `use-few-shot-examples-in-a-prompt` — Add representative examples that demonstrate the inputs, reasoning pattern, and expected outputs.
+  - Triggers: few-shot llm prompt, llm prompt examples, add few-shot examples to an llm prompt
+- `write-a-good-completion-prompt` — Draft a completion prompt that defines the task, input, output, and success criteria.
+  - Triggers: llm completion prompt, write an llm completion prompt, baseline completion prompt
+- `write-a-model-cost-dashboard` — Write a model cost dashboard that breaks spend down by feature, model, latency, and budget variance.
+  - Triggers: model cost dashboard, llm spend tracking, llm budget dashboard
+- `write-a-regression-test-for-prompt-changes` — Create a repeatable regression gate that compares prompt versions on fixed quality, cost, and latency checks.
+  - Triggers: llm prompt regression test, regression test an llm prompt, llm prompt release gate
+
+## ml-model-training
+
+Router: `routers/ml-model-training/SKILL.md` — 34 skills.
+
+- `apply-regularisation-to-a-model` — Reduce overfitting by selecting and validating an appropriate regularization strength.
+  - Triggers: apply regularization to model, regularize overfit model, choose l1 l2 or weight decay
+- `batch-predict-with-a-trained-model` — Generate consistent batch predictions with saved models and traceable failure handling.
+  - Triggers: batch predict with trained model, run batch model inference, score dataset with saved model
+- `choose-a-threshold-for-a-classifier` — Choose a classifier threshold that satisfies the operating constraint.
+  - Triggers: choose threshold for classifier, classifier decision threshold, tune classification threshold
+- `clean-and-deduplicate-training-data` — Remove corrupt records, resolve label conflicts, and deduplicate training rows without altering valid examples.
+  - Triggers: clean and deduplicate training data, deduplicate ml dataset, clean training rows
+- `cross-validate-a-model` — Cross-validate a model with folds that match the data-generating process.
+  - Triggers: cross validate model, k fold cross validation, validate model across folds
+- `define-a-machine-learning-problem` — Turn a business request into a scoped prediction task with labels, metrics, and constraints.
+  - Triggers: define machine learning problem, turn business request into prediction task, define ml objective
+- `detect-data-leakage-in-a-pipeline` — Audit a machine learning pipeline and remove features that leak target information.
+  - Triggers: detect data leakage in pipeline, find ml data leakage, audit feature leakage
+- `detect-model-degradation-over-time` — Detect model performance degradation over time and diagnose its likely cause.
+  - Triggers: detect model degradation over time, track model metric degradation, weekly model performance monitoring
+- `diagnose-overfitting` — Diagnose overfitting from metric gaps, learning curves, and model complexity.
+  - Triggers: diagnose model overfitting, overfitting diagnosis, close train validation gap
+- `diagnose-underfitting` — Diagnose underfitting from training performance, error patterns, and model capacity.
+  - Triggers: diagnose model underfitting, underfitting diagnosis, improve weak model fit
+- `encode-categorical-features` — Convert categorical fields into model-ready representations while preserving unknown-category behavior.
+  - Triggers: encode categorical features, categorical feature encoding, handle unknown categories in ml
+- `evaluate-a-classifier-with-a-confusion-matrix` — Diagnose classifier errors with a class-labelled confusion matrix.
+  - Triggers: evaluate classifier with confusion matrix, classifier confusion matrix, inspect classification error cells
+- `evaluate-a-clustering-result` — Assess cluster usefulness, separation, stability, and actionable membership patterns.
+  - Triggers: evaluate clustering result, assess cluster quality, cluster silhouette evaluation
+- `evaluate-a-model-with-precision-and-recall` — Assess classifier errors with precision, recall, and their underlying counts.
+  - Triggers: evaluate model with precision and recall, precision recall evaluation, classifier precision and recall
+- `feature-engineer-a-new-signal` — Design a predictive feature that is available at inference time and adds measurable value.
+  - Triggers: feature engineer new signal, engineer predictive feature, add a leakage safe ml feature
+- `fine-tune-a-pre-trained-model` — Fine-tune a pre-trained model on permitted task data with validation control.
+  - Triggers: fine tune pre trained model, fine tune pretrained model, adapt foundation model to task
+- `handle-class-imbalance-in-training` — Train a classifier on imbalanced data while protecting minority-class performance.
+  - Triggers: handle class imbalance in training, imbalanced classification training, balance minority classes
+- `handle-missing-values-in-a-dataset` — Impute or handle missing feature values in a way that matches the training and serving paths.
+  - Triggers: handle missing values in dataset, impute missing training features, missing value strategy for ml
+- `interpret-a-tree-based-model` — Explain tree-based decisions, feature influence, and representative prediction paths.
+  - Triggers: interpret tree based model, explain tree model predictions, inspect decision tree splits
+- `monitor-model-drift-in-production` — Detect production feature and prediction drift through scheduled reference checks.
+  - Triggers: monitor model drift in production, production model drift monitor, detect feature prediction drift
+- `prepare-a-labelled-dataset` — Assemble a legally usable labelled dataset with consistent labels and documented sources.
+  - Triggers: prepare labelled dataset, build labelled training data, assemble labeled dataset
+- `retrain-a-model-on-new-data` — Retrain a production model on fresh data and promote it only after acceptance checks.
+  - Triggers: retrain model on new data, schedule model retraining, refresh production model
+- `run-a-reproducible-training-pipeline` — Run a training pipeline that reproduces the same model from recorded configuration.
+  - Triggers: run reproducible training pipeline, reproducible ml training pipeline, rerun model training from config
+- `scale-numeric-features` — Standardize or normalize numeric features consistently for training and inference.
+  - Triggers: scale numeric features, numeric feature scaling, standardize ml inputs
+- `select-a-baseline-model` — Choose and record a simple baseline that provides a credible reference score.
+  - Triggers: select baseline model, choose baseline classifier or regressor, baseline model for ml
+- `select-features-with-importance-scores` — Rank and prune model features using importance scores and held-out validation.
+  - Triggers: select features with importance scores, model feature importance, rank features by importance
+- `serve-a-trained-model-as-an-api` — Package a trained model behind a secure, tested, versioned prediction API.
+  - Triggers: serve trained model as api, deploy model prediction api, package ml model endpoint
+- `split-data-for-training-and-evaluation` — Create leakage-safe train, validation, and test partitions with reproducible split rules.
+  - Triggers: split training and evaluation data, create leakage safe data split, make train validation test split
+- `train-a-clustering-model` — Fit a clustering model and document the structure of its discovered groups.
+  - Triggers: train clustering model, fit clustering model, cluster training data
+- `train-a-first-classification-model` — Build a classification model and measure its errors on an untouched test set.
+  - Triggers: train first classification model, first classification model, train binary classifier
+- `train-a-first-regression-model` — Build a regression model and analyze its residuals on an untouched test set.
+  - Triggers: train first regression model, first regression model, train baseline regressor
+- `train-a-neural-network-from-scratch` — Train a neural network from scratch with reproducible data, weights, and checkpoints.
+  - Triggers: train neural network from scratch, build neural network from scratch, train custom deep learning model
+- `tune-hyperparameters-with-a-search` — Search a bounded hyperparameter space and select the best reproducible configuration.
+  - Triggers: tune hyperparameters with search, hyperparameter search for ml, run grid or random search
+- `write-an-experiment-log` — Record training experiments with complete metadata, metrics, artefacts, and decisions.
+  - Triggers: write experiment log, record ml experiment, track training run metadata
+
+## mobile-desktop
+
+Router: `routers/mobile-desktop/SKILL.md` — 22 skills.
+
+- `add-crash-reporting-to-an-app` — Add privacy-safe crash reporting with redaction, deduplication, and release comparison.
+  - Triggers: app crash reporting, add privacy-safe crash reports, compare crashes across releases
+- `automate-a-mobile-app-ui-check` — Automate a repeatable mobile UI check with stable selectors, screenshots, and failure logs.
+  - Triggers: automate a mobile app UI check, run an automated mobile UI check, agent check on a mobile app
+- `build-a-cross-platform-shared-component` — Build a shared cross-platform component with a common API and platform-specific rendering.
+  - Triggers: cross-platform shared component, build one component for mobile and desktop, share native UI behavior
+- `deep-link-into-an-app` — Route deep links into validated app destinations with fallback and attribution handling.
+  - Triggers: app deep link, route a deep link into an app, validate deep link parameters
+- `design-a-mobile-screen-flow` — Design a mobile screen flow with explicit states, navigation edges, and platform constraints.
+  - Triggers: mobile screen flow, design a mobile screen flow, map mobile navigation states
+- `handle-app-backgrounding-and-resume` — Handle app backgrounding and resume by saving state before suspension and recovering afterward.
+  - Triggers: mobile app backgrounding, handle app background and resume, restore state after backgrounding
+- `handle-screen-rotation-and-resizing` — Handle rotation and resizing while preserving navigation state, focus, and user input.
+  - Triggers: screen rotation handling, preserve state while resizing, handle foldable app layouts
+- `handle-touch-gestures-safely` — Implement touch gestures with bounded movement, conflict checks, and reversible actions.
+  - Triggers: touch gesture handling, add a safe touch gesture, test app swipe gestures
+- `implement-offline-caching-in-a-mobile-app` — Implement mobile offline caching with explicit freshness, storage limits, and fallback states.
+  - Triggers: mobile offline caching, cache mobile app content offline, handle stale offline data
+- `integrate-native-device-permissions` — Integrate native device permissions with contextual prompts and explicit denied-state handling.
+  - Triggers: native device permissions, integrate an OS permission flow, handle a denied device permission
+- `measure-app-startup-time` — Measure app startup timing from process launch to the first usable interactive screen.
+  - Triggers: app startup time, measure mobile app launch, profile desktop startup delay
+- `migrate-a-desktop-app-to-an-electron-shell` — Migrate a desktop application into an Electron shell with secure boundaries and packaged output.
+  - Triggers: Electron shell migration, migrate a desktop app to Electron, secure an Electron desktop wrapper
+- `package-an-app-for-the-store` — Prepare an app package with release metadata, icons, privacy declarations, and signed artifacts.
+  - Triggers: package an app for the store, prepare a mobile store package, validate a desktop release package
+- `persist-local-state-on-a-device` — Persist device-local state with a versioned schema, atomic writes, and recovery defaults.
+  - Triggers: device local state, persist state on a device, recover saved app state
+- `plan-a-mobile-app-release-train` — Plan a mobile app release train with staged rollout gates, freeze windows, and rollback ownership.
+  - Triggers: mobile app release train, plan recurring app releases, set mobile rollout gates
+- `push-notification-permission-flow` — Build a push notification permission flow that asks at the point of relevant user intent.
+  - Triggers: push notification permission, request notification permission, add a push opt-in flow
+- `reduce-app-battery-drain` — Reduce app battery drain by locating background work and aligning refreshes with user needs.
+  - Triggers: app battery drain, reduce mobile battery usage, find desktop background power use
+- `sign-and-publish-an-app-release` — Sign, notarize, and publish an app release with retained checksums and rollout controls.
+  - Triggers: sign and publish an app release, publish a signed mobile build, roll out a desktop app release
+- `sync-offline-changes-when-reconnecting` — Synchronize queued offline changes after reconnection using conflict rules and retry limits.
+  - Triggers: offline change sync, sync device changes after reconnecting, resolve offline sync conflicts
+- `test-a-mobile-app-on-real-devices` — Test a mobile app on real devices by covering hardware, OS, network, and lifecycle variants.
+  - Triggers: real device app testing, test a mobile app on devices, run a device compatibility matrix
+- `write-a-desktop-tray-and-menu-integration` — Add a desktop tray icon and native menu with clear lifecycle and accessibility behavior.
+  - Triggers: desktop tray and menu, add a desktop tray integration, build a native tray menu
+- `write-a-responsive-native-layout` — Build a responsive native layout that adapts to available space without clipping controls.
+  - Triggers: responsive native layout, build an adaptive native layout, resize native app layout
+
+## networking
+
+Router: `routers/networking/SKILL.md` — 26 skills.
+
+- `configure-a-firewall-rule` — Add a narrowly scoped firewall rule and prove it blocks only the intended traffic.
+  - Triggers: configure a firewall rule, allow this port through the firewall, block or permit traffic with a firewall rule
+- `configure-a-load-balancer-health-check` — Configure a load-balancer health check that reflects real service readiness.
+  - Triggers: configure a load balancer health check, set up backend health checks, why is my load balancer marking backends unhealthy
+- `configure-a-reverse-proxy` — Configure a reverse proxy with upstream health, TLS handling, and bounded request limits.
+  - Triggers: configure a reverse proxy, set up proxy routing to the backend, add a reverse proxy in front of this service
+- `configure-ipv6-for-a-service` — Enable IPv6 for a service and verify dual-stack reachability without disrupting IPv4.
+  - Triggers: configure ipv6 for a service, add ipv6 support to this host, make this service reachable over ipv6
+- `debug-a-port-binding-conflict` — Resolve a port binding conflict by identifying the process holding the listener.
+  - Triggers: debug a port binding conflict, address already in use on this port, find which process is listening on the port
+- `design-a-multicast-workflow` — Design a multicast workflow with group scope, source validation, and measured delivery.
+  - Triggers: design a multicast workflow, set up multicast group delivery, stream one to many over multicast
+- `diagnose-a-connectivity-failure` — Isolate the failing hop in a network path and document the exact cause.
+  - Triggers: diagnose a connectivity failure, find the broken network hop, why can I not reach this host
+- `document-a-network-topology` — Document a network topology that maps links, boundaries, owners, and verified paths.
+  - Triggers: document a network topology, create a diagram of our network, map the connections between network devices
+- `establish-an-ssh-tunnel` — Create a bounded SSH tunnel and confirm which hosts and ports it exposes.
+  - Triggers: establish an ssh tunnel, set up an ssh port forward, tunnel through the jump host to this service
+- `fix-a-dns-resolution-problem` — Repair a DNS resolution fault and confirm the corrected answer from every resolver.
+  - Triggers: fix a dns resolution problem, dns lookup returns the wrong address, troubleshoot hostname resolution
+- `harden-an-exposed-network-service` — Harden an internet-facing service by shrinking its exposure and verifying each control.
+  - Triggers: harden an exposed network service, reduce the attack surface of this public service, secure an internet facing network endpoint
+- `migrate-a-service-to-a-new-load-balancer` — Move a service to a new load balancer with reversible traffic and health verification.
+  - Triggers: migrate a service to a new load balancer, move traffic to a replacement load balancer, cut over this service to the new balancer
+- `monitor-network-availability` — Monitor network availability with scheduled probes and actionable failure thresholds.
+  - Triggers: monitor network availability, set up network uptime monitoring, alert me when this network path goes down
+- `plan-a-network-capacity-upgrade` — Plan a network capacity upgrade using measured demand, bottlenecks, and staged thresholds.
+  - Triggers: plan a network capacity upgrade, size an upgrade for link utilisation, our network needs more bandwidth capacity
+- `plan-a-network-segmentation` — Design network segments with trust boundaries, access paths, and enforced controls.
+  - Triggers: plan a network segmentation, design network zones and trust boundaries, segment this flat network
+- `plan-an-ip-addressing-scheme` — Plan an IP addressing scheme with unambiguous subnets, growth room, and ownership records.
+  - Triggers: plan an ip addressing scheme, design subnet ranges for our sites, allocate ip address space by segment
+- `read-a-packet-capture` — Read a packet capture to find handshake failures, retransmissions, and dropped traffic.
+  - Triggers: read a packet capture, analyse this pcap file, inspect captured network packets
+- `reduce-packet-loss-on-a-link` — Reduce packet loss on a link by correcting its physical, capacity, or queueing cause.
+  - Triggers: reduce packet loss on a link, fix dropping packets on this connection, diagnose interface packet loss
+- `renew-an-expired-certificate` — Replace an expired TLS certificate without dropping active connections.
+  - Triggers: renew an expired certificate, replace an expired tls certificate, fix a certificate expiry outage
+- `route-traffic-between-environments` — Route traffic between environments through an explicit, logged, and reversible path.
+  - Triggers: route traffic between environments, connect the test environment to production, allow traffic from staging to prod
+- `set-up-a-service-mesh-sidecar` — Deploy a service-mesh sidecar with scoped traffic policy and verified service discovery.
+  - Triggers: set up a service mesh sidecar, inject the sidecar proxy into this workload, add this service to our service mesh
+- `set-up-a-tls-certificate` — Install a TLS certificate and verify its chain, hostname, and renewal dates.
+  - Triggers: set up a tls certificate, install a certificate for this service, issue and deploy a tls certificate
+- `set-up-a-vpn-for-remote-access` — Establish a secure remote-access VPN and verify tunnel reachability from a client.
+  - Triggers: set up a vpn for remote access, configure vpn client connectivity, give remote users access to the private network
+- `test-end-to-end-network-connectivity` — Run a documented end-to-end connectivity test across every hop and transport layer.
+  - Triggers: test end to end network connectivity, run a full path connectivity test, verify connectivity across the whole network path
+- `troubleshoot-a-latency-spike` — Locate the source of a latency spike by comparing path measurements across endpoints.
+  - Triggers: troubleshoot a latency spike, find the source of network delay, why did ping latency jump
+- `tune-tcp-congestion-control` — Select and validate a TCP congestion-control setting for a measured network path.
+  - Triggers: tune tcp congestion control, change the tcp congestion algorithm, optimise tcp throughput on this link
+
+## observability
+
+Router: `routers/observability/SKILL.md` — 26 skills.
+
+- `add-a-health-and-readiness-probe` — Add health and readiness probes that distinguish running processes from able to serve traffic.
+  - Triggers: add health and readiness probes, configure liveness and readiness, service readiness endpoint
+- `add-a-synthetic-check-for-a-critical-path` — Add a synthetic check that exercises a critical user path and reports its own failure.
+  - Triggers: add a synthetic check for a critical path, synthetic critical path monitor, automated journey health check
+- `add-structured-request-logging` — Add structured request logs with stable fields, correlation identifiers, and secret-safe redaction.
+  - Triggers: add structured request logging, structured logs for requests, log requests as json
+- `audit-a-service-for-missing-telemetry` — Audit a service for blind spots and map each gap to a concrete signal to add.
+  - Triggers: audit a service for missing telemetry, find observability gaps, telemetry coverage review
+- `build-a-capacity-forecast-from-metrics` — Forecast capacity from historical usage, growth, and headroom against a stated ceiling.
+  - Triggers: build a capacity forecast from metrics, forecast resource usage, project capacity from telemetry
+- `build-a-latency-dashboard` — Build a latency dashboard that shows percentile distributions by route, version, and dependency.
+  - Triggers: build a latency dashboard, p95 latency dashboard, percentile latency dashboard
+- `build-a-usage-report-for-a-team` — Build a team usage report from telemetry with fixed windows, deduplication, and budget notes.
+  - Triggers: build a usage report for a team, weekly product usage report, telemetry based usage summary
+- `build-an-error-rate-alert` — Define an error-rate alert that fires on a sustained symptom instead of isolated failures.
+  - Triggers: build an error rate alert, alert on rising failures, request error threshold
+- `correlate-logs-metrics-and-traces` — Correlate logs, metrics, and traces into one incident timeline for a failing request.
+  - Triggers: correlate logs metrics and traces, join telemetry for an incident, match a trace to logs and metrics
+- `create-a-log-search-for-a-failure` — Build a saved log search that isolates one failure mode using fields, time range, and filters.
+  - Triggers: create a log search for a failure, search logs for errors, saved failure log query
+- `define-service-level-indicators` — Choose service level indicators that measure user-visible outcomes rather than internal activity.
+  - Triggers: define service level indicators, select user-visible reliability indicators, choose service level indicator set
+- `detect-a-silent-failure` — Detect a silent failure by checking expected side effects instead of relying on error counts.
+  - Triggers: detect a silent failure, check for missing side effects, catch failures with no errors
+- `implement-a-distributed-trace` — Instrument a request path with distributed tracing so latency and failures map across service boundaries.
+  - Triggers: implement distributed tracing, trace a request across services, add spans to a service
+- `instrument-a-code-path-with-metrics` — Add counters, histograms, and gauges to a code path without unbounded metric labels.
+  - Triggers: instrument a code path with metrics, add metrics to a handler, counter and histogram instrumentation
+- `instrument-a-queue-consumer` — Instrument a queue consumer with throughput, lag, retry, and processing-duration signals.
+  - Triggers: instrument a queue consumer, monitor queue lag, consumer throughput metrics
+- `measure-a-background-job-success-rate` — Measure background job success by counting terminal outcomes against attempted runs.
+  - Triggers: measure background job success rate, job completion percentage, scheduled job failure rate
+- `measure-tail-latency-not-just-averages` — Measure tail latency with percentiles, exemplars, and enough samples to reveal rare slowness.
+  - Triggers: measure tail latency not averages, p99 latency analysis, find slow request tail
+- `plan-an-on-call-dashboard` — Plan an on-call dashboard with service health, active incidents, and recent deploy signals.
+  - Triggers: plan an on call dashboard, on call service health view, primary responder dashboard
+- `report-on-the-reliability-of-a-dependency` — Report dependency reliability using success rate, latency distribution, and attributed failures.
+  - Triggers: report on dependency reliability, upstream service reliability report, assess external service uptime
+- `retire-a-noisy-alert` — Retire a noisy alert after confirming its signal, owner, and replacement coverage.
+  - Triggers: retire a noisy alert, remove an overly frequent alert, clean up alert noise
+- `set-up-a-dead-letter-alert` — Set up a dead-letter queue alert that detects failed messages before they pile up unseen.
+  - Triggers: set up a dead letter alert, alert on dead letter queue growth, monitor dead letter messages
+- `trace-a-slow-third-party-call` — Trace a slow third-party call to separate client delay, network delay, and provider delay.
+  - Triggers: trace a slow third party call, diagnose slow external api, provider call latency breakdown
+- `track-a-request-across-services` — Track one request across service boundaries with propagated identifiers and shared timestamps.
+  - Triggers: track a request across services, follow one request through services, propagate a request identifier
+- `write-a-service-level-objective` — Write a measurable service level objective with a target, window, and accountable owner.
+  - Triggers: write a service level objective, set an slo target, service reliability objective
+- `write-an-alert-that-a-human-can-act-on` — Turn an alert into a specific, owned action with context, severity, and a tested response.
+  - Triggers: write an actionable alert, alert with a runbook, make alerts easier to act on
+- `write-an-slo-burn-rate-alert` — Write a burn-rate alert that fires when the error budget is consumed faster than planned.
+  - Triggers: write an slo burn rate alert, error budget burn alert, notify on fast slo burn
+
+## personal-finance
+
+Router: `routers/personal-finance/SKILL.md` — 11 skills.
+
+- `automate-bill-payments` — Set up automated bill payments so bills leave on time without manual effort.
+  - Triggers: automate my bill payments, set up automatic recurring payments, schedule my bills so they always land
+- `build-a-zero-based-budget` — Build a zero-based budget where every unit of income has a named job.
+  - Triggers: zero based budget, budget where every dollar has a job, assign all of my income
+- `check-a-fee-and-charger-in-a-subscription` — Check a subscription for hidden fees, price rises and charges that no longer apply.
+  - Triggers: check a subscription for hidden fees, audit my subscription charges, has this subscription price gone up
+- `compare-credit-cards-on-cost` — Compare credit cards on the real cost of borrowing rather than on the headline rate.
+  - Triggers: compare credit cards on cost, which credit card is cheapest for me, credit card annual fee versus interest
+- `pay-down-debt-with-a-plan` — Pay down debt with an ordered plan that targets the highest cost first.
+  - Triggers: pay down my debt with a plan, clear my credit card debt fastest, debt repayment schedule by interest rate
+- `plan-a-big-purchase-affordably` — Plan a large purchase so it fits the budget without crowding out the savings.
+  - Triggers: plan a big purchase affordably, can I afford this large purchase, budget for an expensive item
+- `plan-a-sinking-fund` — Plan a sinking fund for a known future cost instead of paying for it from monthly income.
+  - Triggers: plan a sinking fund, save steadily for a known future cost, separate account for a planned purchase
+- `review-a-monthly-finance-routine` — Run a short monthly finance routine that keeps the budget and the accounts honest.
+  - Triggers: monthly finance routine, review my money once a month, monthly money check-in checklist
+- `set-up-an-emergency-fund` — Set up an emergency fund sized to the real cost of losing income for several months.
+  - Triggers: set up an emergency fund, how much should my emergency buffer be, start a cash buffer for surprises
+- `start-a-first-investment` — Start a first investment with a clear rationale, a small stake and a stated time horizon.
+  - Triggers: start my first investment, how do I begin investing as a beginner, make a small first investment
+- `track-spending-in-one-place` — Consolidate every spending source into one place so the totals can be trusted.
+  - Triggers: track my spending in one place, consolidate all my spending records, one place to see all my spending
+
+## productivity
+
+Router: `routers/productivity/SKILL.md` — 34 skills.
+
+- `automate-a-repetitive-admin-task` — Turn a repeated administrative chore into a rule the agent runs on a schedule.
+  - Triggers: automate a repetitive admin task, set up a recurring admin automation, run this chore automatically
+- `batch-similar-tasks-together` — Combine repeated low-effort tasks into one scheduled batch to cut context switching.
+  - Triggers: batch similar tasks, group my small chores together, combine repetitive tasks into one block
+- `build-a-morning-routine-that-lasts` — Design a short morning routine with fixed triggers, low friction and a weekly review.
+  - Triggers: morning routine that lasts, build a sustainable morning routine, stick to a morning routine
+- `build-a-personal-checklist-template` — Create a reusable checklist template that turns a recurring job into a fixed sequence.
+  - Triggers: personal checklist template, make a reusable checklist, checklist for a recurring job
+- `build-a-simple-personal-dashboard` — Assemble a one-page dashboard of active commitments, time budget and current focus.
+  - Triggers: simple personal dashboard, one page view of my commitments, build my personal review dashboard
+- `build-a-weekly-review-routine` — Create a repeatable weekly review that closes loose tasks and sets the next week's focus.
+  - Triggers: weekly review routine, run my end of week review, set up a weekly review
+- `capture-a-task-in-one-line` — Capture a task as one actionable line with an owner, outcome and trigger.
+  - Triggers: capture a task, add this to my task list, write a task in one line
+- `clear-your-inbox-to-zero` — Empty a task inbox by processing every item into a delete, delegate or schedule action.
+  - Triggers: clear my task inbox, empty my inbox, process my inbox to zero
+- `decide-what-not-to-do` — Weed a task list by naming what is deliberately dropped, deferred or refused this week.
+  - Triggers: decide what not to do, what should I drop this week, cut my task list down
+- `delegate-a-task-with-a-check-in-date` — Hand off a task with a written outcome, owner and a dated check-in point.
+  - Triggers: delegate a task with a check-in, hand off a task, assign work with a follow-up date
+- `finish-a-task-that-drags` — Break a stalled task into a first action, a size limit and a defined stopping point.
+  - Triggers: finish a task that drags, task I keep avoiding, help me finish a stalled task
+- `group-tasks-by-context` — Group pending tasks by location, tool or energy need so batches can run without switching.
+  - Triggers: group my tasks by context, sort tasks into batches, organise tasks by where I do them
+- `keep-a-single-task-list` — Consolidate scattered task lists into one ordered list with one home per item.
+  - Triggers: keep a single task list, merge all my todo lists, one list for every task
+- `plan-a-focus-heavy-project-week` — Shape a project week around protected focus time with dependencies and slack ordered.
+  - Triggers: focus heavy project week, plan a week around one project, project week with deep work
+- `plan-a-quiet-day` — Reserve a low-interruption day for one priority task and guard it from new meetings.
+  - Triggers: plan a quiet day, schedule a day without meetings, protect a low interruption day
+- `plan-a-work-week-around-a-holiday` — Fit working days around a holiday and shift deadlines before the gap arrives.
+  - Triggers: plan my work week around a holiday, schedule around time off, plan a week with a holiday
+- `plan-your-day-in-ten-minutes` — Build a time-boxed day plan with the next action stated in ten minutes.
+  - Triggers: plan my day, ten minute daily plan, time box my day
+- `plan-your-week-around-one-outcome` — Choose one weekly outcome and schedule the work that can actually produce it.
+  - Triggers: plan my week around one outcome, one outcome for the week, weekly outcome plan
+- `prepare-the-night-before-a-busy-day` — Prepare tomorrow's first tasks, materials and schedule the evening before.
+  - Triggers: prepare the night before a busy day, set up tomorrow evening, prep for tomorrow morning
+- `protect-a-deep-work-block` — Shield one uninterrupted deep-work block from meetings, messages and task switching.
+  - Triggers: protect a deep work block, block focus time on my calendar, reserve uninterrupted work time
+- `reduce-meeting-load-on-your-calendar` — Audit calendar load and return reclaimed hours to focused work with explicit cuts.
+  - Triggers: reduce my meeting load, too many meetings on my calendar, audit my recurring meetings
+- `review-your-screen-time-and-focus` — Read screen-time data, find the heaviest distraction and set one reduction rule.
+  - Triggers: review my screen time, check screen time and focus, reduce phone screen time
+- `run-a-daily-review` — Close the day in ten minutes by clearing tasks, noting progress and setting tomorrow's start.
+  - Triggers: daily review, end of day shutdown, close out my day
+- `run-a-personal-goal-review` — Review personal goals against evidence, reset stale ones and choose the next measure.
+  - Triggers: personal goal review, review my goals, check progress on my goals
+- `say-no-to-a-new-request` — Decline a new request with a clear reason and, when possible, a smaller alternative.
+  - Triggers: say no to a new request, decline extra work politely, help me refuse a request
+- `set-a-phone-free-work-window` — Define a phone-free work window with a start signal, a backup device and a rule for emergencies.
+  - Triggers: phone free work window, block my phone while I work, work without phone notifications
+- `timebox-a-focus-session` — Run one focused work session with a fixed timer, a single task and a clear finish.
+  - Triggers: timebox a focus session, run a focus timer, one task focus block
+- `track-how-your-time-actually-goes` — Compare logged time with planned time and correct the next plan from the gap.
+  - Triggers: track how my time actually goes, log my actual work time, compare planned and real time
+- `triage-a-to-do-list-after-travel` — Rebuild a task list after travel by clearing stale items and re-timing the rest.
+  - Triggers: triage my todo list after travel, rebuild my task list after a trip, clear my backlog after travel
+- `use-a-pomodoro-style-work-cycle` — Work in timed focus and break cycles that end with a recorded stop point.
+  - Triggers: pomodoro work cycle, work in timed focus and break cycles, run a pomodoro session
+- `use-a-template-for-recurring-reports` — Turn a repeated report into a template that the agent fills and refreshes each period.
+  - Triggers: template for recurring reports, automate my weekly report, standardise my recurring report
+- `work-with-a-tired-brain` — Choose low-friction work for a tired period instead of pushing through the hardest task.
+  - Triggers: work with a tired brain, what can I do when I am exhausted, low energy work session
+- `write-a-personal-energy-map` — Map attention levels across the day and assign each kind of work to its best window.
+  - Triggers: personal energy map, when am I most focused during the day, map my daily energy levels
+- `write-a-two-week-experiment` — Design a two-week test of one habit or workflow with a baseline and a pass mark.
+  - Triggers: two week experiment, test a habit for a fortnight, run a two week workflow trial
+
+## project-management
+
+Router: `routers/project-management/SKILL.md` — 26 skills.
+
+- `assign-task-owners-and-dates` — Assign every project task to one accountable owner with a due date and delivery evidence.
+  - Triggers: assign project task owners, set task owners and dates, allocate project tasks
+- `break-a-project-into-workstreams` — Partition a project goal into coordinated workstreams with clear interfaces and deliverables.
+  - Triggers: project workstreams, break a project into workstreams, plan cross-functional workstreams
+- `build-a-project-schedule-with-dependencies` — Build a dependency-aware schedule that exposes sequencing constraints, blockers, and milestone dates.
+  - Triggers: dependency project schedule, build a project schedule with dependencies, sequence tasks with blockers
+- `close-a-project-and-capture-lessons` — Close a project with acceptance evidence, outcome assessment, handover, and reusable lessons learned.
+  - Triggers: close a project and capture lessons, project closure checklist, finish and document a project
+- `collect-and-rank-backlog-items` — Collect, deduplicate, and rank backlog items using value, risk, effort, and dependency evidence.
+  - Triggers: collect and rank backlog items, prioritize the project backlog, rank incoming backlog requests
+- `coordinate-two-teams-on-one-delivery` — Coordinate two teams on one delivery through a shared interface, explicit handoffs, and joint verification.
+  - Triggers: coordinate two teams on one delivery, joint delivery coordination, align two teams on a delivery
+- `estimate-a-project-timeline` — Estimate a project timeline from capacity, task dependencies, and explicit uncertainty buffers.
+  - Triggers: project timeline estimate, estimate a project timeline, forecast project completion date
+- `estimate-a-task-with-story-points` — Estimate a task with story points by comparing scope, complexity, uncertainty, and team calibration.
+  - Triggers: estimate a task with story points, assign story points, story point estimation
+- `maintain-a-project-risk-register` — Maintain a project risk register with scored exposure, owners, responses, and review dates.
+  - Triggers: maintain a project risk register, project risk register review, update the delivery risk log
+- `manage-a-scope-change-request` — Evaluate a scope change against value, capacity, dependencies, and impact before approving it.
+  - Triggers: manage a scope change request, evaluate a project scope change, approve a scope change
+- `manage-multiple-project-priorities` — Prioritize multiple projects using shared capacity, deadlines, dependencies, and explicit trade-offs.
+  - Triggers: manage multiple project priorities, prioritize several projects, balance work across projects
+- `plan-a-project-handover` — Plan a project handover that transfers knowledge, open work, ownership, and acceptance criteria.
+  - Triggers: plan a project handover, transfer an active project, project ownership handover
+- `plan-a-proof-of-concept` — Plan a proof of concept with a specific hypothesis, success threshold, scope boundary, and decision date.
+  - Triggers: plan a proof of concept, design a proof of concept, scope a technical validation proof
+- `plan-a-release-milestone` — Plan a release milestone around scope, quality gates, dependencies, communication, and rollback readiness.
+  - Triggers: plan a release milestone, release readiness plan, prepare a project release
+- `report-a-schedule-slippage` — Report a schedule slippage with evidence, affected milestones, causes, and a credible recovery plan.
+  - Triggers: report schedule slippage, project delay report, communicate a slipped schedule
+- `resolve-a-project-risk` — Resolve a project risk by confirming exposure, selecting a response, and verifying mitigation.
+  - Triggers: resolve a project risk, mitigate a delivery risk, handle a project risk
+- `run-a-project-kickoff-meeting` — Run a project kickoff that aligns outcomes, scope, owners, milestones, dependencies, and working agreements.
+  - Triggers: run a project kickoff meeting, project kickoff agenda, start a project kickoff
+- `run-a-project-status-review` — Run a project status review grounded in delivered work, current dependencies, and next decisions.
+  - Triggers: project status review, run a project status meeting, review project health
+- `run-a-sprint-planning-session` — Run a sprint planning session that converts prioritized backlog items into owned, sized commitments.
+  - Triggers: run a sprint planning session, plan the next sprint, sprint commitment planning
+- `run-a-sprint-review` — Run a sprint review using delivered increments, acceptance evidence, stakeholder feedback, and next priorities.
+  - Triggers: run a sprint review, sprint demonstration review, review sprint deliverables
+- `set-up-a-project-dashboard` — Set up a project dashboard that shows owners, dependencies, milestone health, and evidence-backed status.
+  - Triggers: set up a project dashboard, project delivery dashboard, build a milestone status dashboard
+- `track-a-project-budget-against-plan` — Track a project budget against plan by recording commitments, actual spend, variances, and forecast outcomes.
+  - Triggers: track a project budget against plan, project budget variance, monitor project spend versus plan
+- `track-a-project-milestone` — Track a project milestone against committed deliverables, blockers, and recovery actions.
+  - Triggers: track a project milestone, check milestone delivery status, milestone progress review
+- `write-a-project-charter` — Write a project charter that authorizes the work and defines its boundaries, outcomes, owners, and measures.
+  - Triggers: write a project charter, create a project charter, project authorization charter
+- `write-a-project-plan` — Create an actionable project plan linking milestones, owners, dependencies, risks, and acceptance criteria.
+  - Triggers: project plan, write a project plan, deliverable project plan
+- `write-a-project-status-email` — Write a concise project status email that separates delivered results, current blockers, and requested decisions.
+  - Triggers: write a project status email, send a project status update, draft a project progress email
+
+## relationships-social
+
+Router: `routers/relationships-social/SKILL.md` — 11 skills.
+
+- `apologise-well` — Apologise in a way that names the harm, takes responsibility and moves forward.
+  - Triggers: apologise well, how to apologise for real, write an apology that lands properly
+- `handle-a-friendship-slight` — Handle a small hurt in a friendship by naming it once and checking what it meant.
+  - Triggers: handle a friendship slight, my friend let me down how do I raise it, resolve a small betrayal between friends
+- `handle-a-social-invitation-you-cannot-accept` — Decline a social invitation warmly, briefly and without inventing an excuse.
+  - Triggers: decline a social invitation, say no to an invitation without an excuse, politely refuse an event I cannot attend
+- `have-a-hard-conversation-with-someone-close` — Prepare for a hard conversation with someone close so it ends in clarity rather than damage.
+  - Triggers: hard conversation with someone close, prepare for a difficult talk with a friend, how to raise a serious issue without a fight
+- `keep-a-long-distance-friendship` — Keep a long-distance friendship alive with small, regular contact instead of rare long calls.
+  - Triggers: keep a long distance friendship, stay in touch with a distant friend, maintain a friendship over distance
+- `make-a-new-friend-as-an-adult` — Make a new friend as an adult through repeated low-pressure contact.
+  - Triggers: make a new friend as an adult, how to meet people as an adult, start a new friendship later in life
+- `plan-a-friends-meeting` — Plan a friends meeting that fits everyone's time and ends with a reason to meet again.
+  - Triggers: plan a friends meeting, organise a get together with friends, arrange a group meet-up that works
+- `set-a-boundary-with-clarity` — Set a boundary that is specific, said once and does not invite negotiation.
+  - Triggers: set a boundary with clarity, how do I say no without over-explaining, write a clear limit on what I will do
+- `support-a-friend-in-crisis` — Support a friend in crisis by staying present, listening well and connecting them to help.
+  - Triggers: support a friend in crisis, my friend is in distress what do I do, help a friend who is not okay
+- `talk-to-a-parent-about-something-difficult` — Talk to a parent about something difficult by giving them context and a clear ask.
+  - Triggers: talk to my parent about something difficult, how to tell my parents hard news, raise a sensitive topic with a parent
+- `write-a-thoughtful-thank-you` — Write a thank-you that names the specific thing that mattered to the recipient.
+  - Triggers: write a thoughtful thank you, thank you message for a specific favour, how to say thanks properly
+
+## research
+
+Router: `routers/research/SKILL.md` — 26 skills.
+
+- `analyse-interview-transcripts` — Analyse interview transcripts by coding themes, contradictions, and supporting quotes.
+  - Triggers: interview transcript analysis, analyse interview transcripts
+- `break-a-question-into-searchable-subquestions` — Break a research question into searchable subquestions with coverage and priority.
+  - Triggers: searchable subquestions, break a research question into subquestions
+- `build-a-comparison-matrix-of-sources` — Build a comparison matrix that contrasts sources on aligned dimensions and evidence quality.
+  - Triggers: source comparison matrix, compare research sources in a matrix
+- `code-an-open-ended-interview` — Code open-ended interview responses with a traceable codebook and consistency check.
+  - Triggers: code open-ended interviews, code qualitative interview responses
+- `compare-alternative-tools-or-vendors` — Compare alternative tools or vendors against shared requirements and total costs.
+  - Triggers: research vendor comparison, compare alternative tools or vendors
+- `critique-a-studys-method` — Critique a study's method by testing fit, validity, and causal inference.
+  - Triggers: critique a study method, evaluate a study's research method
+- `design-a-literature-search-strategy` — Design a literature search strategy with databases, query terms, and inclusion criteria.
+  - Triggers: literature search strategy, design a literature search
+- `design-a-survey-instrument` — Design a survey instrument that measures each construct without leading questions.
+  - Triggers: research survey instrument, design a survey instrument
+- `evaluate-source-credibility` — Evaluate source credibility by checking provenance, evidence, expertise, and transparency.
+  - Triggers: research source credibility, evaluate the credibility of a source
+- `extract-evidence-from-a-source` — Extract evidence from a source with exact passages, context, and claim links.
+  - Triggers: extract source evidence, pull evidence from a source
+- `find-expert-opinions-on-a-topic` — Find expert opinions on a topic and separate informed views from promotion.
+  - Triggers: expert opinions on a topic, find informed expert opinions
+- `frame-a-research-question` — Frame a research question with scope, decision context, and measurable boundaries.
+  - Triggers: research question, frame a research question
+- `plan-a-primary-research-interview` — Plan a primary research interview around hypotheses, probes, and decision use.
+  - Triggers: primary research interview plan, plan a primary research interview
+- `read-a-paper-efficiently` — Read a research paper efficiently by extracting its design, evidence, and limits.
+  - Triggers: read a research paper, efficient academic paper reading
+- `research-a-market-size-estimate` — Research a market size estimate by triangulating demand and supply evidence.
+  - Triggers: research market size estimate, estimate a market size
+- `run-a-competitive-landscape-scan` — Run a competitive landscape scan across categories, substitutes, and positioning.
+  - Triggers: competitive landscape scan, scan the competitive landscape
+- `run-a-user-interview-study` — Run a user interview study with a consistent guide, consent, and traceable notes.
+  - Triggers: user interview study, run a user interview study
+- `scan-preprint-servers-for-recent-work` — Scan preprint servers for recent work and label each result's review status.
+  - Triggers: recent research preprints, scan preprint servers
+- `screen-sources-for-relevance` — Screen candidate sources against explicit relevance criteria and retain an auditable shortlist.
+  - Triggers: screen research sources, source relevance screening
+- `spot-a-bias-in-a-dataset` — Spot dataset bias by examining coverage, measurement, and missingness patterns.
+  - Triggers: research dataset bias, spot bias in a dataset
+- `summarise-a-body-of-research` — Summarise a body of research with agreements, disagreements, and confidence levels.
+  - Triggers: body-of-research synthesis, summarise a body of research
+- `take-structured-notes-while-reading` — Take structured research notes that preserve citations, claims, and open questions.
+  - Triggers: structured research notes, take notes while reading a source
+- `track-citations-and-sources` — Maintain a citation ledger that links every claim to a dated, accessible source.
+  - Triggers: research citation tracker, track research citations and sources
+- `validate-a-claim-with-a-primary-source` — Validate a claim with a primary source and preserve the evidence trail.
+  - Triggers: primary-source validation, validate a claim with a primary source
+- `write-a-literature-review` — Write a literature review organised by themes, evidence, and unresolved questions.
+  - Triggers: research literature review, write a literature review
+- `write-a-research-brief` — Write a research brief that connects evidence to a decision and confidence.
+  - Triggers: decision research brief, write a research brief
+
+## sales-marketing
+
+Router: `routers/sales-marketing/SKILL.md` — 26 skills.
+
+- `build-a-brief-for-a-sales-call` — Build a brief for a sales call so the team walks in knowing the account and the goal.
+  - Triggers: build a brief for a sales call, prep sheet for a prospect meeting, share context before a client call
+- `build-a-lead-scoring-model` — Build a lead scoring model from the actions that have actually preceded a purchase.
+  - Triggers: build a lead scoring model, score leads by likelihood to buy, prioritise our lead list
+- `follow-up-with-a-warm-lead` — Follow up with a warm lead by adding something new rather than repeating the last message.
+  - Triggers: follow up with a warm lead, chase a prospect without being pushy, second email to an interested contact
+- `handle-a-price-objection` — Handle a price objection by returning the conversation to the value and the alternatives.
+  - Triggers: handle a price objection, prospect says it is too expensive, respond to a budget complaint
+- `manage-a-pipeline-review` — Manage a pipeline review by checking each deal against evidence rather than optimism.
+  - Triggers: manage a pipeline review, weekly sales pipeline check, forecast accuracy on open deals
+- `negotiate-a-contract-term` — Negotiate a contract term by knowing what matters to both sides and trading on it.
+  - Triggers: negotiate a contract term, push back on a clause in a customer contract, trade terms in a deal
+- `optimise-a-landing-page-for-conversion` — Optimise a landing page by finding the one point where visitors leave.
+  - Triggers: optimise a landing page for conversion, improve my landing page conversion rate, why do visitors leave my page
+- `plan-a-campaign-calendar` — Plan a campaign calendar that sequences the messages around what the audience is doing.
+  - Triggers: plan a campaign calendar, schedule my marketing campaign, campaign content calendar across channels
+- `plan-a-referral-programme` — Plan a referral programme that gives both sides a reason and a simple way to act.
+  - Triggers: plan a referral programme, customer referral scheme design, reward structure for referrals
+- `plan-a-webinar` — Plan a webinar with a topic, a format and a follow-up that converts attendance.
+  - Triggers: plan a webinar, run of show for an online event, webinar promotion and follow up plan
+- `position-a-product-against-a-competitor` — Position a product against a competitor by comparing what each one is built for.
+  - Triggers: position a product against a competitor, how do we compare to the alternative, competitive messaging without attacking
+- `prepare-an-event-booth-pitch` — Prepare an event pitch that opens with the visitor's problem rather than the product.
+  - Triggers: prepare an event booth pitch, what to say at our conference stand, trade show pitch for visitors
+- `qualify-an-inbound-lead` — Qualify an inbound lead by checking fit, need, authority and timing before investing time.
+  - Triggers: qualify an inbound lead, should we pursue this enquiry, decide if a lead is worth our time
+- `research-a-prospective-account` — Research a prospective account using public sources before the first conversation.
+  - Triggers: research a prospective account, brief me on a company before a call, what should I know about this prospect
+- `review-a-lost-deal` — Review a lost deal to find the real reason rather than the one given on the call.
+  - Triggers: review a lost deal, why did we lose that customer, post mortem on a closed lost sale
+- `run-a-discovery-call` — Run a discovery call by asking about the situation before proposing anything.
+  - Triggers: run a discovery call, questions for a first sales call, understand a prospect's situation
+- `segment-a-customer-list` — Segment a customer list by behaviour and need so each group gets a relevant message.
+  - Triggers: segment a customer list, divide customers into groups for campaigns, customer segmentation by behaviour
+- `set-a-sales-quota-and-review-plan` — Set a sales quota with the review points that let it be corrected during the period.
+  - Triggers: set a sales quota and review plan, how much should this rep sell, quota allocation and checkpoint plan
+- `write-a-case-study` — Write a case study around one customer's problem, the result and the evidence.
+  - Triggers: write a case study, turn a customer success into a story, customer story with proof points
+- `write-a-cold-outreach-email` — Write a cold outreach email that is short, specific and easy to reply to.
+  - Triggers: write a cold outreach email, email a prospect I have never met, first contact email to a stranger
+- `write-a-customer-newsletter` — Write a customer newsletter around one useful idea rather than a list of announcements.
+  - Triggers: write a customer newsletter, monthly update email to customers, customer email with useful content
+- `write-a-landing-page-outline` — Write a landing page outline that answers the objections in the order they arise.
+  - Triggers: write a landing page outline, structure for a landing page, what sections a landing page needs
+- `write-a-product-launch-plan` — Write a product launch plan that ties the announcement to the assets and the timing.
+  - Triggers: write a product launch plan, plan a feature announcement, go to market plan for a new release
+- `write-a-proposal-for-a-client` — Write a proposal that mirrors the client's problem, the approach and the outcome.
+  - Triggers: write a proposal for a client, draft a client proposal document, send a work proposal with pricing
+- `write-a-sales-enablement-guide` — Write a sales enablement guide that a new salesperson can use on their first call.
+  - Triggers: write a sales enablement guide, material for new salespeople, what our sales team needs to know
+- `write-ad-copy-for-a-channel` — Write ad copy that fits the channel's format and spends its first line on the hook.
+  - Triggers: write ad copy for a channel, ad text for our paid social campaign, short advert copy that fits the format
+
+## security
+
+Router: `routers/security/SKILL.md` — 60 skills.
+
+- `add-input-validation-to-an-endpoint` — Add layered input validation to an endpoint before untrusted data reaches business logic.
+  - Triggers: add input validation to an endpoint, validate api request parameters, reject malformed endpoint input
+- `add-security-headers-to-a-web-app` — Add and verify browser security headers that constrain framing, content, and transport.
+  - Triggers: add security headers to a web app, configure csp and frame protection headers, harden browser response headers
+- `apply-data-classification-labels` — Label data by sensitivity class so access, retention and sharing rules can follow the label.
+  - Triggers: apply data classification labels, label data by sensitivity level, set a data classification scheme
+- `apply-the-principle-of-least-privilege` — Reduce identity permissions to the minimum needed for each task and verify the result.
+  - Triggers: apply the principle of least privilege, reduce service permissions to minimum access, tighten role scopes and permissions
+- `audit-access-to-sensitive-data` — Audit access to sensitive data and produce a traceable record of unusual data exposure.
+  - Triggers: audit access to sensitive data, review sensitive record access logs, detect unusual exports of confidential data
+- `audit-third-party-security-posture` — Assess a vendor's security posture with evidence and record the gaps you accept.
+  - Triggers: audit third party security posture, review a supplier's security controls, assess vendor security evidence
+- `authenticate-service-to-service-calls` — Authenticate service-to-service calls with scoped identities and verified caller identity.
+  - Triggers: authenticate service to service calls, secure internal api calls with workload identity, verify a calling service identity
+- `build-a-vulnerability-management-program` — Set up a vulnerability programme that assigns, tracks and retires findings on a published schedule.
+  - Triggers: build a vulnerability management program, run a vulnerability remediation programme, set fix deadlines for security findings
+- `configure-a-cloud-firewall-baseline` — Set a cloud firewall baseline that blocks public access except to the ports the service needs.
+  - Triggers: cloud firewall baseline rules, set a default deny cloud firewall, configure a cloud ingress baseline
+- `configure-cors-safely` — Configure CORS with an explicit origin allowlist and safe credential handling.
+  - Triggers: configure cors safely, restrict api cross-origin requests, allowlist browser origins for an api
+- `design-a-privilege-escalation-test` — Design an authorised privilege-escalation test that proves role boundaries hold.
+  - Triggers: design a privilege escalation test, test vertical privilege boundaries safely, prove role escalation is blocked
+- `detect-secret-leaks-in-ci` — Detect leaked secrets in continuous-integration workflows and block unsafe publication.
+  - Triggers: detect secret leaks in ci, block pipelines that expose credentials, scan build logs and artefacts for secrets
+- `enable-audit-logging-for-a-cloud-account` — Turn on audit logging for a cloud account and confirm the trail reaches a durable destination.
+  - Triggers: enable cloud audit logging, turn on an organisation activity trail, send cloud audit logs to a log store
+- `enforce-authorisation-on-an-api` — Enforce resource-level authorisation across API routes with deny-by-default access tests.
+  - Triggers: enforce authorisation on an api, add resource level access checks, prevent cross-account api access
+- `enforce-mfa-for-an-organisation` — Require multi-factor authentication for every account, phased in by risk group.
+  - Triggers: enforce mfa for an organisation, require multi factor authentication everywhere, roll out two factor authentication
+- `fix-an-sql-injection` — Close an SQL injection path with parameterised queries and a regression proof.
+  - Triggers: fix an sql injection, repair a vulnerable sql query, parameterise an injectable sql statement
+- `fix-an-xss-vulnerability` — Remove an XSS entry point with context-aware output encoding and regression coverage.
+  - Triggers: fix an xss vulnerability, remove cross-site scripting, sanitize untrusted html output
+- `harden-a-container-image` — Harden a container image by removing excess privileges and reducing its runtime attack surface.
+  - Triggers: harden a container image, reduce container runtime privileges, build a minimal non-root container image
+- `harden-a-database-connection` — Harden a database connection by requiring TLS, restricting the source and rotating the credential.
+  - Triggers: harden a database connection, require tls to the database server, restrict database access to app hosts
+- `harden-a-kubernetes-cluster` — Harden a Kubernetes cluster by tightening control plane settings and pod security defaults.
+  - Triggers: harden a kubernetes cluster, apply pod security standards to a cluster, tighten kubernetes control plane settings
+- `implement-data-retention-controls` — Apply retention rules so each data class is deleted on schedule and kept no longer.
+  - Triggers: implement data retention controls, delete records on schedule automatically, set a legal hold on retention rules
+- `implement-secure-file-uploads` — Implement file uploads that constrain content, isolate storage, and block executable delivery.
+  - Triggers: implement secure file uploads, harden an upload endpoint, safely accept user uploaded files
+- `implement-secure-session-handling` — Implement session handling that resists fixation, theft, and unintended privilege changes.
+  - Triggers: implement secure session handling, harden session cookies, prevent session fixation in an app
+- `investigate-a-cloud-access-anomaly` — Investigate a suspicious cloud sign-in by reconstructing the session and scoping the access taken.
+  - Triggers: investigate a suspicious cloud sign in, review unusual cloud account activity, trace an unknown cloud login
+- `lock-down-an-ssh-server` — Harden an SSH server by disabling password logins, restricting root access and limiting sources.
+  - Triggers: harden an ssh server, disable ssh password login, restrict ssh access to key based logins
+- `manage-encryption-keys` — Manage encryption keys with controlled rotation, separation of duties, and recoverability.
+  - Triggers: manage encryption keys, rotate a data encryption key safely, design a production key lifecycle
+- `monitor-for-threat-intelligence-matches` — Watch threat intelligence feeds and confirm each match against the actual estate.
+  - Triggers: monitor for threat intelligence matches, match threat indicators against your estate, watch a threat feed for real hits
+- `offboard-an-employee-securely` — Remove a departing employee's access while preserving the records needed for review.
+  - Triggers: offboard an employee securely, revoke access for a departing employee, remove a leaver from every system
+- `patch-a-critical-cve` — Patch a critical vulnerability by fixing the affected code or dependency and proving the path is closed.
+  - Triggers: patch a critical cve, fix a published critical vulnerability, remediate a high severity security advisory
+- `plan-a-penetration-test` — Plan an authorised penetration test with explicit scope, safety limits, and evidence criteria.
+  - Triggers: plan a penetration test, scope an authorised security engagement, prepare rules of engagement for red team testing
+- `prepare-for-a-security-questionnaire` — Answer a customer security questionnaire from evidence and record every gap you cannot close.
+  - Triggers: prepare for a security questionnaire, complete a customer security assessment, answer a vendor security questionnaire
+- `protect-a-service-with-a-rate-limit` — Protect a service with a distributed rate limit keyed to abuse-prone request dimensions.
+  - Triggers: protect a service with a rate limit, throttle abusive api traffic, add distributed request limiting
+- `protect-secrets-in-a-cicd-pipeline` — Keep pipeline secrets out of logs and build outputs by scoping and masking them at use time.
+  - Triggers: protect secrets in a ci pipeline, mask pipeline credentials in logs, keep build secrets out of artefacts
+- `redact-sensitive-data-from-logs` — Remove secrets and personal data from log output at the point of writing it.
+  - Triggers: redact sensitive data from logs, strip secrets from log output, mask personal data before logging
+- `respond-to-a-leaked-secret` — Contain and recover from a leaked secret without disclosing the credential itself.
+  - Triggers: respond to a leaked secret, contain an exposed credential, handle a secret found in a repository
+- `respond-to-a-ransomware-suspicion` — Contain a suspected ransomware event by isolating affected hosts and preserving evidence first.
+  - Triggers: respond to a ransomware suspicion, contain suspected ransomware activity, handle a suspected encryption attack
+- `review-code-for-injection-risks` — Review code for injection paths and document reproducible fixes for each finding.
+  - Triggers: review code for injection risks, scan source code for injection, find injection vulnerabilities in code
+- `review-permissions-in-an-iam-policy` — Review an IAM policy for unsafe actions, resource scope, and missing conditions.
+  - Triggers: review permissions in an iam policy, audit wildcard permissions in a cloud policy, find unsafe iam actions and resource scopes
+- `review-privileged-access-requests` — Review a privileged access request against the justification, the scope and the expiry.
+  - Triggers: review a privileged access request, approve temporary elevated access, decide on a standing admin request
+- `rotate-a-compromised-api-key` — Rotate a compromised API key while preserving service continuity and audit evidence.
+  - Triggers: rotate a compromised api key, replace an exposed api credential, revoke and issue a new api key
+- `run-a-compliance-gap-assessment` — Map a compliance obligation to the current control and record the gap with a dated action.
+  - Triggers: run a compliance gap assessment, map a standard to the current controls, find where compliance is not met
+- `run-a-security-awareness-session` — Run a practical security awareness session that measures behaviour change and follow-up.
+  - Triggers: run a security awareness session, teach staff secure everyday behaviour, deliver phishing and data handling training
+- `scan-a-container-image-for-vulnerabilities` — Scan a container image for known vulnerabilities and produce a fix list ordered by exposure.
+  - Triggers: find security flaws in a container image, check a built image for known cves, run an image vulnerability scan
+- `scan-dependencies-for-known-vulnerabilities` — Scan project dependencies for known vulnerabilities and produce an evidence-backed fix list.
+  - Triggers: scan dependencies for known vulnerabilities, find vulnerable packages in a lockfile, audit third-party libraries for security flaws
+- `schedule-a-recurring-security-baseline-check` — Set up a recurring security baseline check that fails on drift and records the result.
+  - Triggers: set up a recurring security baseline check, fail a security baseline on drift, run a periodic security configuration review
+- `scope-a-penetration-test` — Scope a penetration test by defining the targets, the rules of engagement and the emergency contacts.
+  - Triggers: scope a penetration test, write rules of engagement for a security test, define the bounds of an external pen test
+- `secure-a-ci-pipeline-with-oidc` — Replace a long-lived pipeline credential with a short-lived OIDC federation token.
+  - Triggers: secure a ci pipeline with oidc, use workload identity federation in ci, remove static cloud keys from a pipeline
+- `secure-a-public-api-surface` — Reduce a public API's exposure with strict authentication, narrow scopes and enforced rate limits.
+  - Triggers: secure a public api surface, reduce the exposure of a public api, tighten an unauthenticated api
+- `set-up-a-vulnerability-scanning-gate` — Add a scanning gate that blocks a merge when a new critical vulnerability appears in the change.
+  - Triggers: set up a vulnerability scanning gate, block a merge on a critical finding, make security scanning a required check
+- `sign-an-artifact-for-provenance` — Sign a build artifact so consumers can verify its origin and integrity.
+  - Triggers: sign an artifact for provenance, attest the origin of a build artefact, create verifiable software release signatures
+- `store-passwords-safely` — Implement password storage with a modern password hash and safe verification policy.
+  - Triggers: store passwords safely, hash user passwords correctly, implement secure password storage
+- `test-backup-restores-for-recovery-readiness` — Prove the backups restore by restoring one into an isolated environment and measuring the recovery time.
+  - Triggers: test backup restores for recovery readiness, prove a backup can actually be restored, run a disaster recovery restore test
+- `threat-model-a-new-feature` — Produce an evidence-based threat model for a new feature before release.
+  - Triggers: threat model a new feature, feature threat model, identify security threats for a feature
+- `triage-a-security-finding` — Triage a security finding by confirming exploitability, impact, and the first safe fix.
+  - Triggers: triage a security finding, validate and prioritise a vulnerability report, decide the severity and fix order for a finding
+- `verify-a-webhook-signature` — Verify webhook signatures against the raw payload before trusting any callback.
+  - Triggers: verify a webhook signature, authenticate inbound webhook calls, validate webhook hmac signatures
+- `verify-software-supply-chain-integrity` — Verify that a build's source, dependencies and artefacts match what was reviewed.
+  - Triggers: verify software supply chain integrity, confirm an artefact came from the expected source, check build provenance end to end
+- `write-a-network-policy` — Write a Kubernetes network policy that limits which pods may talk to each other.
+  - Triggers: write a kubernetes network policy, restrict pod to pod traffic, limit namespace egress with a policy
+- `write-a-security-architecture-review` — Review a design for security gaps and record each gap with the control that would close it.
+  - Triggers: write a security architecture review, review a design for security gaps, check a system design for security
+- `write-a-security-test-case` — Write a focused security test that proves a control blocks an abusive request safely.
+  - Triggers: write a security test case, add a regression test for a vulnerability, prove a security control with a test
+- `write-an-incident-response-playbook` — Write an incident-response playbook with decision points, containment actions, and recovery checks.
+  - Triggers: write an incident response playbook, prepare a security incident runbook, plan containment and recovery for a breach
+
+## software-engineering
+
+Router: `routers/software-engineering/SKILL.md` — 66 skills.
+
+- `add-structured-logging-to-a-code-path` — Add structured logging to a code path with consistent fields, safe values, and testable output.
+  - Triggers: add structured logging to code path, emit searchable application logs, instrument path with log fields
+- `add-timeouts-and-cancellation` — Bound dependency waits with explicit deadlines and propagate cancellation through nested work.
+  - Triggers: add timeouts and cancellation, cancel an operation at a deadline
+- `adopt-type-checking-in-an-untyped-codebase` — Introduce incremental static type checking that catches boundary mistakes without blocking unrelated work.
+  - Triggers: adopt static type checking, type an untyped codebase incrementally
+- `apply-solid-principles-to-a-class` — Apply a focused SOLID refactor to a class while preserving its public behavior and callers.
+  - Triggers: apply solid to a class, refactor a class for solid
+- `automate-a-repetitive-code-change` — Automate a repetitive source change with a bounded codemod that reports edits and preserves verified behavior.
+  - Triggers: automate a repetitive code change, write a bounded codemod
+- `bisect-a-regression-to-one-commit` — Bisect a regression to the first bad commit with a repeatable failing check.
+  - Triggers: bisect regression to one commit, find first bad git commit, narrow regression by history
+- `cache-a-computed-result-safely` — Cache a computed result with explicit keys, invalidation rules, concurrency control, and eviction limits.
+  - Triggers: cache a computed result safely, design a concurrent result cache
+- `configure-formatting-and-linting-for-a-repo` — Configure repository formatting and linting with reproducible rules and a staged adoption path.
+  - Triggers: configure repo formatting linting, enforce consistent code style, add formatter and linter checks
+- `cut-a-hotfix-release` — Cut a hotfix that resolves a critical defect with a focused diff, regression test, and rollback path.
+  - Triggers: cut a production hotfix, release a critical defect patch
+- `cut-a-release-branch-and-backport-a-fix` — Cut a supported release branch and backport a verified fix without introducing unrelated changes.
+  - Triggers: cut a release branch and backport, backport a fix to a release line
+- `deduplicate-repeated-logic` — Consolidate repeated implementation logic while preserving each call site's distinct requirements.
+  - Triggers: deduplicate repeated logic, consolidate copy pasted code, merge duplicate implementation blocks
+- `deprecate-a-public-function` — Retire a public function through a warning, migration path, and measurable removal plan.
+  - Triggers: deprecate a public function, add a function migration warning
+- `design-a-retry-and-backoff-policy` — Design a bounded retry policy that distinguishes transient failures and respects the caller's deadline.
+  - Triggers: design retry backoff, bound retries with jitter and deadline
+- `eliminate-a-race-condition` — Make concurrent execution deterministic by identifying shared state and enforcing one ownership rule.
+  - Triggers: fix a race condition, debug concurrent shared state
+- `estimate-a-change-before-starting-it` — Estimate a code change from repository evidence and state assumptions, uncertainty, and validation slices.
+  - Triggers: estimate code change upfront, size repository work before starting, forecast implementation effort
+- `extract-a-shared-helper` — Extract a shared helper only where it removes verified duplication and clarifies ownership.
+  - Triggers: extract shared helper, consolidate repeated helper logic, share utility across modules
+- `fix-a-memory-leak` — Trace retained memory to its owning reference and add a regression test for the leak.
+  - Triggers: trace a memory leak, find retained heap memory
+- `fix-an-off-by-one-error` — Fix an off-by-one boundary defect with a regression test for both adjacent valid values.
+  - Triggers: fix off by one error, correct range boundary bug, repair inclusive exclusive limit
+- `hand-over-code-to-the-next-owner` — Hand over code with a current-state map, verified commands, open risks, and an owner acknowledgement.
+  - Triggers: hand over code to next owner, transfer active code change, prepare maintainer handoff
+- `handle-merge-conflicts-in-a-feature-branch` — Resolve feature-branch merge conflicts by preserving intended changes and validating the combined result.
+  - Triggers: resolve feature branch merge conflicts, combine conflicting code changes, fix git merge conflict
+- `implement-a-feature-from-a-ticket` — Implement a ticket end to end with a focused change, regression test, rationale, and rollback note.
+  - Triggers: implement feature from ticket, build ticket in codebase, deliver repository ticket
+- `introduce-a-feature-flag` — Introduce a feature flag with a default state, cleanup owner, and tests for both branches.
+  - Triggers: introduce feature flag, roll out behavior with flag, add controlled code switch
+- `make-a-blocking-call-non-blocking` — Move a blocking dependency behind an asynchronous boundary while preserving results, errors, and cancellation.
+  - Triggers: make a blocking call async, move blocking io off the event loop
+- `make-a-script-safe-to-run-twice` — Make a script converge to the same safe state when it is run twice without deleting user data.
+  - Triggers: make a script safe to rerun, make a maintenance script idempotent
+- `migrate-code-to-a-new-language-version` — Upgrade code to a new language version while preserving compatibility and controlling migration risk.
+  - Triggers: migrate to a new language version, upgrade code for a new language release
+- `pin-a-build-to-reproducible-output` — Pin toolchain and dependency inputs so two clean builds produce the same release artefact.
+  - Triggers: build reproducible software output, pin a reproducible build
+- `plan-a-multi-day-migration` — Plan a multi-day code migration with staged commits, compatibility checkpoints, and rollback gates.
+  - Triggers: plan multi day code migration, stage repository migration over days, schedule incremental code migration
+- `plan-the-code-change-before-editing` — Turn a requested code change into a bounded plan with touched files, tests, risks, and rollback.
+  - Triggers: plan code change before editing, map repository change, scope a code modification
+- `port-a-module-to-another-language` — Port a module to another language while preserving its API contract, edge cases, and observable behavior.
+  - Triggers: port a module to another language, create cross language api parity
+- `prepare-a-pull-request-for-review` — Prepare a pull request for review with a scoped diff, verified checks, rationale, and rollback note.
+  - Triggers: prepare pull request for review, make code change review ready, package diff for reviewer approval
+- `prepare-code-for-a-code-freeze` — Prepare a repository for a code freeze by isolating risk, approving exceptions, and proving the release state.
+  - Triggers: prepare code for a freeze, stabilize a repository for release freeze
+- `profile-a-slow-function` — Identify the dominant runtime cost in a slow function and validate a focused optimization with benchmarks.
+  - Triggers: profile a slow function, cpu profile a hot function
+- `raise-useful-errors-from-a-library` — Raise stable library errors with actionable context while keeping implementation details private.
+  - Triggers: raise useful library errors, add actionable error context
+- `reduce-coupling-between-modules` — Replace direct module dependencies with a narrow interface that preserves existing behavior.
+  - Triggers: reduce module coupling, introduce a narrow module interface
+- `reduce-the-blame-of-a-failing-test-suite` — Reduce the blame of a failing test suite by isolating the first independent failure and fixing root causes.
+  - Triggers: reduce failing test suite blame, isolate first test failure, triage noisy test suite
+- `refactor-a-long-function` — Refactor a long function into named units without changing behavior or widening the change.
+  - Triggers: refactor long function, break up oversized function, simplify procedural function
+- `remove-a-dependency-safely` — Remove an unused dependency after verifying imports, plugins, runtime features, and lockfile effects.
+  - Triggers: remove dependency safely, drop unused package, prune project dependency
+- `remove-a-hot-path-allocation` — Remove repeated allocations from a hot path without changing observable behavior or ownership semantics.
+  - Triggers: remove hot path allocations, optimize repeated object allocation
+- `remove-dead-code-safely` — Remove unreachable or obsolete code after proving no runtime, build, or consumer dependency remains.
+  - Triggers: remove dead code safely, delete unused source paths, prune unreachable code
+- `rename-a-symbol-across-the-codebase` — Rename a symbol across every code, test, and configuration reference without changing behavior.
+  - Triggers: rename symbol across codebase, change identifier everywhere, rename API symbol safely
+- `reproduce-a-bug-in-a-local-sandbox` — Reproduce a reported bug in a local sandbox with captured inputs, evidence, and a repeatable command.
+  - Triggers: reproduce bug in local sandbox, capture repeatable software failure, run defect outside production
+- `retire-a-feature-flag-after-rollout` — Remove a fully rolled-out feature flag and its branches after verifying every consumer is migrated.
+  - Triggers: retire feature flag after rollout, remove expired code flag, delete completed flag branches
+- `review-a-pull-request-as-a-pair` — Review a pull request as a pair by finding defects, proving them, and separating blockers from suggestions.
+  - Triggers: review pull request as pair, pair review code changes, find and prove review defects
+- `revive-a-stale-pull-request` — Revive a stale pull request by reconciling it with current code and re-proving its requested behavior.
+  - Triggers: revive stale pull request, update old code contribution, reopen outdated pull request
+- `run-a-weekly-code-maintenance-session` — Run a bounded weekly maintenance pass that improves code quality, preserves tests, and records remaining risks.
+  - Triggers: run a weekly maintenance session, schedule recurring code maintenance
+- `set-up-a-build-system-for-a-new-service` — Set up a new service build with reproducible commands, dependency locking, and CI parity.
+  - Triggers: set up build system for service, create reproducible service build, bootstrap new service build
+- `set-up-pre-commit-hooks` — Add pre-commit hooks that run fast deterministic checks and remain easy to bypass deliberately.
+  - Triggers: set up pre commit hooks, add local git quality hooks, install commit time checks
+- `speed-up-a-slow-build` — Reduce build duration by measuring stages, removing waste, and proving equivalent outputs.
+  - Triggers: speed up slow build, reduce repository build time, optimize build pipeline duration
+- `split-a-large-pull-request` — Split an oversized pull request into reviewable changes without losing behavior or history.
+  - Triggers: split large pull request, break oversized code review, stack pull request into parts
+- `split-a-monolith-into-modules` — Split a monolithic module along real responsibilities while preserving behavior through incremental module boundaries.
+  - Triggers: split a monolith into modules, extract cohesive code modules
+- `split-an-oversized-module` — Split an oversized module into cohesive units with explicit imports and unchanged behavior.
+  - Triggers: split oversized module, divide giant source file, break module into units
+- `support-a-library-consumer` — Resolve a library consumer issue with a minimal compatibility fix, focused regression test, and usage guidance.
+  - Triggers: support a library consumer, fix a downstream library issue
+- `tag-and-release-a-version` — Prepare and tag a version with passing tests, matching release notes, and a recoverable release record.
+  - Triggers: tag and release a version, create an annotated release tag
+- `tidy-a-noisy-git-history` — Rewrite a noisy local git history into reviewable commits while preserving the final tree.
+  - Triggers: tidy noisy git history, rewrite commits into logical units, clean messy local branch history
+- `trace-a-production-stack-trace` — Trace a production stack trace to the originating code path using versioned evidence.
+  - Triggers: trace production stack trace, map crash frames to code, diagnose deployed exception path
+- `triage-a-bug-report-with-a-reproducer` — Turn a bug report into a minimal reproducer, a severity decision, and an automated regression test.
+  - Triggers: triage a bug with a reproducer, minimize a defect reproduction
+- `upgrade-a-dependency-without-breaking-anything` — Upgrade a dependency with compatibility checks, pinned versions, and a tested rollback.
+  - Triggers: upgrade dependency without breaking, bump package version safely, test library upgrade compatibility
+- `use-property-based-testing-for-edge-cases` — Use property-based tests to explore edge cases and shrink any counterexample into a concrete regression.
+  - Triggers: property test edge cases, generate and shrink counterexamples
+- `validate-input-at-the-system-boundary` — Reject malformed or unsafe input at the boundary before it reaches domain logic.
+  - Triggers: validate input at api boundary, reject malformed request input
+- `verify-a-third-party-library-integration` — Verify a third-party library integration through version, security, failure-handling, and compatibility checks.
+  - Triggers: verify a third party integration, validate an external library dependency
+- `work-in-a-legacy-codebase-without-tests` — Work safely in untested legacy code by capturing current behavior before changing it.
+  - Triggers: work in legacy code without tests, change untested legacy module, capture behavior before refactor
+- `write-a-changelog-entry` — Write a concise changelog entry that explains user-visible changes and links each change to its source.
+  - Triggers: write a changelog entry, document user visible release changes
+- `write-a-postmortem-for-a-defect` — Produce a blameless defect postmortem with evidence, contributing factors, owned actions, and follow-up dates.
+  - Triggers: write a defect postmortem, analyze a production defect blamelessly
+- `write-a-technical-debt-register` — Record technical debt with evidence, impact, effort, ownership, and a clear prioritization order.
+  - Triggers: create a technical debt register, rank technical debt by cost
+- `write-an-executable-design-note` — Write an executable design note that links assumptions to code, checks, and a verifiable rollout plan.
+  - Triggers: write executable design note, capture implementation ready design, link design to code checks
+- `write-an-idempotent-background-job` — Make a background job safe to retry by recording a durable idempotency key for each requested effect.
+  - Triggers: make a background job idempotent, handle duplicate background delivery
+
+## technical-writing
+
+Router: `routers/technical-writing/SKILL.md` — 22 skills.
+
+- `convert-a-meeting-recording-into-a-document` — Convert a meeting recording into a document that records the decisions and the actions.
+  - Triggers: convert a meeting recording into a document, write the minutes from a recording, turn this transcript into notes
+- `edit-a-document-for-clarity` — Edit a document for clarity by cutting what the reader does not need and ordering what they do.
+  - Triggers: edit a document for clarity, this draft is hard to follow, tighten my technical writing
+- `explain-a-technical-concept-to-a-senior-reader` — Explain a technical concept to a senior reader in terms of decision and risk.
+  - Triggers: explain a technical concept to a senior reader, brief an exec on this design, technical summary for leadership
+- `explain-a-tradeoff-with-numbers` — Explain a trade-off with the numbers that show what each option costs and saves.
+  - Triggers: explain a tradeoff with numbers, justify this tradeoff with data, cost and benefit of this design choice
+- `review-a-technical-document-for-accuracy` — Review a technical document for accuracy by checking every claim against its source.
+  - Triggers: review a technical document for accuracy, fact check this technical doc, verify the claims in my write up
+- `structure-a-long-document` — Structure a long document so the reader can find the part they need without reading it all.
+  - Triggers: structure a long document, organise all this material, table of contents and section order
+- `write-a-benchmark-report` — Write a benchmark report that states the method, the environment and the limits of the result.
+  - Triggers: write a benchmark report, publish these performance measurements, performance results with methodology
+- `write-a-comparison-of-two-approaches` — Compare two approaches on the criteria that decide, with the evidence for each.
+  - Triggers: compare two technical approaches, option a versus option b write up, weigh two implementation choices
+- `write-a-migration-plan-for-users` — Write a migration plan that tells existing users what changes and what they must do.
+  - Triggers: write a migration plan for users, tell customers about a breaking change, user facing migration guide
+- `write-a-postmortem` — Write a postmortem that explains what happened and what changes, without assigning blame.
+  - Triggers: write a postmortem, write a blameless incident review, document what went wrong in our outage
+- `write-a-runbook-for-an-operational-task` — Write a runbook that lets someone carry out an operational task under pressure.
+  - Triggers: write a runbook for an operational task, procedure for handling this production task, step by step ops runbook
+- `write-a-technical-abstract` — Write an abstract that states the problem, the method, the result and the significance.
+  - Triggers: write a technical abstract, short summary of my paper, abstract for a technical report
+- `write-a-technical-postmortem-timeline` — Write an incident timeline where every entry is timed and traceable to a source.
+  - Triggers: write a technical postmortem timeline, chronological record of our outage, incident event timeline with times
+- `write-a-technical-proposal` — Write a technical proposal that states the problem, the options and the recommendation.
+  - Triggers: write a technical proposal, propose a technical approach for approval, engineering proposal document
+- `write-a-technical-slide-deck` — Write a technical slide deck where each slide makes one point that the audience can read.
+  - Triggers: write a technical slide deck, turn this doc into slides, conference talk slides for engineers
+- `write-a-technical-tutorial-for-developers` — Write a tutorial that takes a developer from nothing to a working result.
+  - Triggers: write a technical tutorial for developers, getting started guide for engineers, step by step developer walkthrough
+- `write-a-threat-model-document` — Write a threat model that lists the assets, the attackers and the controls that matter.
+  - Triggers: write a threat model document, document the security risks of a design, threat model for a new system
+- `write-an-api-design-document` — Write an API design document that covers the contract, the errors and the versioning.
+  - Triggers: write an api design document, document an interface before it is built, api contract design write up
+- `write-an-architecture-decision-record-for-a-reviewer` — Write an ADR that captures the decision, its context and its consequences for good.
+  - Triggers: write an architecture decision record, record why we chose this approach, adr for a technical decision
+- `write-an-engineering-design-doc` — Write an engineering design document that covers the context, the shape and the trade-offs.
+  - Triggers: write an engineering design doc, document how this feature should be built, design document for a system change
+- `write-an-rfc-for-review` — Write an RFC that makes review easy by stating the decision and the objections early.
+  - Triggers: write an rfc for review, request for comments document, propose a change for team review
+- `write-code-examples-that-actually-run` — Write code examples that are verified by running them before they are published.
+  - Triggers: write code examples that actually run, examples in my docs are broken, verify every snippet before publishing
+
+## testing-qa
+
+Router: `routers/testing-qa/SKILL.md` — 34 skills.
+
+- `assert-on-behaviour-not-implementation` — Assert on observable behaviour rather than internal calls so refactors do not break the test.
+  - Triggers: assert on behaviour not implementation, test asserts on internal calls, avoid mock assertions in test
+- `automate-a-visual-regression-check` — Automate a visual regression check by comparing rendered screenshots against approved baselines.
+  - Triggers: automate a visual regression check, screenshot comparison test, detect ui changes with visual diff
+- `build-a-data-driven-test-table` — Build a data-driven test table that runs one assertion body across many input cases.
+  - Triggers: data-driven test table, parametrise a test with cases, table driven test cases
+- `build-a-test-fixture-that-does-not-leak-state` — Build a test fixture that resets state so each test starts from the same known baseline.
+  - Triggers: test fixture that does not leak state, test state leaks between tests, reset test state fixture
+- `build-a-test-harness-for-multiple-environments` — Build a test harness that runs the same suite across local, CI, and staging environments.
+  - Triggers: test harness for multiple environments, run the same test suite in several environments, parameterise tests by environment
+- `design-a-test-data-strategy` — Design a test data strategy that defines fixtures, factories, cleanup, and ownership per environment.
+  - Triggers: design a test data strategy, manage test data across environments, test data fixtures plan
+- `detect-and-fix-a-flaky-test` — Detect a flaky test by rerunning it repeatedly and fix the shared-state cause, not the symptom.
+  - Triggers: detect and fix a flaky test, fix a test that fails randomly, flaky test root cause
+- `measure-test-suite-duration` — Measure test suite duration per test file to find the slowest cases and the bottleneck.
+  - Triggers: measure test suite duration, find the slowest tests, profile test runtime
+- `mock-an-external-dependency` — Mock an external dependency with a controlled stub so tests never call the real service.
+  - Triggers: mock an external dependency, stub a third-party service, replace api call with a mock
+- `name-tests-so-failures-explain-themselves` — Name tests so a failing test line states the behaviour, input, and expected result.
+  - Triggers: name tests so failures explain themselves, rename a test to be clearer, readable test names
+- `quarantine-a-flaky-test-with-a-ticket` — Quarantine a flaky test behind a tracking ticket and an expiry date instead of retrying it.
+  - Triggers: quarantine a flaky test with a ticket, skip a flaky test and track it, move flaky test to quarantine
+- `review-a-test-suite-for-gap-coverage` — Review a test suite for gap coverage by comparing behaviour contracts against the existing tests.
+  - Triggers: review a test suite for gap coverage, find untested behaviour, coverage gap analysis
+- `run-a-smoke-test-after-a-deploy` — Run a smoke test after a deploy that checks the critical path once against the new release.
+  - Triggers: smoke test after a deploy, post-deploy smoke check, run a deploy smoke test
+- `run-a-test-of-the-test-suite` — Run a test of the test suite by mutating the code and confirming the expected tests fail.
+  - Triggers: run a test of the test suite, mutation test the suite, prove tests catch defects
+- `run-a-test-suite-in-parallel` — Run a test suite in parallel with isolated workers and record the per-worker duration.
+  - Triggers: run a test suite in parallel, parallelize the test suite, speed up ci with test workers
+- `set-up-a-test-coverage-gate` — Set up a coverage gate that fails the build below a documented threshold and reports gaps.
+  - Triggers: set up a test coverage gate, enforce coverage threshold in ci, fail build on low coverage
+- `test-a-background-worker-end-to-end` — Test a background worker end to end by enqueueing a job and asserting its committed effect.
+  - Triggers: test a background worker end to end, test a queued job processing, assert a worker job side effect
+- `test-a-feature-flagged-code-path` — Test a feature-flagged code path by exercising both flag states in separate deterministic runs.
+  - Triggers: test a feature flagged code path, test both sides of a feature flag, feature flag on and off test
+- `test-a-migration-on-a-copy-of-production-data` — Test a database migration against a sanitised copy of production data in a disposable database.
+  - Triggers: test a migration on a production data copy, dry run a schema migration, verify migration on real data
+- `test-a-timezone-sensitive-feature` — Test a timezone-sensitive feature by pinning the clock across named zones and daylight-saving edges.
+  - Triggers: test a timezone sensitive feature, test across daylight saving, pin the clock for time tests
+- `test-the-happy-path-and-the-edges` — Pair a happy-path test with boundary and empty-case tests in one focused test class.
+  - Triggers: test the happy path and the edges, add boundary test cases, cover empty and invalid input
+- `use-a-test-double-for-slow-io` — Use a test double for slow IO so the suite runs fast without skipping real behaviour checks.
+  - Triggers: test double for slow io, speed up a slow test, replace slow network call in test
+- `verify-a-backup-can-be-restored` — Verify a backup by restoring it into a disposable environment and comparing row counts and checksums.
+  - Triggers: verify a backup can be restored, test restore from a backup, backup restore drill
+- `verify-accessibility-in-a-test` — Verify accessibility in an automated test that checks roles, labels, and contrast on key screens.
+  - Triggers: verify accessibility in a test, automated accessibility check, catch a11y regressions in ci
+- `write-a-canary-test-for-a-risk-area` — Write a canary test that exercises the riskiest changed path before wider release traffic.
+  - Triggers: canary test for a risk area, canary check on a risky path, shadow traffic test
+- `write-a-contract-test-for-two-services` — Write a contract test that pins the request and response shape shared by two services.
+  - Triggers: contract test for two services, test a service consumer contract, pin an api schema between services
+- `write-a-load-test-scenario` — Write a load test scenario with a target rate, a latency threshold, and a duration.
+  - Triggers: write a load test scenario, load test a service endpoint, test throughput and latency
+- `write-a-property-based-invariant-test` — Write a property-based test that generates inputs and asserts an invariant for every case.
+  - Triggers: property based invariant test, property based testing example, assert an invariant over generated inputs
+- `write-a-regression-test-that-fails-first` — Write a regression test that fails on the old bug and passes only after the fix lands.
+  - Triggers: regression test that fails first, write a test for this bug, lock in a bug fix with a test
+- `write-a-replay-test-from-a-production-log` — Write a replay test from a sanitised production log line and assert the same handling outcome.
+  - Triggers: replay test from a production log, turn a production log into a test, replay a log line in a test
+- `write-a-test-for-an-error-path` — Write a test for an error path that asserts the exact error type and user-facing message.
+  - Triggers: test for an error path, test the failure branch, assert an error is raised
+- `write-a-test-plan-for-a-release` — Write a release test plan that lists scope, environments, checks, owners, and the abort criteria.
+  - Triggers: write a test plan for a release, plan testing before a launch, release verification plan
+- `write-a-unit-test-for-a-pure-function` — Write a unit test for a pure function that checks one input-output pair per assertion.
+  - Triggers: unit test for a pure function, test a pure function, write a unit test with no side effects
+- `write-an-integration-test-for-an-api` — Write an integration test for an API that exercises a real request against a disposable server.
+  - Triggers: integration test for an api, test an api endpoint, api integration test request
+
+## travel-lifestyle
+
+Router: `routers/travel-lifestyle/SKILL.md` — 18 skills.
+
+- `apply-for-a-travel-visa` — Prepare a travel visa application with every document checked against the official rules.
+  - Triggers: apply for a travel visa, visa application documents checklist, what do I need for a visa
+- `arrange-travel-for-a-group` — Arrange travel for a group so bookings, payments and names all stay consistent.
+  - Triggers: arrange travel for a group, book trips for several people together, group travel booking checklist
+- `book-accommodation-that-fits` — Book accommodation that fits the trip's budget, location needs and real sleeping requirements.
+  - Triggers: book accommodation that fits, choose a hotel for my trip, pick the right place to stay for my dates
+- `choose-travel-insurance` — Choose travel insurance that covers the actual risks of the trip rather than the cheapest policy.
+  - Triggers: choose travel insurance, what travel insurance cover do I need, compare travel insurance policies
+- `compare-flight-options` — Compare flight options on total journey time and total cost rather than the headline fare.
+  - Triggers: compare flight options, which flight is actually faster or cheaper, layover versus direct flight comparison
+- `find-local-food-and-markets` — Find the local food and markets that are worth the trip without relying on tourist lists.
+  - Triggers: find local food and markets, where do locals eat in this city, authentic market to visit
+- `handle-a-missed-connection` — Handle a missed connection by rebooking quickly and protecting the rest of the journey.
+  - Triggers: handle a missed connection, missed my flight what do I do now, missed a train connection rebook
+- `pack-a-carry-on-bag` — Pack a carry-on bag that fits the airline limits without leaving anything essential behind.
+  - Triggers: pack a carry on bag, fit everything in cabin luggage only, carry on packing list and limits
+- `plan-a-budget-travel-route` — Plan a low-cost route that trades a little travel time for a much lower total spend.
+  - Triggers: plan a budget travel route, cheapest way to get there overland, low cost multi city travel plan
+- `plan-a-safe-transit-day` — Plan a day of moving around a city with the transfers, buffers and backups worked out.
+  - Triggers: plan a safe transit day, getting around an unfamiliar city all day, city transport plan with buffers
+- `plan-a-solo-travel-safety-check` — Run a solo travel safety check covering documents, contacts, movement and local advice.
+  - Triggers: solo travel safety check, travelling alone safety checklist, prepare for solo travel alone
+- `plan-a-trip-itinerary` — Plan a trip itinerary with realistic timings, booked anchors and room to breathe.
+  - Triggers: plan a trip itinerary, day by day travel plan for my dates, build a holiday schedule
+- `plan-an-accessible-itinerary` — Plan an accessible itinerary around step-free routes, timing and real accessibility information.
+  - Triggers: plan an accessible itinerary, step free travel plan for someone with mobility needs, accessible route planning
+- `prepare-for-a-long-haul-flight` — Prepare for a long-haul flight so the journey is manageable rather than punishing.
+  - Triggers: prepare for a long haul flight, how to survive a many hour flight, long flight comfort and jet lag plan
+- `rent-a-car-for-a-road-trip` — Rent a car for a road trip with the costs, restrictions and fuel stops planned in advance.
+  - Triggers: rent a car for a road trip, car hire costs and restrictions abroad, self drive trip rental car checklist
+- `travel-overnight-by-train` — Take an overnight train with the booking, packing and arrival details planned for comfort.
+  - Triggers: travel overnight by train, sleeper train booking and packing, night train berth versus seat
+- `travel-with-a-newborn` — Plan travel with a newborn around feeding, sleep, health checks and airport logistics.
+  - Triggers: travel with a newborn, flying with a very young baby, travelling with an infant logistics
+- `write-a-travel-postcard-summary` — Write a short travel summary that captures the trip in the voice of the person who took it.
+  - Triggers: write a travel postcard summary, short reflection about my trip, share my holiday in a few lines
+
+## video-audio
+
+Router: `routers/video-audio/SKILL.md` — 22 skills.
+
+- `add-a-lower-third-and-branding` — Add a lower third and branding that identify the speaker without covering the content.
+  - Triggers: add a lower third and branding, put a name title on a video, place a brand mark on footage
+- `add-subtitles-and-captions` — Add subtitles that match the spoken audio exactly and stay readable on a small screen.
+  - Triggers: add subtitles and captions to a video, caption a finished video, put readable subtitles on footage
+- `build-a-subtitle-file-for-a-video` — Build a subtitle file with correct timings, a clean cue format and a match to the final edit.
+  - Triggers: build a subtitle file for a video, export a caption file for a video, make an srt from a finished edit
+- `check-a-video-for-accessibility` — Check a video for accessibility by testing the captions, the overlay contrast and the audio description need.
+  - Triggers: check a video for accessibility, audit a video before publishing it, verify a video meets accessibility rules
+- `clean-up-audio-noise` — Clean up audio noise by removing hum, hiss and rumble while keeping the voice natural.
+  - Triggers: clean up audio noise, remove hiss and hum from a recording, reduce background noise in a track
+- `compress-a-video-for-web-delivery` — Compress a video for the web by choosing a target size, an encoding preset and a checked result.
+  - Triggers: compress a video for web delivery, make a video file smaller for the web, re-encode a video for faster loading
+- `create-a-podcast-episode-plan` — Plan a podcast episode with a segment order, a time budget and a clear arc for the listener.
+  - Triggers: create a podcast episode plan, outline a podcast episode, plan the segments of an episode
+- `create-a-thumbnail-for-a-video` — Create a thumbnail that reads at a small size and makes the subject of the video obvious.
+  - Triggers: create a thumbnail for a video, make a video thumbnail that reads small, design a still for a video listing
+- `cut-a-video-to-a-tight-timeline` — Cut a video to a tight timeline by removing pauses, repeats and every frame that carries no meaning.
+  - Triggers: cut a video to a tight timeline, trim the dead air out of a recording, remove pauses from a video edit
+- `design-a-background-music-bed` — Design a background music bed that follows the pace of the edit without drawing attention to itself.
+  - Triggers: design a background music bed, score a video with a music bed, place music under a long edit
+- `edit-a-podcast-episode` — Edit a podcast episode by tightening the conversation, removing dead air and levelling both voices.
+  - Triggers: edit a podcast episode, cut a raw podcast recording, finish a recorded podcast interview
+- `mix-audio-levels-for-speech-and-music` — Mix speech and music so the voice stays in front and the music never masks a word.
+  - Triggers: mix audio levels for speech and music, balance voice against a music bed, duck the music under the narration
+- `plan-a-live-stream-run-of-show` — Plan a live stream with a timed run of show, the fallback for each segment and the handover points.
+  - Triggers: plan a live stream run of show, build a broadcast rundown, schedule the segments of a live stream
+- `plan-a-screencast-recording` — Plan a screencast by scripting each screen change, the narration and the zoom level.
+  - Triggers: plan a screencast recording, script a software walkthrough, prepare the screens for a demo capture
+- `plan-a-video-edit` — Plan a video edit as an assembly list of cuts, inserts and audio changes before touching the timeline.
+  - Triggers: plan a video edit, make an assembly plan for a video, map the cuts before editing
+- `record-a-demo-video` — Record a demo video with clean state, deliberate pacing and a retake plan for each section.
+  - Triggers: record a demo video, capture a product demo for publishing, film a walkthrough of the app
+- `record-a-voiceover-cleanly` — Record a voiceover with a treated room, a fixed microphone position and a quiet warm up.
+  - Triggers: record a voiceover cleanly, capture a clean voice track, set up a home recording booth for narration
+- `storyboard-a-short-video` — Storyboard a short video as a sequence of frames that each carry one idea.
+  - Triggers: storyboard a short video, draw the shots for a video, make a frame by frame video plan
+- `write-a-shot-list-for-a-product-film` — Write a shot list for a product film that names every frame, its size and the purpose it serves.
+  - Triggers: write a shot list for a product film, plan the shots for a filmed piece, list every frame for a product video
+- `write-a-video-description-and-metadata` — Write a video description and metadata that tell a viewer what they get and where to go next.
+  - Triggers: write a video description and metadata, write the publishing details for a video, describe a video for search
+- `write-a-video-script` — Write a video script that fits the target duration, with each scene timed against the narration.
+  - Triggers: write a video script, script for a video with timing, draft the narration for a video
+- `write-a-voiceover-script` — Write a voiceover script that is written for the ear and fits the picture it sits over.
+  - Triggers: write a voiceover script, words for a voiceover track, draft narration over existing footage
+
+## web-development
+
+Router: `routers/web-development/SKILL.md` — 52 skills.
+
+- `add-a-cookie-consent-banner` — Add a cookie consent banner that records choices before enabling nonessential tracking.
+  - Triggers: cookie consent web banner, add a consent banner to a website, gate non-essential website cookies on consent
+- `add-a-service-worker-for-caching` — Add a service worker that caches static assets with a versioned strategy and a safe fallback.
+  - Triggers: service worker caching, cache front end assets offline, add a service worker to the app
+- `add-analytics-and-track-events` — Instrument a website with a named analytics event taxonomy, consent controls, and privacy-safe payloads.
+  - Triggers: web analytics event tracking, track named events in a web analytics tool, instrument a website with consent-aware analytics
+- `add-dark-mode-to-a-site` — Apply a site-wide dark theme with system preference support, consistent tokens, and readable contrast.
+  - Triggers: system dark mode for a website, apply dark theme tokens across a site, support prefers-color-scheme on a website
+- `add-internationalisation-to-a-site` — Internationalise a website with locale-specific copy, formatting, fallbacks, and right-to-left support.
+  - Triggers: internationalised web interface, add multiple languages to a website, format a web app for different locales
+- `audit-a-page-for-accessibility` — Audit a webpage for accessibility defects with automated scans and manual keyboard verification.
+  - Triggers: web page accessibility audit, audit a webpage with automated accessibility checks, find keyboard and screen-reader barriers in a page
+- `build-a-carousel-without-jank` — Build a carousel that advances smoothly, pauses on interaction, and stays within layout shift limits.
+  - Triggers: smooth carousel slides, carousel without layout jank, build a jank-free carousel
+- `build-a-component-library` — Assemble a reusable, documented component library with typed props and consistent visual states.
+  - Triggers: build a component library, create reusable ui components, component library for our product
+- `build-a-dark-mode-theme-switch` — Build a dark mode switch that persists the chosen theme and respects the system colour preference.
+  - Triggers: dark mode theme switch, add a light and dark theme toggle, remember the chosen colour theme
+- `build-a-dropdown-menu` — Build a dropdown menu with roving keyboard focus, correct expansion state, and menu semantics.
+  - Triggers: build a dropdown menu, dropdown with keyboard support, accessible dropdown menu
+- `build-a-form-with-inline-validation` — Add inline validation to a browser form with clear field errors and a submission summary.
+  - Triggers: inline browser form validation, build a form with inline validation messages, validate a web form while the user types
+- `build-a-modal-dialog-with-focus-management` — Build an accessible modal dialog that traps focus, restores it on close, and reports errors.
+  - Triggers: accessible modal dialog, modal with focus trap, build a dialog with focus management
+- `build-a-responsive-page-layout` — Build a responsive page layout that reflows cleanly from the smallest supported width to desktop.
+  - Triggers: responsive web page layout, build a breakpoint-based web layout, make a web page adapt to mobile widths
+- `build-a-search-box-with-debounced-results` — Build a search box that debounces requests, cancels stale responses, and announces result updates.
+  - Triggers: debounced browser search box, build a search box with debounced web results, cancel stale browser search requests
+- `build-a-tabs-component` — Build an accessible tabs component that links each panel to its selected trigger.
+  - Triggers: build a tabs component, tabbed interface with keyboard support, accessible tabs for panels
+- `build-a-toast-notification` — Build a toast notification stack that announces messages, expires them, and respects motion settings.
+  - Triggers: toast notification stack, show a transient toast message, build toast notifications
+- `build-an-accessible-navigation-menu` — Build an accessible navigation menu with semantic controls, focus handling, and predictable keyboard behavior.
+  - Triggers: accessible web navigation menu, build a keyboard-friendly navigation menu, add accessible menu semantics to a site
+- `build-an-offline-first-web-app` — Build an offline-first web app that stores a working dataset locally and reconciles later.
+  - Triggers: offline first web app, app that works without internet, cache data for offline use
+- `compose-ui-from-design-tokens` — Compose interface screens from design tokens so spacing, colour, and typography stay consistent.
+  - Triggers: compose ui from design tokens, apply design tokens to a page, build a screen with our tokens
+- `debug-a-cross-browser-layout-bug` — Debug a cross-browser layout defect by reproducing it, isolating the CSS cause, and preventing regressions.
+  - Triggers: cross-browser layout debugging, debug a browser layout mismatch, fix css that breaks in one browser
+- `embed-a-video-player-responsively` — Embed a responsive video player with stable dimensions, captions, and accessible controls.
+  - Triggers: responsive embedded video player, embed a responsive web video, add a captioned responsive video iframe
+- `embed-an-svg-icon-system` — Embed a consistent SVG icon system with title text, sizing rules, and colour inheritance.
+  - Triggers: embed an svg icon system, use svg icons across screens, icon component library
+- `fetch-and-cache-data-in-a-browser` — Cache browser-fetched data with explicit freshness, revalidation, and failure behavior.
+  - Triggers: browser data caching, cache fetched web data in the browser, add stale-while-revalidate browser caching
+- `handle-a-form-with-server-actions` — Handle a form with server actions, inline validation errors, and a protected resubmission path.
+  - Triggers: form with server actions, submit a form to a server action, server action form with errors
+- `handle-a-network-failure-gracefully` — Handle a network failure with a clear error state, a retry action, and preserved user input.
+  - Triggers: handle network failure, graceful error state for a failed request, retry when the request fails
+- `handle-form-submission-and-errors` — Handle browser form submission states so pending, successful, and failed requests stay understandable.
+  - Triggers: web form submission errors, handle a browser form submit failure, show an error after form submission
+- `implement-a-navigation-header` — Build a site navigation header that exposes clear links, current-page state, and responsive placement.
+  - Triggers: web navigation header, build a responsive site header, implement a web header navigation
+- `implement-client-side-routing` — Implement client-side routing with predictable URLs, history behavior, and route-level error states.
+  - Triggers: client-side web routing, implement browser route navigation, add single-page app routing
+- `implement-client-side-validation-messages` — Implement client-side validation messages that are specific, announced, and cleared on correction.
+  - Triggers: client side validation messages, show validation errors on fields, accessible form validation
+- `implement-infinite-scroll-safely` — Implement infinite scroll with guarded pagination, scroll restoration, and an explicit retry path.
+  - Triggers: infinite scroll feed, load more rows while scrolling, implement infinite scroll
+- `integrate-a-third-party-payment-widget` — Integrate a hosted payment widget without exposing credentials or collecting unnecessary card details.
+  - Triggers: third-party payment widget, integrate a hosted checkout payment widget, embed a browser payment form safely
+- `lazy-load-below-the-fold-images` — Lazy-load below-the-fold images while preserving dimensions and avoiding delays to primary content.
+  - Triggers: lazy-loaded below-fold images, defer below-the-fold web images, implement lazy image loading in the browser
+- `make-a-page-work-without-javascript` — Make a web flow work without JavaScript by preserving server-rendered content and progressive enhancement.
+  - Triggers: javascript-free web page, make a webpage work without javascript, add progressive enhancement to a web flow
+- `manage-a-loading-skeleton` — Manage a loading skeleton that mirrors the final layout and disappears when data arrives.
+  - Triggers: loading skeleton placeholder, show a skeleton while data loads, manage loading placeholders
+- `manage-css-without-a-mess` — Restructure scattered CSS into predictable layers, tokens, and modules without changing page behaviour.
+  - Triggers: css architecture cleanup, organize messy css stylesheets, refactor a css codebase without duplication
+- `migrate-a-legacy-website-to-a-modern-stack` — Migrate a legacy website to a modern stack while preserving routes, URLs, and search visibility.
+  - Triggers: migrate a legacy website, rebuild an old site on a modern stack, move a legacy site to a new framework
+- `migrate-a-site-to-a-modern-framework` — Migrate a legacy website to a modern framework while preserving routes, assets, and behaviour.
+  - Triggers: modern web framework migration, migrate a website to a modern frontend framework, move a legacy site to a component framework
+- `optimise-largest-contentful-paint` — Improve largest contentful paint by measuring the real bottleneck and changing the critical render path.
+  - Triggers: largest contentful paint optimization, improve the lcp element on a web page, speed up a page's largest contentful paint
+- `prevent-double-submit-on-a-button` — Prevent double submissions by disabling the control during processing and rejecting repeat events.
+  - Triggers: prevent double submit, disable a button while submitting, stop duplicate form submission
+- `publish-a-static-site-from-a-source-folder` — Publish a static website by building its source folder and validating the generated artifact.
+  - Triggers: static website source publishing, publish a static website from source files, build and deploy a static site artifact
+- `reduce-javascript-bundle-size` — Reduce a frontend JavaScript bundle by locating heavy modules and deferring noncritical code.
+  - Triggers: javascript bundle size reduction, shrink a frontend javascript bundle, split a large web javascript chunk
+- `render-a-chart-in-the-browser` — Render an accessible browser chart with a data table fallback and readable axis labels.
+  - Triggers: chart in the browser, render a data chart on the page, browser chart with data table fallback
+- `render-a-list-with-virtual-scrolling` — Render a long browser list with virtual scrolling so only visible rows consume DOM work.
+  - Triggers: virtualized web list, render a long browser list with windowing, add virtual scrolling to a web list
+- `render-a-table-with-sorting-and-pagination` — Render a data table with sortable columns, paginated rows, and clear empty and loading states.
+  - Triggers: sortable paginated table, table with sorting and pagination, add pagination to a data table
+- `run-a-web-bundle-analysis` — Run a bundle analysis that identifies the largest dependencies and the assets driving page weight.
+  - Triggers: analyse the web bundle, why is our javascript bundle large, bundle size report
+- `set-up-a-content-management-system` — Set up a CMS-backed website with structured content models, preview, roles, and publish checks.
+  - Triggers: content management system for a website, set up cms content models for a site, connect a website to a headless cms
+- `set-up-a-preview-deploy-for-a-web-app` — Set up a preview deploy that builds the front end, serves it, and announces the resulting URL.
+  - Triggers: preview deploy for a web app, share a preview build url, set up per branch previews
+- `set-up-a-static-site-generator-pipeline` — Set up a static site generator pipeline that builds every page and deploys the output cleanly.
+  - Triggers: static site generator pipeline, build a docs site from markdown, set up a static site build
+- `style-a-component-with-a-design-system` — Style a web component from design-system tokens so variants, states, and themes stay consistent.
+  - Triggers: design system component styling, style a web component from design tokens, apply a component design system in css
+- `test-a-web-component-in-isolation` — Test a web component in isolation by rendering it with controlled props and captured events.
+  - Triggers: test a web component, unit test a single ui component, component test in isolation
+- `upload-a-file-with-progress` — Upload a file with progress feedback, cancellation, and validation before transfer starts.
+  - Triggers: file upload with progress, show upload progress for a file, cancelable file upload
+- `write-an-end-to-end-test-for-a-web-flow` — Write an end-to-end test that drives a real browser through a complete user journey.
+  - Triggers: end to end web flow test, browser test for a user journey, write an e2e test for the checkout flow

@@ -1,0 +1,164 @@
+"""Skills for personal finance."""
+
+from __future__ import annotations
+
+from catalog.source._types import spec
+
+DOMAIN = "personal-finance"
+
+SKILLS = (
+    spec(
+        "build-a-zero-based-budget",
+        summary="Build a zero-based budget where every unit of income has a named job.",
+        when="the user wants a monthly budget that assigns every pound or dollar a purpose",
+        steps=(
+            "List the actual take-home income from the last three payslips.",
+            "List every recurring outgoing cost with its amount and due date.",
+            "Set aside savings, debt payments and a buffer before flexible spending.",
+            "Give the remaining amount to the flexible categories the user actually uses.",
+            "Check that the assigned amounts sum exactly to the take-home income.",
+        ),
+        tags=("budget", "money", "planning"),
+        triggers=("zero based budget", "budget where every dollar has a job", "assign all of my income"),
+    ),
+    spec(
+        "track-spending-in-one-place",
+        summary="Consolidate every spending source into one place so the totals can be trusted.",
+        when="the user wants to see all of their spending together instead of scattered across accounts",
+        steps=(
+            "List every account, card and cash source the user spends from.",
+            "Choose one place to record transactions, either a spreadsheet or an app.",
+            "Import or enter the transactions from each source into that one place.",
+            "Agree the categories and map any source-specific label to them.",
+            "Reconcile the total against a bank statement once to confirm accuracy.",
+        ),
+        tags=("tracking", "spending", "organising"),
+        triggers=("track my spending in one place", "consolidate all my spending records", "one place to see all my spending"),
+    ),
+    spec(
+        "set-up-an-emergency-fund",
+        summary="Set up an emergency fund sized to the real cost of losing income for several months.",
+        when="the user wants a buffer to cover unexpected costs or a sudden loss of income",
+        steps=(
+            "Calculate the essential monthly costs from the budget, not the average spend.",
+            "Multiply by the number of months the user wants to cover.",
+            "List the current savings that already count toward that target.",
+            "Open a separate accessible account that keeps the buffer out of daily spending.",
+            "Automate a fixed transfer on payday until the target is reached.",
+        ),
+        tags=("emergency-fund", "savings", "safety"),
+        triggers=("set up an emergency fund", "how much should my emergency buffer be", "start a cash buffer for surprises"),
+    ),
+    spec(
+        "pay-down-debt-with-a-plan",
+        summary="Pay down debt with an ordered plan that targets the highest cost first.",
+        when="the user wants a concrete schedule for clearing credit card or other debts",
+        steps=(
+            "List every debt with its balance, interest rate and minimum payment.",
+            "Rank the debts by rate, highest first, and confirm the required minimums are affordable.",
+            "Direct every spare amount to the top-ranked debt beyond its minimum.",
+            "Set a monthly payment amount and a target date for clearing that debt.",
+            "Roll the freed payment into the next debt once the first is cleared.",
+        ),
+        tags=("debt", "repayment", "interest"),
+        triggers=("pay down my debt with a plan", "clear my credit card debt fastest", "debt repayment schedule by interest rate"),
+    ),
+    spec(
+        "compare-credit-cards-on-cost",
+        summary="Compare credit cards on the real cost of borrowing rather than on the headline rate.",
+        when="the user wants to choose between credit cards based on what they will actually pay",
+        steps=(
+            "List the cards under consideration with their annual fee and purchase rate.",
+            "Write the cash advance rate and any foreign transaction or balance transfer fees.",
+            "Estimate the spend and balance the user would carry on each card.",
+            "Compute the total annual cost for each card from those two numbers.",
+            "Pick the cheapest on the estimate and note what would change that answer.",
+        ),
+        tags=("credit-card", "comparison", "cost"),
+        triggers=("compare credit cards on cost", "which credit card is cheapest for me", "credit card annual fee versus interest"),
+    ),
+    spec(
+        "automate-bill-payments",
+        summary="Set up automated bill payments so bills leave on time without manual effort.",
+        when="the user wants recurring bills to be paid automatically and on schedule",
+        steps=(
+            "List each recurring bill with its amount, due date and the account it comes from.",
+            "Check each amount against the last three charges to catch anything that changed.",
+            "Set up a scheduled payment for each bill with a buffer before the due date.",
+            "Keep one account with enough balance to cover the first scheduled run.",
+            "Review the schedule after one cycle to confirm every payment landed on time.",
+        ),
+        tags=("bills", "automation", "scheduling"),
+        triggers=("automate my bill payments", "set up automatic recurring payments", "schedule my bills so they always land"),
+    ),
+    spec(
+        "plan-a-sinking-fund",
+        summary="Plan a sinking fund for a known future cost instead of paying for it from monthly income.",
+        when="the user wants to save steadily for a specific planned purchase or renewal",
+        steps=(
+            "Name the target cost, the target date and the amount involved.",
+            "Divide the amount by the number of months until the target date.",
+            "Open a separate account named for that goal so the money is not spent elsewhere.",
+            "Automate the monthly contribution on the same day each month.",
+            "Review the balance a month before the target date to confirm it is on track.",
+        ),
+        tags=("sinking-fund", "saving", "goals"),
+        triggers=("plan a sinking fund", "save steadily for a known future cost", "separate account for a planned purchase"),
+    ),
+    spec(
+        "start-a-first-investment",
+        summary="Start a first investment with a clear rationale, a small stake and a stated time horizon.",
+        when="the user wants to make their first investment and needs a safe starting point",
+        steps=(
+            "State the goal the investment serves and the horizon it needs to cover.",
+            "Confirm an emergency buffer is in place before committing any money.",
+            "Choose a diversified, low-cost option appropriate to the stated horizon.",
+            "Invest a small fixed amount that the user can afford to leave untouched.",
+            "Set a review date rather than reacting to short-term price moves.",
+        ),
+        tags=("investing", "first-steps", "portfolio"),
+        triggers=("start my first investment", "how do I begin investing as a beginner", "make a small first investment"),
+    ),
+    spec(
+        "check-a-fee-and-charger-in-a-subscription",
+        summary="Check a subscription for hidden fees, price rises and charges that no longer apply.",
+        when="the user wants to audit a subscription before deciding to keep it",
+        steps=(
+            "Find the current plan price and every fee the provider lists for it.",
+            "Check whether the price has risen recently or rises at renewal.",
+            "Identify any add-ons, premium tiers or charges that were added separately.",
+            "Confirm what happens to the price if the subscription is cancelled.",
+            "Decide keep, downgrade or cancel, and note the renewal date to revisit it.",
+        ),
+        tags=("subscription", "fees", "audit"),
+        triggers=("check a subscription for hidden fees", "audit my subscription charges", "has this subscription price gone up"),
+    ),
+    spec(
+        "plan-a-big-purchase-affordably",
+        summary="Plan a large purchase so it fits the budget without crowding out the savings.",
+        when="the user wants to buy something expensive without overextending their money",
+        steps=(
+            "State the total price including tax, delivery, insurance and setup costs.",
+            "Check the amount against the savings available and the monthly budget headroom.",
+            "Split the purchase into a deposit, a balance and the month each is due.",
+            "Show what the monthly payment would do to the savings target and the buffer.",
+            "Set the decision date and the conditions under which the purchase is confirmed.",
+        ),
+        tags=("purchase", "affordability", "planning"),
+        triggers=("plan a big purchase affordably", "can I afford this large purchase", "budget for an expensive item"),
+    ),
+    spec(
+        "review-a-monthly-finance-routine",
+        summary="Run a short monthly finance routine that keeps the budget and the accounts honest.",
+        when="the user wants a repeatable monthly check on their money",
+        steps=(
+            "Reconcile the accounts against the statements and record any difference.",
+            "Compare the month's actual spending with each budget category.",
+            "Check that the emergency buffer, sinking funds and debt payments are on track.",
+            "Move money to correct any category that drifted and note the cause.",
+            "Write down the single action that would make next month easier.",
+        ),
+        tags=("review", "routine", "monthly"),
+        triggers=("monthly finance routine", "review my money once a month", "monthly money check-in checklist"),
+    ),
+)
