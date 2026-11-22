@@ -52,5 +52,5 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 ## Related skills
 
 - `build-a-long-term-memory-store`
+- `build-a-real-time-voice-agent`
 - `give-an-agent-a-budget-of-tokens`
-- `implement-a-blackboard-pattern-for-agents`
