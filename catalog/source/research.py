@@ -372,4 +372,20 @@ SKILLS = (
         tags=("interview-planning", "primary-research", "research-guide"),
         triggers=("primary research interview plan", "plan a primary research interview"),
     ),
+    spec(
+        "reason-through-a-hard-problem",
+        summary="Reason through a hard problem by decomposing it, testing competing hypotheses against weighed evidence and steelmanned objections, and concluding with calibrated confidence.",
+        when="the user needs a careful, defensible answer to a complex or uncertain question where a first impression may be wrong",
+        steps=(
+            "Restate the problem as one precise question and separate what is known, what is assumed and what is unknown before reasoning further.",
+            "Decompose the question into the sub-questions and causal factors that must each be resolved for an answer to hold.",
+            "Generate at least three competing hypotheses, including one that contradicts the initially favoured explanation.",
+            "Weigh the available evidence for and against each hypothesis, rating source quality and naming the evidence that is missing.",
+            "Steelman the strongest opposing hypothesis and list the assumptions the favoured hypothesis depends on, with a check for each assumption.",
+            "Decide under the remaining uncertainty by choosing the best-supported hypothesis and naming the observation that would change the conclusion.",
+            "State the conclusion with a calibrated confidence level, the key caveats and the next evidence that would most reduce uncertainty.",
+        ),
+        tags=("reasoning", "hypotheses", "evidence-weighing", "decision-making", "calibration"),
+        triggers=("reason through a hard problem", "structured reasoning for a decision", "weigh the evidence before deciding"),
+    ),
 )
