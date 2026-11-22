@@ -70,6 +70,7 @@ Never cite a source that was not opened, and never present an unverified claim a
 | `frame-a-research-question` | Use when the user needs to turn a broad interest into a bounded question for a decision. |
 | `plan-a-primary-research-interview` | Use when the user needs a rigorous interview plan for gathering original evidence. |
 | `read-a-paper-efficiently` | Use when the user needs the core content and evidential limits of an academic paper. |
+| `reason-through-a-hard-problem` | Use when the user needs a careful, defensible answer to a complex or uncertain question where a first impression may be wrong. |
 | `research-a-market-size-estimate` | Use when the user needs a defensible market size range for a defined segment. |
 | `run-a-competitive-landscape-scan` | Use when the user needs an up-to-date view of competitors and alternative offerings. |
 | `run-a-user-interview-study` | Use when the user needs to collect comparable qualitative evidence from target users. |
