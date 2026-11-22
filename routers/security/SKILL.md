@@ -66,6 +66,7 @@ Never test against a system without written authorisation, and never print crede
 | `build-a-vulnerability-management-program` | Use when the user wants a repeatable way to handle findings across many teams. |
 | `configure-a-cloud-firewall-baseline` | Use when the user wants a reviewed default deny firewall rule set for a cloud network. |
 | `configure-cors-safely` | Use when the user needs browser cross-origin requests controlled on an API service. |
+| `dedupe-a-vulnerability-report` | Use when the user wants to know whether a vulnerability has already been reported, disclosed or fixed before spending effort on a report. |
 | `design-a-privilege-escalation-test` | Use when the user wants to test whether a low-privilege account can reach higher privileges. |
 | `detect-secret-leaks-in-ci` | Use when the user wants pipelines to stop committing or publishing exposed credentials. |
 | `enable-audit-logging-for-a-cloud-account` | Use when the user wants proof that administrative actions are recorded for later investigation. |
@@ -109,10 +110,12 @@ Never test against a system without written authorisation, and never print crede
 | `store-passwords-safely` | Use when the user wants user passwords stored and verified without exposing plaintext. |
 | `test-backup-restores-for-recovery-readiness` | Use when the user wants evidence that the backup set can be restored in practice. |
 | `threat-model-a-new-feature` | Use when the user wants a new feature assessed for threats before implementation. |
+| `triage-a-bug-bounty-finding` | Use when the user has a candidate bug bounty finding and needs to decide whether it is worth reporting to a programme. |
 | `triage-a-security-finding` | Use when the user has a new security finding that needs validation and prioritisation. |
 | `verify-a-webhook-signature` | Use when the user needs an inbound webhook endpoint to authenticate sender messages. |
 | `verify-software-supply-chain-integrity` | Use when the user wants evidence that a released artefact came from the expected source. |
 | `write-a-network-policy` | Use when the user wants to restrict pod-to-pod traffic inside a Kubernetes namespace. |
 | `write-a-security-architecture-review` | Use when the user wants a design checked for security before it is built. |
 | `write-a-security-test-case` | Use when the user wants a repeatable test for a specific security control or vulnerability. |
+| `write-a-vulnerability-report` | Use when the user has a confirmed vulnerability and needs a report a triager can reproduce and act on without follow-up questions. |
 | `write-an-incident-response-playbook` | Use when the user needs a repeatable response plan for a specific security incident type. |
