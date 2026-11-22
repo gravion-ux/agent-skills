@@ -2,7 +2,7 @@
 
 Generated from `catalog/source` at version 0.1.0.
 
-Total skills: 1211 across 42 domains.
+Total skills: 1217 across 42 domains.
 
 ## agent-tooling-meta
 
@@ -63,7 +63,7 @@ Router: `routers/agent-tooling-meta/SKILL.md` — 26 skills.
 
 ## ai-agents
 
-Router: `routers/ai-agents/SKILL.md` — 52 skills.
+Router: `routers/ai-agents/SKILL.md` — 55 skills.
 
 - `add-human-approval-to-an-agent-step` — Add a human approval gate before an agent step that changes external state, with a recorded decision.
   - Triggers: human approval for an agent step, pause an agent for confirmation, add a confirm-before-run gate
@@ -73,6 +73,8 @@ Router: `routers/ai-agents/SKILL.md` — 52 skills.
   - Triggers: block harmful agent actions, deny unsafe agent tool calls, gate dangerous agent operations
 - `build-a-long-term-memory-store` — Build a long-term memory store with explicit schemas, retrievable records and a maintenance path for old entries.
   - Triggers: long-term memory store, persist agent knowledge across sessions, build an agent knowledge base
+- `build-a-real-time-voice-agent` — Build a low-latency voice agent loop with voice activity detection, streaming speech-to-text, an agent turn and interruptible text-to-speech, budgeted and measured end to end.
+  - Triggers: build a real time voice agent, low latency voice loop for an agent, streaming speech recognition with vosk
 - `build-a-swarm-of-specialist-agents` — Design a swarm that routes each subtask to the specialist agent best equipped to complete it.
   - Triggers: swarm of specialist agents, build a specialist agent swarm, route subtasks across agents
 - `build-an-agent-queue-and-worker` — Build a queue and worker system that processes agent jobs reliably without duplicate execution.
@@ -115,6 +117,8 @@ Router: `routers/ai-agents/SKILL.md` — 52 skills.
   - Triggers: agent webhook trigger, start an agent from a webhook, route webhook events to agents
 - `design-an-agent-with-a-single-purpose` — Design an agent with one measurable purpose, a bounded toolset and an explicit stop condition.
   - Triggers: single-purpose agent, design an agent for one job, scope an autonomous agent
+- `design-an-ai-companion-pet` — Design an AI companion pet for an agent or app, covering its personality core, mood and reaction system, appearance descriptor, bond progression and integration hooks.
+  - Triggers: design an ai companion pet, create a virtual pet for my agent, ai pet with moods and reactions
 - `detect-agent-drift-in-production` — Detect production agent drift by comparing live traces, outcomes, and costs against a trusted baseline.
   - Triggers: detect agent drift in production, monitor an agent for behavior drift, compare live agent traces to baseline
 - `give-an-agent-a-budget-of-tokens` — Give an agent a token budget split across steps so it finishes within a declared spend limit.
@@ -151,6 +155,8 @@ Router: `routers/ai-agents/SKILL.md` — 52 skills.
   - Triggers: roll back an agent prompt, revert a regressing prompt release, restore a previous agent prompt
 - `route-a-task-to-a-smaller-model` — Route an agent task to a smaller model when defined checks show it can meet the required quality.
   - Triggers: route a task to a smaller model, use a cheaper model for agent tasks, downshift eligible agent work
+- `run-a-chief-verifier-multi-agent-task` — Run a multi-agent task where a chief agent decomposes the work, assigns specialist subagents and accepts an output only after verifying it against evidence.
+  - Triggers: run a multi agent task with a chief verifier, coordinate subagents and verify their work, chief agent delegating to specialist agents
 - `run-an-agent-in-a-docker-sandbox` — Run an agent inside a Docker sandbox with pinned image, restricted mounts and a hard time limit.
   - Triggers: docker sandbox for an agent, run an agent in a container, containerised agent execution
 - `schedule-a-recurring-agent-task` — Schedule a recurring agent task with isolated runs, bounded catch-up, and auditable outcomes.
@@ -2055,7 +2061,7 @@ Router: `routers/sales-marketing/SKILL.md` — 26 skills.
 
 ## security
 
-Router: `routers/security/SKILL.md` — 60 skills.
+Router: `routers/security/SKILL.md` — 63 skills.
 
 - `add-input-validation-to-an-endpoint` — Add layered input validation to an endpoint before untrusted data reaches business logic.
   - Triggers: add input validation to an endpoint, validate api request parameters, reject malformed endpoint input
@@ -2077,6 +2083,8 @@ Router: `routers/security/SKILL.md` — 60 skills.
   - Triggers: cloud firewall baseline rules, set a default deny cloud firewall, configure a cloud ingress baseline
 - `configure-cors-safely` — Configure CORS with an explicit origin allowlist and safe credential handling.
   - Triggers: configure cors safely, restrict api cross-origin requests, allowlist browser origins for an api
+- `dedupe-a-vulnerability-report` — Check a vulnerability finding against disclosed reports, CVE records, vendor changelogs, patch diffs and programme known-issues lists so a duplicate is caught before a report is drafted.
+  - Triggers: dedupe a vulnerability report, check if this bug was already reported, is this vulnerability a duplicate
 - `design-a-privilege-escalation-test` — Design an authorised privilege-escalation test that proves role boundaries hold.
   - Triggers: design a privilege escalation test, test vertical privilege boundaries safely, prove role escalation is blocked
 - `detect-secret-leaks-in-ci` — Detect leaked secrets in continuous-integration workflows and block unsafe publication.
@@ -2163,6 +2171,8 @@ Router: `routers/security/SKILL.md` — 60 skills.
   - Triggers: test backup restores for recovery readiness, prove a backup can actually be restored, run a disaster recovery restore test
 - `threat-model-a-new-feature` — Produce an evidence-based threat model for a new feature before release.
   - Triggers: threat model a new feature, feature threat model, identify security threats for a feature
+- `triage-a-bug-bounty-finding` — Gate a bug bounty finding through seven validation questions on scope, authorisation, reproducibility, demonstrated impact, duplicates, severity and evidence before any report is drafted.
+  - Triggers: triage a bug bounty finding, should I report this bounty finding, validate a finding before submitting it
 - `triage-a-security-finding` — Triage a security finding by confirming exploitability, impact, and the first safe fix.
   - Triggers: triage a security finding, validate and prioritise a vulnerability report, decide the severity and fix order for a finding
 - `verify-a-webhook-signature` — Verify webhook signatures against the raw payload before trusting any callback.
@@ -2175,6 +2185,8 @@ Router: `routers/security/SKILL.md` — 60 skills.
   - Triggers: write a security architecture review, review a design for security gaps, check a system design for security
 - `write-a-security-test-case` — Write a focused security test that proves a control blocks an abusive request safely.
   - Triggers: write a security test case, add a regression test for a vulnerability, prove a security control with a test
+- `write-a-vulnerability-report` — Write an impact-first vulnerability report with scope and authorisation, exact reproduction steps, captured evidence, CVSS reasoning and a concrete remediation.
+  - Triggers: write a vulnerability report, draft a bug bounty report, report a confirmed vulnerability
 - `write-an-incident-response-playbook` — Write an incident-response playbook with decision points, containment actions, and recovery checks.
   - Triggers: write an incident response playbook, prepare a security incident runbook, plan containment and recovery for a breach
 
