@@ -53,4 +53,4 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 
 - `run-an-agent-in-a-docker-sandbox`
 - `handle-a-tool-failure-in-an-agent`
-- `build-a-long-term-memory-store`
+- `run-a-chief-verifier-multi-agent-task`
