@@ -52,5 +52,5 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 ## Related skills
 
 - `choose-a-model-per-agent-step`
+- `run-a-chief-verifier-multi-agent-task`
 - `schedule-a-recurring-agent-task`
-- `stream-agent-progress-to-a-user`
