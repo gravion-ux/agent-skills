@@ -80,6 +80,7 @@ Never schedule rest, health or recovery time away to fit more work in.
 | `review-your-screen-time-and-focus` | Use when the user has looked at device usage data and wants to find what broke focus. |
 | `run-a-daily-review` | Use when the user wants a short end-of-day shutdown for their personal task list. |
 | `run-a-personal-goal-review` | Use when the user wants to assess whether their personal goals still reflect what matters. |
+| `run-a-structured-brainstorm` | Use when the user wants a wide range of fresh ideas for a problem, project or decision and needs them narrowed to a defensible shortlist. |
 | `say-no-to-a-new-request` | Use when the user has been asked for more work and wants to refuse or redirect it. |
 | `set-a-phone-free-work-window` | Use when the user wants to work uninterrupted without phone notifications for a set period. |
 | `timebox-a-focus-session` | Use when the user wants to concentrate on one task for a set period of time. |
