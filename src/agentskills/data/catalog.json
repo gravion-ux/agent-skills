@@ -30735,6 +30735,52 @@
       ]
     },
     {
+      "name": "reason-through-a-hard-problem",
+      "domain": "research",
+      "summary": "Reason through a hard problem by decomposing it, testing competing hypotheses against weighed evidence and steelmanned objections, and concluding with calibrated confidence.",
+      "description": "Reason through a hard problem by decomposing it, testing competing hypotheses against weighed evidence and steelmanned objections, and concluding with calibrated confidence. Use when the user needs a careful, defensible answer to a complex or uncertain question where a first impression may be wrong.",
+      "tags": [
+        "reasoning",
+        "hypotheses",
+        "evidence-weighing",
+        "decision-making",
+        "calibration"
+      ],
+      "triggers": [
+        "reason through a hard problem",
+        "structured reasoning for a decision",
+        "weigh the evidence before deciding"
+      ],
+      "steps": [
+        "Restate the problem as one precise question and separate what is known, what is assumed and what is unknown before reasoning further.",
+        "Decompose the question into the sub-questions and causal factors that must each be resolved for an answer to hold.",
+        "Generate at least three competing hypotheses, including one that contradicts the initially favoured explanation.",
+        "Weigh the available evidence for and against each hypothesis, rating source quality and naming the evidence that is missing.",
+        "Steelman the strongest opposing hypothesis and list the assumptions the favoured hypothesis depends on, with a check for each assumption.",
+        "Decide under the remaining uncertainty by choosing the best-supported hypothesis and naming the observation that would change the conclusion.",
+        "State the conclusion with a calibrated confidence level, the key caveats and the next evidence that would most reduce uncertainty."
+      ],
+      "when_to_use": "Use when the user needs a careful, defensible answer to a complex or uncertain question where a first impression may be wrong.",
+      "when_not_to_use": "Do not use this for a quick fact check with one authoritative source; use communication instead.",
+      "inputs": [
+        "The question and why it matters",
+        "The scope, the date range and the sources allowed",
+        "The decision the research informs"
+      ],
+      "output_contract": "A written synthesis with claims linked to sources, the disagreements surfaced and the confidence stated.",
+      "checks": [
+        "Every factual claim has a source",
+        "Sources are dated and primary where possible",
+        "Contradictions between sources are stated"
+      ],
+      "safety": "Never cite a source that was not opened, and never present an unverified claim as established.",
+      "related": [
+        "break-a-question-into-searchable-subquestions",
+        "build-a-comparison-matrix-of-sources",
+        "critique-a-studys-method"
+      ]
+    },
+    {
       "name": "reconcile-a-bank-account",
       "domain": "finance-accounting",
       "summary": "Reconcile a bank account by matching every statement line to a ledger entry.",
@@ -34995,7 +35041,7 @@
       "related": [
         "run-a-personal-goal-review",
         "build-a-weekly-review-routine",
-        "automate-a-repetitive-admin-task"
+        "run-a-structured-brainstorm"
       ]
     },
     {
@@ -35966,6 +36012,52 @@
         "run-a-project-status-review",
         "run-a-sprint-planning-session",
         "run-a-project-kickoff-meeting"
+      ]
+    },
+    {
+      "name": "run-a-structured-brainstorm",
+      "domain": "productivity",
+      "summary": "Run a structured brainstorm that generates ideas divergently, transforms them with constraint flips and SCAMPER, then scores and shortlists them against stated criteria.",
+      "description": "Run a structured brainstorm that generates ideas divergently, transforms them with constraint flips and SCAMPER, then scores and shortlists them against stated criteria. Use when the user wants a wide range of fresh ideas for a problem, project or decision and needs them narrowed to a defensible shortlist.",
+      "tags": [
+        "brainstorming",
+        "ideation",
+        "creativity",
+        "divergent-thinking",
+        "prioritisation"
+      ],
+      "triggers": [
+        "brainstorm ideas for a problem",
+        "generate a wide range of ideas",
+        "structured brainstorming session"
+      ],
+      "steps": [
+        "Frame the challenge as one question with the audience, the constraints and the success criteria stated before any ideas are generated.",
+        "Generate ideas in a timed divergent round without judging, combining or editing any idea as it appears.",
+        "Flip each stated constraint in turn and record the ideas that only appear when that constraint is reversed or removed.",
+        "Apply SCAMPER transforms (substitute, combine, adapt, modify, put to another use, eliminate, reverse) to the strongest raw ideas to create variants.",
+        "Combine and mutate promising ideas into hybrid options that pair the best mechanism of one with the best audience or format of another.",
+        "Score every surviving idea against the stated criteria for impact, feasibility, cost and novelty, and discard ideas below the agreed threshold.",
+        "Shortlist the top three to five ideas, state why each one won, and attach the next concrete action to the leading idea."
+      ],
+      "when_to_use": "Use when the user wants a wide range of fresh ideas for a problem, project or decision and needs them narrowed to a defensible shortlist.",
+      "when_not_to_use": "Do not use this for a shared team workflow; use project-management instead.",
+      "inputs": [
+        "The tasks or commitments in scope",
+        "The time and attention available",
+        "The deadline or habit being targeted"
+      ],
+      "output_contract": "A prioritised, time-boxed plan with the next concrete action stated.",
+      "checks": [
+        "The first action can start immediately",
+        "The plan fits the available time",
+        "Each item has an explicit done condition"
+      ],
+      "safety": "Never schedule rest, health or recovery time away to fit more work in.",
+      "related": [
+        "run-a-daily-review",
+        "run-a-personal-goal-review",
+        "automate-a-repetitive-admin-task"
       ]
     },
     {
