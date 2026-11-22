@@ -52,4 +52,4 @@ Never schedule rest, health or recovery time away to fit more work in.
 
 - `run-a-personal-goal-review`
 - `build-a-weekly-review-routine`
-- `automate-a-repetitive-admin-task`
+- `run-a-structured-brainstorm`
