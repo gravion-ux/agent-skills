@@ -51,6 +51,6 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 
 ## Related skills
 
+- `build-a-real-time-voice-agent`
 - `choose-a-model-per-agent-step`
 - `debug-a-looping-agent`
-- `design-a-durable-agent-workflow`
