@@ -53,4 +53,4 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 
 - `add-human-approval-to-an-agent-step`
 - `add-memory-to-an-agent`
-- `build-an-agent-queue-and-worker`
+- `build-a-real-time-voice-agent`
