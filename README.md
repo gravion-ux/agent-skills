@@ -1,5 +1,9 @@
 # agent-skills
 
+![Demo](docs/demo.png)
+
+*Demo: routing a task to the best-matching skill in the library.*
+
 A library of **1,217 agent skills** across **42 domains**, with a deterministic router that
 selects the right skill (and the right chain of skills) for any task — from everyday
 assistant work down to single-step micro-tasks.
