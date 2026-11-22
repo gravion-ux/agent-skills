@@ -61,6 +61,7 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 | `add-memory-to-an-agent` | Use when the user wants an AI agent to remember information across separate runs. |
 | `block-harmful-agent-actions` | Use when the user needs an agent prevented from performing unsafe or unauthorized actions. |
 | `build-a-long-term-memory-store` | Use when the user wants an agent to retain curated knowledge across many sessions. |
+| `build-a-real-time-voice-agent` | Use when the user wants an agent that listens and answers by voice in real time with natural turn-taking. |
 | `build-a-swarm-of-specialist-agents` | Use when the user needs several narrow agents to divide a larger objective. |
 | `build-an-agent-queue-and-worker` | Use when the user needs agent requests processed asynchronously by background workers. |
 | `cache-agent-results-for-reuse` | Use when the user wants repeated agent requests to reuse safe, validated results. |
@@ -82,6 +83,7 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 | `design-an-agent-sandbox` | Use when the user wants to define an isolated execution environment for an agent. |
 | `design-an-agent-trigger-from-a-webhook` | Use when the user wants external webhook events to start an authorized agent workflow. |
 | `design-an-agent-with-a-single-purpose` | Use when the user wants to scope a new autonomous agent around one clear job. |
+| `design-an-ai-companion-pet` | Use when the user wants a virtual pet or companion character that reacts, bonds and grows alongside an agent's work. |
 | `detect-agent-drift-in-production` | Use when the user needs to identify behavioral or quality drift in a running agent. |
 | `give-an-agent-a-budget-of-tokens` | Use when the user wants to control the token cost of an autonomous agent run. |
 | `give-an-agent-a-tool-contract` | Use when the user wants to document what each tool in an agent's allow-list may do. |
@@ -100,6 +102,7 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 | `resume-an-interrupted-agent-task` | Use when the user wants an interrupted agent run to continue safely from saved state. |
 | `roll-back-an-agent-prompt-change` | Use when the user needs a harmful or regressing agent prompt change reverted safely. |
 | `route-a-task-to-a-smaller-model` | Use when the user wants eligible agent tasks delegated to a cheaper or faster model. |
+| `run-a-chief-verifier-multi-agent-task` | Use when the user wants a large task split across several agents with one accountable chief checking every result before it is used. |
 | `run-an-agent-in-a-docker-sandbox` | Use when the user wants an agent's code execution contained in a Docker container. |
 | `schedule-a-recurring-agent-task` | Use when the user wants an authorized agent action to run on a recurring schedule. |
 | `score-an-agent-run` | Use when the user wants to judge whether an agent run met its quality bar. |
