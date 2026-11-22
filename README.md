@@ -1,6 +1,6 @@
 # agent-skills
 
-A library of **1,209 agent skills** across **42 domains**, with a deterministic router that
+A library of **1,211 agent skills** across **42 domains**, with a deterministic router that
 selects the right skill (and the right chain of skills) for any task — from everyday
 assistant work down to single-step micro-tasks.
 
@@ -12,7 +12,7 @@ assistant work down to single-step micro-tasks.
 
 **It is**
 
-- 1,209 hand-authored skills, each a complete nine-section playbook: purpose, when to use,
+- 1,211 hand-authored skills, each a complete nine-section playbook: purpose, when to use,
   when *not* to use, inputs, procedure, output contract, validation checklist, safety notes
   and related skills.
 - A deterministic BM25 router (`agentskills route`) that ranks the catalogue against a
@@ -53,13 +53,13 @@ assistant work down to single-step micro-tasks.
 | `llm-engineering` | 44 | `ml-model-training` | 34 |
 | `mobile-desktop` | 22 | `networking` | 26 |
 | `observability` | 26 | `personal-finance` | 11 |
-| `productivity` | 34 | `project-management` | 26 |
-| `relationships-social` | 11 | `research` | 26 |
+| `productivity` | 35 | `project-management` | 26 |
+| `relationships-social` | 11 | `research` | 27 |
 | `sales-marketing` | 26 | `security` | 60 |
 | `software-engineering` | 66 | `technical-writing` | 22 |
 | `testing-qa` | 34 | `travel-lifestyle` | 18 |
 | `video-audio` | 22 | `web-development` | 52 |
-| **Total** | **1,209** | | |
+| **Total** | **1,211** | | |
 
 The generated, always-current version of this table lives in
 [`catalog/CATALOG.md`](catalog/CATALOG.md).
@@ -126,7 +126,7 @@ for hit in route(catalogue, "write a migration runbook", top=5):
    leaf skill in that domain with its "use when" clause, so an agent can pick a chain
    without reading the whole catalogue.
 
-The three layers are complementary: the scorer narrows 1,209 skills to a shortlist, the
+The three layers are complementary: the scorer narrows 1,211 skills to a shortlist, the
 routers give structural context, and the master skill applies judgement.
 
 ## Skill file format
