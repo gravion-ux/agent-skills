@@ -52,4 +52,4 @@ Never test against a system without written authorisation, and never print crede
 
 - `write-a-security-architecture-review`
 - `write-a-security-test-case`
-- `add-security-headers-to-a-web-app`
+- `write-a-vulnerability-report`
