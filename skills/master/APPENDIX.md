@@ -1,6 +1,6 @@
 # Master appendix
 
-Generated from `catalog/source` at version 0.1.0. 1209 skills across 42 domains.
+Generated from `catalog/source` at version 0.1.0. 1211 skills across 42 domains.
 
 ## Domain map
 
@@ -36,10 +36,10 @@ Generated from `catalog/source` at version 0.1.0. 1209 skills across 42 domains.
 | `networking` | `routers/networking/SKILL.md` | 26 |
 | `observability` | `routers/observability/SKILL.md` | 26 |
 | `personal-finance` | `routers/personal-finance/SKILL.md` | 11 |
-| `productivity` | `routers/productivity/SKILL.md` | 34 |
+| `productivity` | `routers/productivity/SKILL.md` | 35 |
 | `project-management` | `routers/project-management/SKILL.md` | 26 |
 | `relationships-social` | `routers/relationships-social/SKILL.md` | 11 |
-| `research` | `routers/research/SKILL.md` | 26 |
+| `research` | `routers/research/SKILL.md` | 27 |
 | `sales-marketing` | `routers/sales-marketing/SKILL.md` | 26 |
 | `security` | `routers/security/SKILL.md` | 60 |
 | `software-engineering` | `routers/software-engineering/SKILL.md` | 66 |
