@@ -493,4 +493,20 @@ SKILLS = (
         tags=("dashboard", "overview", "weekly-review"),
         triggers=("simple personal dashboard", "one page view of my commitments", "build my personal review dashboard"),
     ),
+    spec(
+        "run-a-structured-brainstorm",
+        summary="Run a structured brainstorm that generates ideas divergently, transforms them with constraint flips and SCAMPER, then scores and shortlists them against stated criteria.",
+        when="the user wants a wide range of fresh ideas for a problem, project or decision and needs them narrowed to a defensible shortlist",
+        steps=(
+            "Frame the challenge as one question with the audience, the constraints and the success criteria stated before any ideas are generated.",
+            "Generate ideas in a timed divergent round without judging, combining or editing any idea as it appears.",
+            "Flip each stated constraint in turn and record the ideas that only appear when that constraint is reversed or removed.",
+            "Apply SCAMPER transforms (substitute, combine, adapt, modify, put to another use, eliminate, reverse) to the strongest raw ideas to create variants.",
+            "Combine and mutate promising ideas into hybrid options that pair the best mechanism of one with the best audience or format of another.",
+            "Score every surviving idea against the stated criteria for impact, feasibility, cost and novelty, and discard ideas below the agreed threshold.",
+            "Shortlist the top three to five ideas, state why each one won, and attach the next concrete action to the leading idea.",
+        ),
+        tags=("brainstorming", "ideation", "creativity", "divergent-thinking", "prioritisation"),
+        triggers=("brainstorm ideas for a problem", "generate a wide range of ideas", "structured brainstorming session"),
+    ),
 )
