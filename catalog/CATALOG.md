@@ -2,7 +2,7 @@
 
 Generated from `catalog/source` at version 0.1.0.
 
-Total skills: 1209 across 42 domains.
+Total skills: 1211 across 42 domains.
 
 ## agent-tooling-meta
 
@@ -1780,7 +1780,7 @@ Router: `routers/personal-finance/SKILL.md` — 11 skills.
 
 ## productivity
 
-Router: `routers/productivity/SKILL.md` — 34 skills.
+Router: `routers/productivity/SKILL.md` — 35 skills.
 
 - `automate-a-repetitive-admin-task` — Turn a repeated administrative chore into a rule the agent runs on a schedule.
   - Triggers: automate a repetitive admin task, set up a recurring admin automation, run this chore automatically
@@ -1830,6 +1830,8 @@ Router: `routers/productivity/SKILL.md` — 34 skills.
   - Triggers: daily review, end of day shutdown, close out my day
 - `run-a-personal-goal-review` — Review personal goals against evidence, reset stale ones and choose the next measure.
   - Triggers: personal goal review, review my goals, check progress on my goals
+- `run-a-structured-brainstorm` — Run a structured brainstorm that generates ideas divergently, transforms them with constraint flips and SCAMPER, then scores and shortlists them against stated criteria.
+  - Triggers: brainstorm ideas for a problem, generate a wide range of ideas, structured brainstorming session
 - `say-no-to-a-new-request` — Decline a new request with a clear reason and, when possible, a smaller alternative.
   - Triggers: say no to a new request, decline extra work politely, help me refuse a request
 - `set-a-phone-free-work-window` — Define a phone-free work window with a start signal, a backup device and a rule for emergencies.
@@ -1937,7 +1939,7 @@ Router: `routers/relationships-social/SKILL.md` — 11 skills.
 
 ## research
 
-Router: `routers/research/SKILL.md` — 26 skills.
+Router: `routers/research/SKILL.md` — 27 skills.
 
 - `analyse-interview-transcripts` — Analyse interview transcripts by coding themes, contradictions, and supporting quotes.
   - Triggers: interview transcript analysis, analyse interview transcripts
@@ -1967,6 +1969,8 @@ Router: `routers/research/SKILL.md` — 26 skills.
   - Triggers: primary research interview plan, plan a primary research interview
 - `read-a-paper-efficiently` — Read a research paper efficiently by extracting its design, evidence, and limits.
   - Triggers: read a research paper, efficient academic paper reading
+- `reason-through-a-hard-problem` — Reason through a hard problem by decomposing it, testing competing hypotheses against weighed evidence and steelmanned objections, and concluding with calibrated confidence.
+  - Triggers: reason through a hard problem, structured reasoning for a decision, weigh the evidence before deciding
 - `research-a-market-size-estimate` — Research a market size estimate by triangulating demand and supply evidence.
   - Triggers: research market size estimate, estimate a market size
 - `run-a-competitive-landscape-scan` — Run a competitive landscape scan across categories, substitutes, and positioning.
