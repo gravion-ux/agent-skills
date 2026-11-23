@@ -2,7 +2,7 @@
 
 Generated from `catalog/source` at version 0.1.0.
 
-Total skills: 1223 across 42 domains.
+Total skills: 1224 across 42 domains.
 
 ## agent-tooling-meta
 
@@ -2069,7 +2069,7 @@ Router: `routers/sales-marketing/SKILL.md` — 26 skills.
 
 ## security
 
-Router: `routers/security/SKILL.md` — 65 skills.
+Router: `routers/security/SKILL.md` — 66 skills.
 
 - `add-input-validation-to-an-endpoint` — Add layered input validation to an endpoint before untrusted data reaches business logic.
   - Triggers: add input validation to an endpoint, validate api request parameters, reject malformed endpoint input
@@ -2113,6 +2113,8 @@ Router: `routers/security/SKILL.md` — 65 skills.
   - Triggers: harden a database connection, require tls to the database server, restrict database access to app hosts
 - `harden-a-kubernetes-cluster` — Harden a Kubernetes cluster by tightening control plane settings and pod security defaults.
   - Triggers: harden a kubernetes cluster, apply pod security standards to a cluster, tighten kubernetes control plane settings
+- `hunt-verify-and-report-a-bug-bounty-finding` — Run a complete bug bounty hunt on an authorised target — scope first, then testing from low to high severity, safe verification, duplicate checking, a replayable proof of concept and a submission-ready report, stopping whenever a step cannot be proven.
+  - Triggers: hunt a bug bounty target end to end, find verify and report a bug bounty bug, complete bug bounty hunt with poc and report
 - `implement-data-retention-controls` — Apply retention rules so each data class is deleted on schedule and kept no longer.
   - Triggers: implement data retention controls, delete records on schedule automatically, set a legal hold on retention rules
 - `implement-secure-file-uploads` — Implement file uploads that constrain content, isolate storage, and block executable delivery.
