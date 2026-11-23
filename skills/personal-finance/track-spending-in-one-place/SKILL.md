@@ -52,4 +52,4 @@ Never give personalised tax or investment advice as if it were professional advi
 
 - `check-a-fee-and-charger-in-a-subscription`
 - `automate-bill-payments`
-- `build-a-zero-based-budget`
+- `build-a-personal-cash-flow-forecast`
