@@ -109,8 +109,10 @@ Never test against a system without written authorisation, and never print crede
 | `sign-an-artifact-for-provenance` | Use when the user wants a released artefact protected against tampering and substitution. |
 | `store-passwords-safely` | Use when the user wants user passwords stored and verified without exposing plaintext. |
 | `test-backup-restores-for-recovery-readiness` | Use when the user wants evidence that the backup set can be restored in practice. |
+| `test-object-level-authorisation-on-an-api` | Use when the user wants to check whether an API enforces per-object ownership — the broken object level authorisation (BOLA/IDOR) class — on a system they own or are authorised to test. |
 | `threat-model-a-new-feature` | Use when the user wants a new feature assessed for threats before implementation. |
 | `triage-a-bug-bounty-finding` | Use when the user has a candidate bug bounty finding and needs to decide whether it is worth reporting to a programme. |
+| `triage-a-dependency-confusion-risk` | Use when the user suspects their build pulls internal packages whose names could be claimed or shadowed on a public package registry. |
 | `triage-a-security-finding` | Use when the user has a new security finding that needs validation and prioritisation. |
 | `verify-a-webhook-signature` | Use when the user needs an inbound webhook endpoint to authenticate sender messages. |
 | `verify-software-supply-chain-integrity` | Use when the user wants evidence that a released artefact came from the expected source. |
