@@ -68,5 +68,6 @@ Never present unverified claims about a topic as established fact.
 | `run-weekly-learning-review` | Use when the user wants to review the past week and choose what to study next. |
 | `schedule-study-reminder` | Use when the user wants recurring reminders for study and practice sessions. |
 | `set-weekly-learning-goal` | Use when the user needs a measurable goal for one week of study. |
+| `study-with-worked-examples` | Use when the user is learning a procedural skill — maths, programming, a language pattern — and keeps failing problems they have only read about. |
 | `trace-skill-learning-path` | Use when the user needs a staged path from beginner knowledge to independent skill use. |
 | `write-revision-notes` | Use when the user needs concise notes for revisiting a topic before an assessment. |
