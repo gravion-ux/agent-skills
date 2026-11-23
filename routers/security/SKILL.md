@@ -77,6 +77,7 @@ Never test against a system without written authorisation, and never print crede
 | `harden-a-container-image` | Use when the user wants a container image minimised for secure production execution. |
 | `harden-a-database-connection` | Use when the user wants to protect the path between an application and its database. |
 | `harden-a-kubernetes-cluster` | Use when the user wants to raise the security posture of an existing Kubernetes cluster. |
+| `hunt-verify-and-report-a-bug-bounty-finding` | Use when the user wants to hunt a bug bounty target end to end — finding, verifying, deduping and reporting real vulnerabilities without ever submitting an unproven claim. |
 | `implement-data-retention-controls` | Use when the user wants records deleted automatically once the retention period ends. |
 | `implement-secure-file-uploads` | Use when the user needs an application to accept user files without exposing unsafe content. |
 | `implement-secure-session-handling` | Use when the user needs server-side or token sessions secured across authentication events. |
