@@ -1,12 +1,12 @@
 # tests/test_source_counts.py
 from catalog.source import domain_of
 
-TOTAL_SKILLS = 1217
+TOTAL_SKILLS = 1223
 TOTAL_DOMAINS = 42
 
 EXPECTED = {
     "agent-tooling-meta": 26,
-    "ai-agents": 55,
+    "ai-agents": 57,
     "api-design": 22,
     "architecture-design": 26,
     "business-ops": 30,
@@ -27,20 +27,20 @@ EXPECTED = {
     "home-diy": 18,
     "hr-recruiting": 18,
     "image-visual": 22,
-    "learning-skills": 14,
+    "learning-skills": 15,
     "legal-compliance": 18,
     "llm-engineering": 44,
     "ml-model-training": 34,
     "mobile-desktop": 22,
     "networking": 26,
     "observability": 26,
-    "personal-finance": 11,
+    "personal-finance": 12,
     "productivity": 35,
     "project-management": 26,
     "relationships-social": 11,
     "research": 27,
     "sales-marketing": 26,
-    "security": 63,
+    "security": 65,
     "software-engineering": 66,
     "technical-writing": 22,
     "testing-qa": 34,
