@@ -51,6 +51,6 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 
 ## Related skills
 
+- `protect-an-agent-from-indirect-prompt-injection`
 - `roll-back-an-agent-prompt-change`
 - `version-an-agent-prompt`
-- `write-an-agent-runbook`
