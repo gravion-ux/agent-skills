@@ -50,6 +50,6 @@ Never test against a system without written authorisation, and never print crede
 
 ## Related skills
 
+- `test-object-level-authorisation-on-an-api`
 - `enforce-mfa-for-an-organisation`
 - `add-input-validation-to-an-endpoint`
-- `fix-an-sql-injection`
