@@ -50,6 +50,6 @@ Never test against a system without written authorisation, and never print crede
 
 ## Related skills
 
+- `hunt-verify-and-report-a-bug-bounty-finding`
 - `verify-a-webhook-signature`
 - `add-input-validation-to-an-endpoint`
-- `add-security-headers-to-a-web-app`
