@@ -1,7 +1,7 @@
 # tests/test_source_counts.py
 from catalog.source import domain_of
 
-TOTAL_SKILLS = 1223
+TOTAL_SKILLS = 1224
 TOTAL_DOMAINS = 42
 
 EXPECTED = {
@@ -40,7 +40,7 @@ EXPECTED = {
     "relationships-social": 11,
     "research": 27,
     "sales-marketing": 26,
-    "security": 65,
+    "security": 66,
     "software-engineering": 66,
     "technical-writing": 22,
     "testing-qa": 34,
