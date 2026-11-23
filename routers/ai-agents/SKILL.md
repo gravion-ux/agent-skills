@@ -59,6 +59,7 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 |---|---|
 | `add-human-approval-to-an-agent-step` | Use when the user wants a human to confirm risky agent actions before they run. |
 | `add-memory-to-an-agent` | Use when the user wants an AI agent to remember information across separate runs. |
+| `audit-an-mcp-servers-tool-permissions` | Use when the user connects an agent to an MCP server and wants to know what the server's tools let the agent reach before trusting it. |
 | `block-harmful-agent-actions` | Use when the user needs an agent prevented from performing unsafe or unauthorized actions. |
 | `build-a-long-term-memory-store` | Use when the user wants an agent to retain curated knowledge across many sessions. |
 | `build-a-real-time-voice-agent` | Use when the user wants an agent that listens and answers by voice in real time with natural turn-taking. |
@@ -97,6 +98,7 @@ Never widen the tool allow-list without explicit approval, never run an irrevers
 | `make-an-agent-action-idempotent` | Use when the user needs a repeated agent action to stay safe after a retry. |
 | `plan-an-agent-task-decomposition` | Use when the user needs to break a broad agent objective into an executable plan. |
 | `price-an-agent-run` | Use when the user needs the measurable cost and budget variance of an agent execution. |
+| `protect-an-agent-from-indirect-prompt-injection` | Use when the user runs an agent that reads web pages, emails, documents or tool results in which an attacker could plant instructions. |
 | `rate-limit-an-agent-endpoint` | Use when the user needs to protect an agent service from excessive or abusive request volume. |
 | `red-team-an-agent` | Use when the user wants an agent evaluated against realistic adversarial and misuse scenarios. |
 | `resume-an-interrupted-agent-task` | Use when the user wants an interrupted agent run to continue safely from saved state. |
