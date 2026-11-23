@@ -52,4 +52,4 @@ Never test against a system without written authorisation, and never print crede
 
 - `triage-a-bug-bounty-finding`
 - `add-security-headers-to-a-web-app`
-- `prepare-for-a-security-questionnaire`
+- `hunt-verify-and-report-a-bug-bounty-finding`
