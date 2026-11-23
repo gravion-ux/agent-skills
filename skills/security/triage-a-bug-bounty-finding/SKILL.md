@@ -52,6 +52,6 @@ Never test against a system without written authorisation, and never print crede
 
 ## Related skills
 
+- `hunt-verify-and-report-a-bug-bounty-finding`
 - `triage-a-security-finding`
 - `triage-a-dependency-confusion-risk`
-- `add-security-headers-to-a-web-app`
