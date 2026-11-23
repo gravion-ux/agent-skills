@@ -203,4 +203,19 @@ SKILLS = (
         tags=("skills", "learning", "planning"),
         triggers=("skill learning path", "map a skill learning path", "skill learning path for independent use"),
     ),
+    spec(
+        "study-with-worked-examples",
+        summary="Study with worked examples by analysing fully solved problems first, then fading the support through completion problems until the learner solves unaided.",
+        when="the user is learning a procedural skill — maths, programming, a language pattern — and keeps failing problems they have only read about",
+        steps=(
+            "Choose worked examples that cover the problem types the learner must master, one type at a time.",
+            "Study each example by explaining every step aloud or in writing before moving on, naming why that step was chosen.",
+            "Cover the solution and reconstruct it from memory, checking each step against the original only after a genuine attempt.",
+            "Move to completion problems where the first steps are given and the learner supplies the rest, reducing the given steps as accuracy improves.",
+            "Attempt a full unaided problem of the same type and compare the result against a worked example, not just an answer key.",
+            "Log every step where the reconstruction failed and add one more worked example for exactly that step before progressing.",
+        ),
+        tags=("worked-examples", "study-technique", "scaffolding"),
+        triggers=("study with worked examples", "learn from solved examples", "worked example study method"),
+    ),
 )

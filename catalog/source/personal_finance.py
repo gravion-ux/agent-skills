@@ -161,4 +161,20 @@ SKILLS = (
         tags=("review", "routine", "monthly"),
         triggers=("monthly finance routine", "review my money once a month", "monthly money check-in checklist"),
     ),
+    spec(
+        "build-a-personal-cash-flow-forecast",
+        summary="Build a personal cash-flow forecast that projects income and committed spending month by month so a shortfall is visible while there is still time to act.",
+        when="the user wants to see whether their money covers the coming months, including irregular bills and planned large expenses",
+        steps=(
+            "List the income that is certain enough to count, with the date each payment actually lands in the account.",
+            "List every committed outflow by date: rent, bills, subscriptions, debt payments and insurance premiums.",
+            "Add the irregular and annual costs — tax, renewals, repairs and gifts — in the months they will really be paid.",
+            "Project the running balance month by month for six to twelve months using only those dated entries.",
+            "Mark every month where the balance dips below the user's safety floor and name the entries that cause the dip.",
+            "Fix the worst dips by moving a discretionary expense, building a sinking fund or renegotiating a due date, then re-run the projection.",
+            "Refresh the forecast monthly with actual figures and note which assumptions were wrong, so the next forecast starts from reality.",
+        ),
+        tags=("cash-flow", "forecast", "budgeting", "planning"),
+        triggers=("cash flow forecast", "will my money last the year", "project my income and bills"),
+    ),
 )
