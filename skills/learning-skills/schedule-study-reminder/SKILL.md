@@ -51,5 +51,5 @@ Never present unverified claims about a topic as established fact.
 ## Related skills
 
 - `build-a-two-week-study-plan`
+- `study-with-worked-examples`
 - `build-learning-feedback-loop`
-- `build-spaced-repetition-deck`
