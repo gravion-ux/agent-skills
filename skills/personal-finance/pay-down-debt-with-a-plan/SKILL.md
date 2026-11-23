@@ -52,4 +52,4 @@ Never give personalised tax or investment advice as if it were professional advi
 
 - `plan-a-big-purchase-affordably`
 - `plan-a-sinking-fund`
-- `build-a-zero-based-budget`
+- `build-a-personal-cash-flow-forecast`
