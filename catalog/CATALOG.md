@@ -2,7 +2,7 @@
 
 Generated from `catalog/source` at version 0.1.0.
 
-Total skills: 1217 across 42 domains.
+Total skills: 1223 across 42 domains.
 
 ## agent-tooling-meta
 
@@ -63,12 +63,14 @@ Router: `routers/agent-tooling-meta/SKILL.md` — 26 skills.
 
 ## ai-agents
 
-Router: `routers/ai-agents/SKILL.md` — 55 skills.
+Router: `routers/ai-agents/SKILL.md` — 57 skills.
 
 - `add-human-approval-to-an-agent-step` — Add a human approval gate before an agent step that changes external state, with a recorded decision.
   - Triggers: human approval for an agent step, pause an agent for confirmation, add a confirm-before-run gate
 - `add-memory-to-an-agent` — Add an agent memory layer that stores useful facts, recalls them at the right time and forgets stale entries.
   - Triggers: agent memory, make an AI agent remember things, add persistence to an agent
+- `audit-an-mcp-servers-tool-permissions` — Audit an MCP server's tool permissions by inventorying every exposed tool, classifying what each can read, write or execute, and checking the grants against what the connected agent actually needs.
+  - Triggers: audit an mcp server, check mcp tool permissions, what can this mcp server access
 - `block-harmful-agent-actions` — Block harmful agent actions through scoped policies, confirmation gates, and auditable denials.
   - Triggers: block harmful agent actions, deny unsafe agent tool calls, gate dangerous agent operations
 - `build-a-long-term-memory-store` — Build a long-term memory store with explicit schemas, retrievable records and a maintenance path for old entries.
@@ -145,6 +147,8 @@ Router: `routers/ai-agents/SKILL.md` — 55 skills.
   - Triggers: agent task decomposition, break an agent objective into steps, plan subtasks for an autonomous agent
 - `price-an-agent-run` — Price an agent run by itemizing model tokens, tool calls, storage, and retry overhead.
   - Triggers: price an agent run, calculate the cost of agent execution, itemize agent tool and token costs
+- `protect-an-agent-from-indirect-prompt-injection` — Protect an agent from indirect prompt injection by treating all retrieved content as untrusted data, separating it from instructions, and gating the actions that injected text tries to trigger.
+  - Triggers: protect an agent from prompt injection, indirect prompt injection defence, stop web pages instructing my agent
 - `rate-limit-an-agent-endpoint` — Rate-limit an agent endpoint by identity while returning clear retry guidance and usable metrics.
   - Triggers: rate limit an agent endpoint, throttle requests to an agent service, enforce agent API quotas
 - `red-team-an-agent` — Red-team an agent with authorized adversarial cases that expose unsafe tool use and instruction failures.
@@ -1356,7 +1360,7 @@ Router: `routers/image-visual/SKILL.md` — 22 skills.
 
 ## learning-skills
 
-Router: `routers/learning-skills/SKILL.md` — 14 skills.
+Router: `routers/learning-skills/SKILL.md` — 15 skills.
 
 - `build-a-two-week-study-plan` — Build a two-week study plan with daily practice and a mid-point checkpoint.
   - Triggers: build a study plan, plan to learn a topic in two weeks, two-week study plan
@@ -1382,6 +1386,8 @@ Router: `routers/learning-skills/SKILL.md` — 14 skills.
   - Triggers: study reminder, schedule a study reminder, set a study reminder
 - `set-weekly-learning-goal` — Set a weekly learning goal with a visible outcome and a completion check.
   - Triggers: weekly learning goal, set a weekly learning goal, learning goal for this week
+- `study-with-worked-examples` — Study with worked examples by analysing fully solved problems first, then fading the support through completion problems until the learner solves unaided.
+  - Triggers: study with worked examples, learn from solved examples, worked example study method
 - `trace-skill-learning-path` — Trace a skill-learning path that sequences prerequisite practice before independent use.
   - Triggers: skill learning path, map a skill learning path, skill learning path for independent use
 - `write-revision-notes` — Write revision notes that connect key ideas to questions and practice tasks.
@@ -1759,10 +1765,12 @@ Router: `routers/observability/SKILL.md` — 26 skills.
 
 ## personal-finance
 
-Router: `routers/personal-finance/SKILL.md` — 11 skills.
+Router: `routers/personal-finance/SKILL.md` — 12 skills.
 
 - `automate-bill-payments` — Set up automated bill payments so bills leave on time without manual effort.
   - Triggers: automate my bill payments, set up automatic recurring payments, schedule my bills so they always land
+- `build-a-personal-cash-flow-forecast` — Build a personal cash-flow forecast that projects income and committed spending month by month so a shortfall is visible while there is still time to act.
+  - Triggers: cash flow forecast, will my money last the year, project my income and bills
 - `build-a-zero-based-budget` — Build a zero-based budget where every unit of income has a named job.
   - Triggers: zero based budget, budget where every dollar has a job, assign all of my income
 - `check-a-fee-and-charger-in-a-subscription` — Check a subscription for hidden fees, price rises and charges that no longer apply.
@@ -2061,7 +2069,7 @@ Router: `routers/sales-marketing/SKILL.md` — 26 skills.
 
 ## security
 
-Router: `routers/security/SKILL.md` — 63 skills.
+Router: `routers/security/SKILL.md` — 65 skills.
 
 - `add-input-validation-to-an-endpoint` — Add layered input validation to an endpoint before untrusted data reaches business logic.
   - Triggers: add input validation to an endpoint, validate api request parameters, reject malformed endpoint input
@@ -2169,10 +2177,14 @@ Router: `routers/security/SKILL.md` — 63 skills.
   - Triggers: store passwords safely, hash user passwords correctly, implement secure password storage
 - `test-backup-restores-for-recovery-readiness` — Prove the backups restore by restoring one into an isolated environment and measuring the recovery time.
   - Triggers: test backup restores for recovery readiness, prove a backup can actually be restored, run a disaster recovery restore test
+- `test-object-level-authorisation-on-an-api` — Test an API's object-level authorisation by replaying one test account's requests against another account's object identifiers and recording exactly which cross-account reads and writes succeed.
+  - Triggers: test object level authorisation, check an api for idor, bola test with two accounts
 - `threat-model-a-new-feature` — Produce an evidence-based threat model for a new feature before release.
   - Triggers: threat model a new feature, feature threat model, identify security threats for a feature
 - `triage-a-bug-bounty-finding` — Gate a bug bounty finding through seven validation questions on scope, authorisation, reproducibility, demonstrated impact, duplicates, severity and evidence before any report is drafted.
   - Triggers: triage a bug bounty finding, should I report this bounty finding, validate a finding before submitting it
+- `triage-a-dependency-confusion-risk` — Triage a dependency-confusion risk by inventorying internal package names, checking whether they resolve on public registries, and closing the namespace gaps that let an attacker publish a malicious namesake.
+  - Triggers: dependency confusion risk, internal package name on a public registry, could someone shadow our private packages
 - `triage-a-security-finding` — Triage a security finding by confirming exploitability, impact, and the first safe fix.
   - Triggers: triage a security finding, validate and prioritise a vulnerability report, decide the severity and fix order for a finding
 - `verify-a-webhook-signature` — Verify webhook signatures against the raw payload before trusting any callback.
