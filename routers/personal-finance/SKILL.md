@@ -57,6 +57,7 @@ Never give personalised tax or investment advice as if it were professional advi
 | Skill | Use when |
 |---|---|
 | `automate-bill-payments` | Use when the user wants recurring bills to be paid automatically and on schedule. |
+| `build-a-personal-cash-flow-forecast` | Use when the user wants to see whether their money covers the coming months, including irregular bills and planned large expenses. |
 | `build-a-zero-based-budget` | Use when the user wants a monthly budget that assigns every pound or dollar a purpose. |
 | `check-a-fee-and-charger-in-a-subscription` | Use when the user wants to audit a subscription before deciding to keep it. |
 | `compare-credit-cards-on-cost` | Use when the user wants to choose between credit cards based on what they will actually pay. |
