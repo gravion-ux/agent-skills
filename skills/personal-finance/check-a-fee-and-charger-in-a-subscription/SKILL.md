@@ -50,6 +50,6 @@ Never give personalised tax or investment advice as if it were professional advi
 
 ## Related skills
 
+- `build-a-personal-cash-flow-forecast`
 - `build-a-zero-based-budget`
 - `pay-down-debt-with-a-plan`
-- `plan-a-big-purchase-affordably`
