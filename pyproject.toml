@@ -27,7 +27,7 @@ dev = [
     "build==1.2.2.post1",
     "mypy==1.18.2",
     "pytest==9.2.0",
-    "pytest-cov==7.0.0",
+    "pytest-cov==7.1.0",
     "ruff==0.17.4",
 ]
 
