@@ -65,8 +65,14 @@ def _first_matching_field(fields: dict[str, list[str]], term: str) -> str:
     return "description"
 
 
+MAX_TOP = 50
+
+
 def route(catalogue: Catalogue, query: str, top: int = 8) -> list[ScoredSkill]:
     """Rank catalogue skills against a free-form task description."""
+    # A non-positive or unbounded ``top`` would slice results surprisingly
+    # (``results[:-1]`` drops the tail); clamp to a sane page size.
+    top = max(1, min(top, MAX_TOP))
     terms = list(dict.fromkeys(tokenize(query)))
     if not terms or not catalogue.skills:
         return []
@@ -74,7 +80,7 @@ def route(catalogue: Catalogue, query: str, top: int = 8) -> list[ScoredSkill]:
     fields_by_skill = {skill.name: _field_tokens(skill) for skill in catalogue.skills}
     documents = {name: _document(fields) for name, fields in fields_by_skill.items()}
     lengths = {name: len(document) for name, document in documents.items()}
-    average_length = sum(lengths.values()) / len(lengths)
+    average_length = sum(lengths.values()) / len(lengths) or 1.0
     frequencies = {name: Counter(document) for name, document in documents.items()}
     document_frequency: Counter[str] = Counter()
     for counter in frequencies.values():

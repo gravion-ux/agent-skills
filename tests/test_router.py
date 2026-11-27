@@ -91,3 +91,8 @@ def test_each_matched_term_reports_the_field_it_hit() -> None:
 
 def test_route_respects_the_top_limit() -> None:
     assert len(route(CATALOGUE, "use when something", top=1)) == 1
+
+
+def test_route_clamps_non_positive_top() -> None:
+    assert len(route(CATALOGUE, "migrate to postgres", top=0)) == 1
+    assert len(route(CATALOGUE, "migrate to postgres", top=-3)) == 1
